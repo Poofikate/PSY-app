@@ -1,0 +1,75 @@
+$fonts-path: '../fonts/';
+$roboto-path: $fonts-path + 'Roboto/';
+$roboto-slab-path: $fonts-path + 'RobotoSlab/';
+
+// Fonts
+$arial: 'Arial';
+$roboto: 'Roboto';
+$roboto-slab: 'Roboto Slab';
+
+/* stylelint-disable scss/operator-no-unspaced */
+
+// Roboto
+@font-face {
+  font-family: $roboto;
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto-Light'), local('Roboto-Light'),
+    url($roboto-path+'Roboto-Light.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $roboto;
+  font-style: normal;
+  font-weight: normal;
+  src: local('Roboto-Regular'), local('Roboto-Regular'),
+    url($roboto-path+'Roboto-Regular.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $roboto;
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto-Medium'), local('Roboto-Medium'),
+    url($roboto-path+'Roboto-Medium.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $roboto;
+  font-style: normal;
+  font-weight: bold;
+  src: local('Roboto-Bold'), local('Roboto-Bold'),
+    url($roboto-path+'Roboto-Bold.woff') format('woff');
+  font-display: swap;
+}
+
+// Roboot Slab
+@font-face {
+  font-family: $roboto-slab;
+  font-style: normal;
+  font-weight: 300;
+  src: local('RobotoSlab-Light'), local('RobotoSlab-Light'),
+    url($roboto-slab-path+'RobotoSlab-Light.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $roboto-slab;
+  font-style: normal;
+  font-weight: normal;
+  src: local('RobotoSlab-Regular'), local('RobotoSlab-Regular'),
+    url($roboto-slab-path+'RobotoSlab-Regular.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $roboto-slab;
+  font-style: normal;
+  font-weight: bold;
+  src: local('RobotoSlab-Bold'), local('RobotoSlab-Bold'),
+    url($roboto-slab-path+'RobotoSlab-Bold.woff') format('woff');
+  font-display: swap;
+}

@@ -1,0 +1,508 @@
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-size: 0;
+  text-align: center;
+  white-space: nowrap;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.4s;
+
+  @media (max-width: 768px) {
+    padding: 15px;
+  }
+  &::before {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    content: '';
+  }
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+    .modal {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  .modal {
+    position: relative;
+    z-index: 11;
+    display: inline-block;
+    width: 100%;
+    max-width: 480px;
+    padding: 60px 40px;
+    font-size: 1rem;
+    text-align: center;
+    white-space: normal;
+    vertical-align: middle;
+    background-color: #fff;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.4s, transform 0.4s;
+    transform: scale(0.5) translateY(100%);
+
+    @include max-width($touch) {
+      padding: 20px;
+    }
+
+    @include max-width($phone) {
+      padding: 20px 15px;
+    }
+
+    &--small {
+      max-width: 420px;
+
+      .modal-wrap {
+        width: 100%;
+        max-width: 270px;
+        margin: 0 auto;
+      }
+    }
+    &--medium {
+      max-width: 600px;
+    }
+    &--large {
+      max-width: 1070px;
+    }
+    &--no-padding {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+}
+
+.modal {
+  .hamburger {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: inline-flex;
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    min-height: 20px;
+  }
+
+  .input,
+  .textarea {
+    padding: 0.858em 1.43em;
+  }
+
+  .button {
+    margin: 20px 0 0;
+  }
+}
+
+.modal-title {
+  color: $blue-dark;
+  text-align: left;
+
+  @include max-width($touch) {
+    padding-right: 50px;
+  }
+}
+
+.modal-wrap {
+  text-align: left;
+
+  .meditation__list {
+    .meditation__text {
+      width: auto;
+      min-width: auto;
+    }
+  }
+
+  .aside__info {
+    max-width: 100%;
+  }
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  margin: 30px auto 0;
+
+  @include max-width($touch) {
+    max-width: 100%;
+    margin: 20px 0 0;
+  }
+
+  .input,
+  .textarea {
+    width: 100%;
+    margin: 10px 0;
+
+    @include max-width($touch) {
+      margin: 5px 0;
+    }
+  }
+
+  .button {
+    width: 100%;
+    margin: 20px 0 0;
+
+    @include max-width($touch) {
+      margin: 10px 0 0;
+    }
+  }
+
+  br {
+    display: none;
+  }
+}
+
+.modal-instruction {
+  .modal {
+    @include min-width($touch + 1px) {
+      padding: 60px 40px 40px 60px;
+    }
+  }
+}
+
+.modal-feeling {
+  .modal {
+    padding-top: 30px;
+    padding-bottom: 45px;
+
+    @include max-width($touch) {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
+
+  .modal-title {
+    font-family: $roboto-slab;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: center;
+
+    @include max-width($touch) {
+      padding: 0 40px 0 20px;
+      text-align: left;
+    }
+  }
+}
+
+.modal-feeling-form {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+
+  @include max-width($touch) {
+    margin-top: 10px;
+  }
+}
+
+.modal-feeling-col {
+  width: 20%;
+  margin: 10px 0;
+
+  @include max-width(700px) {
+    flex-grow: 1;
+    width: 50%;
+    margin: 5px 0;
+  }
+
+  $col: &;
+
+  &--red {
+    #{$col}__title {
+      color: $red;
+    }
+
+    .checkbox-feel {
+      .checkbox__input {
+        &:checked + .checkbox__custom {
+          background-color: $pale-red;
+        }
+      }
+    }
+  }
+  &--blue-light {
+    #{$col}__title {
+      color: $blue-light;
+    }
+
+    .checkbox-feel {
+      .checkbox__input {
+        &:checked + .checkbox__custom {
+          background-color: $pale-blue;
+        }
+      }
+    }
+  }
+  &--blue {
+    #{$col}__title {
+      color: $blue;
+    }
+
+    .checkbox-feel {
+      .checkbox__input {
+        &:checked + .checkbox__custom {
+          background-color: $pale-blue-light;
+        }
+      }
+    }
+  }
+  &--yellow {
+    #{$col}__title {
+      color: $yellow;
+    }
+
+    .checkbox-feel {
+      .checkbox__input {
+        &:checked + .checkbox__custom {
+          background-color: $pale-yellow;
+        }
+      }
+    }
+  }
+  &--purple {
+    #{$col}__title {
+      color: $purple;
+    }
+
+    .checkbox-feel {
+      .checkbox__input {
+        &:checked + .checkbox__custom {
+          background-color: $pale-purple;
+        }
+      }
+    }
+  }
+  &--gray {
+    width: 100%;
+
+    @include max-width(700px) {
+      width: 50%;
+    }
+
+    #{$col}__title {
+      color: $blue-dark;
+      text-align: center;
+      background-color: rgba($color: $gray-light, $alpha: 0.5);
+
+      @include max-width(700px) {
+        display: none;
+      }
+
+      &.on-mobile {
+        display: none;
+
+        @include max-width(700px) {
+          display: block;
+          text-align: left;
+          background-color: rgba($color: #f9e3eb, $alpha: 0.5);
+        }
+      }
+    }
+
+    #{$col}__wrap {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    #{$col}__item {
+      width: 20%;
+
+      @include max-width(700px) {
+        width: 100%;
+      }
+    }
+
+    .checkbox-feel {
+      .checkbox__input {
+        &:checked + .checkbox__custom {
+          background-color: rgba($color: $gray-light, $alpha: 0.5);
+        }
+      }
+    }
+  }
+
+  &__title {
+    display: block;
+    padding: 10px 10px 10px 40px;
+    font-family: $roboto-slab;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: rgba($color: #f9e3eb, $alpha: 0.5);
+
+    @include max-width($touch) {
+      padding: 10px 0 10px 20px;
+    }
+
+    @include max-width($phone) {
+      padding: 10px 20px;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  &__item {
+    padding: 0 10px 0 20px;
+
+    @include max-width($touch) {
+      padding: 0 0 0 5px;
+    }
+  }
+}
+
+.modal-buttons {
+  display: flex;
+  padding: 15px;
+
+  .button {
+    margin: 0 auto;
+
+    @include max-width($phone) {
+      flex-grow: 1;
+      margin: 0;
+    }
+  }
+}
+
+.modal-training {
+  .modal {
+    max-width: 790px;
+    padding: 40px;
+
+    @include max-width($phone) {
+      padding: 40px 25px;
+    }
+  }
+
+  .logo {
+    margin: 0 0 50px;
+  }
+}
+
+.modal-train-slider-wrapper {
+  @include max-width($phone) {
+    text-align: center;
+  }
+}
+
+.modal-train-pagination {
+  position: static;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 50px 0 0;
+
+  @include max-width($phone) {
+    justify-content: center;
+    margin: 30px 0 0;
+  }
+
+  .swiper-pagination-bullet {
+    width: 12px;
+    min-width: 12px;
+    height: 12px;
+    min-height: 12px;
+    background-color: $gray;
+    outline: none;
+    opacity: 0.5;
+
+    &:not(:last-of-type) {
+      margin-right: 10px;
+    }
+
+    &.swiper-pagination-bullet-active {
+      background-color: $blue;
+      opacity: 1;
+    }
+  }
+}
+
+.modal-train-slide {
+  .modal-title {
+    margin: 0 0 25px;
+
+    @include max-width($touch) {
+      padding: 0;
+    }
+
+    @include max-width($phone) {
+      text-align: center;
+    }
+  }
+
+  .checkbox {
+    margin: 25px 0 0;
+
+    @include max-width($phone) {
+      text-align: left;
+    }
+  }
+}
+
+.modal-train__text {
+  margin: 0 0 25px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: $blue-dark;
+}
+
+.modal-train__subtext {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  color: $blue-dark;
+}
+
+.modal-train-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 40px 0 0;
+
+  @include max-width($phone) {
+    flex-direction: column;
+    justify-content: unset;
+    margin: 30px 0 0;
+  }
+
+  .button {
+    width: 100%;
+    min-width: auto;
+    max-width: 270px;
+    margin: 0;
+    letter-spacing: 0.4px;
+
+    &.hidden {
+      display: none;
+    }
+  }
+
+  .modal-train__link {
+    width: auto;
+    min-width: auto;
+    max-width: none;
+    padding: 0;
+    color: $gray;
+
+    @include max-width($phone) {
+      margin-top: 20px;
+    }
+  }
+}

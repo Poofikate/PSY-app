@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>UI elements</title>
+  </head>
+
+  <body>
+    <section>
+      <h2 style="text-align: center;">Текст</h2>
+
+      <div style="margin: 20px;">
+        <h1 class="h1">Заголовок H-1</h1>
+        <h2 class="h2">Заголовок H-2</h2>
+        <h3 class="h3">Заголовок H-3</h3>
+        <h4 class="h4">Заголовок H-4</h4>
+        <h5 class="h5">Заголовок H-5</h5>
+        <h6 class="h6">Заголовок H-6</h6>
+      </div>
+
+      <div style="margin: 20px;">
+        <h1 class="h2">Заголовок H-1 (H-2)</h1>
+        <h2 class="h3">Заголовок H-2 (H-3)</h2>
+        <h3 class="h4">Заголовок H-3 (H-4)</h3>
+        <h4 class="h5">Заголовок H-4 (H-5)</h4>
+        <h5 class="h6">Заголовок H-5 (H-6)</h5>
+        <h6 class="h6">Заголовок H-6 (H-6)</h6>
+      </div>
+
+      <div style="margin: 20px 0;">
+        <h2 style="text-align: center;">Кнопки</h2>
+
+        <button class="button" type="button">
+          Кнопка обычная
+        </button>
+        <button class="button button--invert" type="button">
+          Кнопка инвертированная
+        </button>
+        <button class="button" type="button">
+          <svg class="svg">
+            <use xlink:href="#play"></use>
+          </svg>
+
+          Кнопка обычная
+        </button>
+        <button class="button button--invert" type="button">
+          <svg class="svg">
+            <use xlink:href="#play"></use>
+          </svg>
+
+          Кнопка инвертированная
+        </button>
+
+        <br />
+
+        <button class="button button--gray" type="button">
+          Кнопка обычная
+        </button>
+        <button class="button button--gray" type="button">
+          <svg class="svg">
+            <use xlink:href="#play"></use>
+          </svg>
+
+          Кнопка обычная
+        </button>
+
+        <br />
+
+        <button class="button button--not-button" type="button">
+          Кнопка обычная
+        </button>
+
+        <br />
+
+        <button class="button button--gray button-play" type="button">
+          <svg class="svg">
+            <use xlink:href="#play"></use>
+          </svg>
+        </button>
+
+        <br />
+
+        <button class="button button-icon" type="button">
+          <svg class="svg">
+            <use xlink:href="#question"></use>
+          </svg>
+        </button>
+
+        <br />
+
+        <button class="button button-arrow button-arrow--prev" type="button">
+          <svg class="svg">
+            <use xlink:href="#arrow"></use>
+          </svg>
+        </button>
+        <button class="button button-arrow button-arrow--next" type="button">
+          <svg class="svg">
+            <use xlink:href="#arrow"></use>
+          </svg>
+        </button>
+
+        <br />
+
+        <div class="tabs">
+          <button class="button button-tab active" type="button">
+            Задачи
+          </button>
+          <button class="button button-tab" type="button">
+            Оценка
+          </button>
+        </div>
+
+        <br />
+
+        <div class="dropdown j_dropdown" id="dropdown1">
+          <button
+            data-dropdown-target="#dropdown1"
+            class="button dropdown__button"
+            type="button"
+          >
+            <span>
+              1 час
+            </span>
+
+            <svg class="svg">
+              <use xlink:href="#arrow"></use>
+            </svg>
+          </button>
+
+          <div class="dropdown__content">
+            <div class="dropdown__scroller">
+              <ul class="dropdown__list">
+                <li class="dropdown__item">
+                  <label class="checkbox">
+                    <input class="checkbox__input" type="checkbox" />
+                    <div class="checkbox__custom">
+                      <span class="checkbox__text">
+                        1 час
+                      </span>
+                    </div>
+                  </label>
+                </li>
+                <li class="dropdown__item">
+                  <label class="checkbox">
+                    <input class="checkbox__input" type="checkbox" />
+                    <div class="checkbox__custom">
+                      <span class="checkbox__text">
+                        2 час
+                      </span>
+                    </div>
+                  </label>
+                </li>
+                <li class="dropdown__item">
+                  <label class="checkbox">
+                    <input class="checkbox__input" type="checkbox" />
+                    <div class="checkbox__custom">
+                      <span class="checkbox__text">
+                        3 час
+                      </span>
+                    </div>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 style="text-align: center;">Инпуты</h2>
+
+      <div
+        style="display: flex; flex-direction: column; align-items: flex-start; padding: 20px;margin: 20px 0;"
+      >
+        <input class="input" type="text" placeholder="Placeholder Input" />
+        <input
+          class="input input--not-valid"
+          type="text"
+          placeholder="Placeholder Input"
+        />
+
+        <textarea
+          id=""
+          cols="30"
+          rows="10"
+          class="textarea"
+          placeholder="Placeholder Textarea"
+        ></textarea>
+
+        <label class="checkbox">
+          <input class="checkbox__input" type="checkbox" />
+          <div class="checkbox__custom">
+            <svg class="checkbox__icon stroke">
+              <use xlink:href="#done"></use>
+            </svg>
+          </div>
+          <span class="checkbox__text">
+            Согласен на обработку
+            <a class="checkbox__link" href="#">персональных данных</a>
+          </span>
+        </label>
+
+        <label class="radio">
+          <input class="radio__input" type="radio" name="name1" />
+          <div class="radio__custom">
+            <svg class="radio__icon">
+              <use xlink:href="#done"></use>
+            </svg>
+          </div>
+          <span class="radio__text">
+            Согласен на обработку
+            <a class="radio__link" href="#">персональных данных</a>
+          </span>
+        </label>
+      </div>
+    </section>
+  </body>
+</html>
