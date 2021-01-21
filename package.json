@@ -72,6 +72,7 @@
     "easytimer.js": "^4.3.0",
     "echarts": "^4.9.0",
     "gsap": "^3.5.1",
+    "node-waves": "^0.7.6",
     "nouislider": "^14.6.2",
     "plyr": "^3.6.2",
     "scroll-lock": "^2.1.4",

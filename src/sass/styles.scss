@@ -2,6 +2,7 @@
 @import 'extensions/reset';
 
 // Libs - Библиотеки
+@import '~node-waves/dist/waves.min.css';
 
 // Variables - Переменные
 @import 'variables/fonts';
@@ -13,5 +14,6 @@
 @import 'variables/UI';
 
 // Components - Компоненты
+@import 'components/nav-bar';
 
 // Sections - Разделы сайта
