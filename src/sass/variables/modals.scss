@@ -6,7 +6,7 @@
   display: block;
   width: 100%;
   height: 100%;
-  padding: 20px;
+  padding: 15px;
   overflow: auto;
   overflow-x: hidden;
   overflow-y: auto;
@@ -18,9 +18,6 @@
   opacity: 0;
   transition: opacity 0.3s, visibility 0.4s;
 
-  @media (max-width: 768px) {
-    padding: 15px;
-  }
   &::before {
     display: inline-block;
     height: 100%;
@@ -42,7 +39,7 @@
     display: inline-block;
     width: 100%;
     max-width: 480px;
-    padding: 60px 40px;
+    padding: 20px 15px;
     font-size: 1rem;
     text-align: center;
     white-space: normal;
@@ -52,14 +49,6 @@
     opacity: 0;
     transition: opacity 0.4s, transform 0.4s;
     transform: scale(0.5) translateY(100%);
-
-    @include max-width($touch) {
-      padding: 20px;
-    }
-
-    @include max-width($phone) {
-      padding: 20px 15px;
-    }
 
     &--small {
       max-width: 420px;
@@ -106,12 +95,9 @@
 }
 
 .modal-title {
+  padding-right: 50px;
   color: $blue-dark;
   text-align: left;
-
-  @include max-width($touch) {
-    padding-right: 50px;
-  }
 }
 
 .modal-wrap {
@@ -132,30 +118,18 @@
 .modal-form {
   display: flex;
   flex-direction: column;
-  margin: 30px auto 0;
-
-  @include max-width($touch) {
-    max-width: 100%;
-    margin: 20px 0 0;
-  }
+  max-width: 100%;
+  margin: 20px 0 0;
 
   .input,
   .textarea {
     width: 100%;
-    margin: 10px 0;
-
-    @include max-width($touch) {
-      margin: 5px 0;
-    }
+    margin: 5px 0;
   }
 
   .button {
     width: 100%;
-    margin: 20px 0 0;
-
-    @include max-width($touch) {
-      margin: 10px 0 0;
-    }
+    margin: 10px 0 0;
   }
 
   br {
@@ -163,57 +137,39 @@
   }
 }
 
-.modal-instruction {
-  .modal {
-    @include min-width($touch + 1px) {
-      padding: 60px 40px 40px 60px;
-    }
-  }
-}
+// .modal-instruction {
+//   .modal {
+//     @include min-width($touch + 1px) {
+//       padding: 60px 40px 40px 60px;
+//     }
+//   }
+// }
 
 .modal-feeling {
   .modal {
-    padding-top: 30px;
-    padding-bottom: 45px;
-
-    @include max-width($touch) {
-      padding-top: 20px;
-      padding-bottom: 20px;
-    }
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
   .modal-title {
+    padding: 0 40px 0 20px;
     font-family: $roboto-slab;
     font-size: 1.5rem;
     font-weight: 300;
-    text-align: center;
-
-    @include max-width($touch) {
-      padding: 0 40px 0 20px;
-      text-align: left;
-    }
+    text-align: left;
   }
 }
 
 .modal-feeling-form {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 20px;
-
-  @include max-width($touch) {
-    margin-top: 10px;
-  }
+  margin-top: 10px;
 }
 
 .modal-feeling-col {
-  width: 20%;
-  margin: 10px 0;
-
-  @include max-width(700px) {
-    flex-grow: 1;
-    width: 50%;
-    margin: 5px 0;
-  }
+  flex-grow: 1;
+  width: 50%;
+  margin: 5px 0;
 
   $col: &;
 
@@ -283,11 +239,7 @@
     }
   }
   &--gray {
-    width: 100%;
-
-    @include max-width(700px) {
-      width: 50%;
-    }
+    width: 50%;
 
     #{$col}__title {
       color: $blue-dark;
@@ -333,20 +285,12 @@
 
   &__title {
     display: block;
-    padding: 10px 10px 10px 40px;
+    padding: 10px 20px;
     font-family: $roboto-slab;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
     background-color: rgba($color: #f9e3eb, $alpha: 0.5);
-
-    @include max-width($touch) {
-      padding: 10px 0 10px 20px;
-    }
-
-    @include max-width($phone) {
-      padding: 10px 20px;
-    }
   }
 
   &__wrap {
@@ -359,11 +303,7 @@
   }
 
   &__item {
-    padding: 0 10px 0 20px;
-
-    @include max-width($touch) {
-      padding: 0 0 0 5px;
-    }
+    padding: 0 0 0 5px;
   }
 }
 
@@ -372,23 +312,15 @@
   padding: 15px;
 
   .button {
-    margin: 0 auto;
-
-    @include max-width($phone) {
-      flex-grow: 1;
-      margin: 0;
-    }
+    flex-grow: 1;
+    margin: 0;
   }
 }
 
 .modal-training {
   .modal {
     max-width: 790px;
-    padding: 40px;
-
-    @include max-width($phone) {
-      padding: 40px 25px;
-    }
+    padding: 40px 25px;
   }
 
   .logo {
@@ -397,22 +329,15 @@
 }
 
 .modal-train-slider-wrapper {
-  @include max-width($phone) {
-    text-align: center;
-  }
+  text-align: center;
 }
 
 .modal-train-pagination {
   position: static;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  margin: 50px 0 0;
-
-  @include max-width($phone) {
-    justify-content: center;
-    margin: 30px 0 0;
-  }
+  justify-content: center;
+  margin: 30px 0 0;
 
   .swiper-pagination-bullet {
     width: 12px;
@@ -437,22 +362,12 @@
 .modal-train-slide {
   .modal-title {
     margin: 0 0 25px;
-
-    @include max-width($touch) {
-      padding: 0;
-    }
-
-    @include max-width($phone) {
-      text-align: center;
-    }
+    text-align: center;
   }
 
   .checkbox {
     margin: 25px 0 0;
-
-    @include max-width($phone) {
-      text-align: left;
-    }
+    text-align: left;
   }
 }
 
@@ -472,15 +387,10 @@
 
 .modal-train-buttons {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  margin: 40px 0 0;
-
-  @include max-width($phone) {
-    flex-direction: column;
-    justify-content: unset;
-    margin: 30px 0 0;
-  }
+  justify-content: unset;
+  margin: 30px 0 0;
 
   .button {
     width: 100%;
@@ -499,10 +409,7 @@
     min-width: auto;
     max-width: none;
     padding: 0;
+    margin-top: 20px;
     color: $gray;
-
-    @include max-width($phone) {
-      margin-top: 20px;
-    }
   }
 }

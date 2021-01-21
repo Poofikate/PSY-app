@@ -2,24 +2,6 @@
   box-sizing: border-box;
 }
 
-// @include min-width($touch + 1px) {
-//   html {
-//     height: 100%;
-//   }
-
-//   body {
-//     display: flex;
-//     flex-direction: column;
-//     height: 100%;
-//   }
-
-//   main {
-//     display: flex;
-//     flex-direction: column;
-//     flex-grow: 1;
-//   }
-// }
-
 .container {
   width: 100%;
   max-width: $container-max-width;
@@ -28,27 +10,7 @@
 }
 
 section {
-  padding: $section-padding;
-
-  &:first-of-type {
-    padding-top: 90px;
-
-    @include max-width($touch) {
-      padding-top: 65px;
-    }
-  }
-
-  &:first-of-type:last-of-type {
-    flex-grow: 1;
-  }
-
-  @include max-width($tablet) {
-    padding: $section-padding-tablet;
-  }
-
-  @include max-width($phone) {
-    padding: $section-padding-phone;
-  }
+  padding: $section-padding-phone;
 }
 
 a {
