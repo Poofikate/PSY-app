@@ -13,11 +13,11 @@ section {
   padding: $section-padding-phone;
 
   &:first-of-type {
-    padding-top: 0;
+    padding-top: 10px;
   }
 
   &:last-of-type {
-    padding-bottom: 40px;
+    padding-bottom: 30px;
   }
 }
 
