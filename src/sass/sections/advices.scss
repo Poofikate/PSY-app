@@ -1,0 +1,71 @@
+.stats-info {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: $white;
+  border-radius: 6px;
+
+  .meditation__list {
+    margin: 0;
+  }
+
+  .meditation__text {
+    width: auto;
+    min-width: auto;
+
+    b {
+      font-weight: bold;
+    }
+  }
+
+  .locked-content {
+    display: none !important;
+
+    @include max-width($touch) {
+      display: flex !important;
+    }
+  }
+}
+
+.stats-info__wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.stats-info__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.meditation__list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  overflow: hidden;
+  counter-reset: count;
+}
+
+.meditation__item {
+  counter-increment: count;
+
+  &:not(:last-of-type) {
+    margin-bottom: 15px;
+  }
+}
+
+.meditation__text {
+  font-size: 14px;
+  line-height: 1.5;
+  color: $blue-dark;
+
+  &::before {
+    font-family: $roboto;
+    content: counter(count) '.';
+  }
+
+  b {
+    color: $blue;
+  }
+}
