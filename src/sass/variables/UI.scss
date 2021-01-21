@@ -211,6 +211,12 @@ button {
     &.swiper-button-lock {
       display: none;
     }
+
+    &:disabled,
+    &.swiper-button-disabled {
+      color: $gray;
+      background-color: transparent;
+    }
   }
 
   &-icon {
@@ -847,22 +853,17 @@ button {
   width: 100%;
 
   .datepicker__wrapper {
+    right: auto !important;
+    left: 50% !important;
     z-index: 3 !important;
-    width: 320px;
-    padding: 15px 20px 5px;
+    width: 290px;
+    padding: 10px;
     font-family: $roboto;
     background-color: $gray-light;
     border: none;
     border-radius: 6px;
     box-shadow: 0 0 5px rgba($color: $blue-dark, $alpha: 0.2) !important;
-
-    @include max-width($touch) {
-      padding: 10px;
-    }
-
-    @include max-width(400px) {
-      width: 100%;
-    }
+    transform: translate(-50%);
   }
 
   .datepicker__header {
@@ -871,12 +872,8 @@ button {
     justify-content: space-between;
     padding: 0;
     margin: 0;
-    margin: 0 0 15px;
+    margin: 0 0 10px;
     background: transparent;
-
-    @include max-width(400px) {
-      margin: 0 0 10px;
-    }
   }
 
   .datepicker__title {

@@ -3,6 +3,7 @@
 
 // Libs - Библиотеки
 @import '~node-waves/dist/waves.min.css';
+@import '~Datepicker.js/dist/css/datepicker.material.css';
 
 // Variables - Переменные
 @import 'variables/fonts';
@@ -16,5 +17,6 @@
 // Components - Компоненты
 @import 'components/nav-bar';
 @import 'components/progress';
+@import 'components/date';
 
 // Sections - Разделы сайта
