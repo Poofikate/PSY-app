@@ -9,3 +9,4 @@ Waves.attach('.button--dark:not(.button--invert)', [
   'waves-float',
   'waves-light',
 ]);
+Waves.attach('.task', ['waves-float']);
