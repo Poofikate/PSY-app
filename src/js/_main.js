@@ -10,5 +10,6 @@ import './modules/polyfills/closest';
 // modules
 import './modules/ClickWaves';
 import './modules/datepicker';
+import './modules/TabsController';
 
 // sliders

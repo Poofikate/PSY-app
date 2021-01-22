@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <title>Results</title>
+  </head>
+  <body>
+    <main>
+      <!-- results -->
+      <section class="results-section">
+        <div class="container">
+          <!-- wrap -->
+          <div class="results-wrap">
+            <h6 class="subtitle">
+              Ваш супер прогресс
+            </h6>
+
+            <div class="results-info">
+              <div class="results-info__content">
+                <p class="results-info__text">
+                  На этой неделе все ваши показатели улучшились <b>на 20%</b>.
+                  Так держать!
+                </p>
+              </div>
+
+              <div class="results-info__img-wrapper">
+                <img src="./img/bear.svg" alt="" class="results-info__img" />
+              </div>
+            </div>
+
+            <div data-tabs-container class="results">
+              <div class="tabs">
+                <button
+                  data-tab="tab1"
+                  class="button button-tab active"
+                  type="button"
+                >
+                  Показатели
+                </button>
+                <button data-tab="tab2" class="button button-tab" type="button">
+                  Графики
+                </button>
+              </div>
+
+              <div data-tab-content="tab1" class="tab-content j_locked">
+                <div class="results-desc-wrapper">
+                  <div class="results-indicators">
+                    <div class="tasks-card-stat">
+                      <div class="tasks-card-stat__percent-wrapper">
+                        <svg
+                          data-percent="22"
+                          width="14"
+                          height="14"
+                          viewBox="0 0 14 14"
+                          class="tasks-card-stat__progress j_progressBar"
+                        >
+                          <circle cx="7" cy="7" r="6.5" />
+                        </svg>
+
+                        <span class="tasks-card-stat__percent">
+                          22%
+                        </span>
+                      </div>
+
+                      <span class="tasks-card-stat__text">
+                        Средний процент выполнения заданий
+                      </span>
+                    </div>
+                    <div class="tasks-card-stat">
+                      <div class="tasks-card-stat__percent-wrapper">
+                        <svg
+                          data-percent="40"
+                          width="14"
+                          height="14"
+                          viewBox="0 0 14 14"
+                          class="tasks-card-stat__progress j_progressBar"
+                        >
+                          <circle cx="7" cy="7" r="6.5" />
+                        </svg>
+
+                        <span class="tasks-card-stat__percent">
+                          40%
+                        </span>
+                      </div>
+
+                      <span class="tasks-card-stat__text">
+                        На этой неделе все ваши показатели улучшились
+                      </span>
+                    </div>
+                    <div class="tasks-card-stat">
+                      <div class="tasks-card-stat__percent-wrapper">
+                        <svg
+                          data-percent="51"
+                          width="14"
+                          height="14"
+                          viewBox="0 0 14 14"
+                          class="tasks-card-stat__progress j_progressBar"
+                        >
+                          <circle cx="7" cy="7" r="6.5" />
+                        </svg>
+
+                        <span class="tasks-card-stat__percent">
+                          15%
+                        </span>
+                      </div>
+
+                      <span class="tasks-card-stat__text">
+                        минут вы тратите ежедневно на выполнения заданий
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="results-desc">
+                    <div class="results-desc-item">
+                      <h3 class="results-desc-item__title">
+                        Ваше настроение в течении этой недели
+                      </h3>
+
+                      <div class="results-desc-item__content">
+                        <div class="results-desc-item__tasks">
+                          <div class="results-desc-item__task">
+                            <svg class="results-desc-item__icon">
+                              <use xlink:href="#task3"></use>
+                            </svg>
+                          </div>
+                          <div class="results-desc-item__task">
+                            <svg class="results-desc-item__icon">
+                              <use xlink:href="#task4"></use>
+                            </svg>
+                          </div>
+                          <div class="results-desc-item__task">
+                            <svg class="results-desc-item__icon">
+                              <use xlink:href="#task5"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="results-desc-item">
+                      <h3 class="results-desc-item__title">
+                        Вы наиболее счестливы, выполняя эти задачи:
+                      </h3>
+
+                      <div class="results-desc-item__content">
+                        <div class="results-desc-item__tasks">
+                          <div class="results-desc-item__task">
+                            <svg class="results-desc-item__icon">
+                              <use xlink:href="#task3"></use>
+                            </svg>
+                          </div>
+                          <div class="results-desc-item__task">
+                            <svg class="results-desc-item__icon">
+                              <use xlink:href="#task4"></use>
+                            </svg>
+                          </div>
+                          <div class="results-desc-item__task">
+                            <svg class="results-desc-item__icon">
+                              <use xlink:href="#task5"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div data-tab-content="tab2" class="tab-content">
+                <div class="stats-charts">
+                  ${require('./modules/components/date.html')}
+
+                  <div class="stats-chart-container-wrapper">
+                    <h3 class="section-title">
+                      Выполненные задачи в течении недели
+                    </h3>
+
+                    <div class="stats-chart-container">
+                      <div class="stats-chart-wrapper">
+                        <div class="stats-chart-wrap">
+                          <div
+                            data-prev="[8, 6, 7, 3, 5, 4, 3, 6]"
+                            data-current="[7, 5, 4, 6, 8, 6, 8, 8]"
+                            data-prev-color="#EBEDEF"
+                            data-current-color="#1CA7C4"
+                            class="stats-chart j_polar-chart"
+                          ></div>
+
+                          <div class="stats-chart-items">
+                            <div class="stats-chart-item">
+                              <div class="stats-chart-item__wrap">
+                                <svg class="stats-chart-item__icon">
+                                  <use xlink:href="#task1"></use>
+                                </svg>
+
+                                <em class="notifications-num">
+                                  2
+                                </em>
+                              </div>
+                            </div>
+                            <div class="stats-chart-item">
+                              <div class="stats-chart-item__wrap">
+                                <svg class="stats-chart-item__icon">
+                                  <use xlink:href="#task1"></use>
+                                </svg>
+
+                                <em class="notifications-num">
+                                  2
+                                </em>
+                              </div>
+                            </div>
+                            <div class="stats-chart-item">
+                              <div class="stats-chart-item__wrap">
+                                <svg class="stats-chart-item__icon">
+                                  <use xlink:href="#task1"></use>
+                                </svg>
+
+                                <em class="notifications-num">
+                                  2
+                                </em>
+                              </div>
+                            </div>
+                            <div class="stats-chart-item">
+                              <div class="stats-chart-item__wrap">
+                                <svg class="stats-chart-item__icon">
+                                  <use xlink:href="#task1"></use>
+                                </svg>
+
+                                <em class="notifications-num">
+                                  2
+                                </em>
+                              </div>
+                            </div>
+                            <div class="stats-chart-item">
+                              <div class="stats-chart-item__wrap">
+                                <svg class="stats-chart-item__icon">
+                                  <use xlink:href="#task1"></use>
+                                </svg>
+
+                                <em class="notifications-num">
+                                  2
+                                </em>
+                              </div>
+                            </div>
+                            <div class="stats-chart-item">
+                              <div class="stats-chart-item__wrap">
+                                <svg class="stats-chart-item__icon">
+                                  <use xlink:href="#task1"></use>
+                                </svg>
+
+                                <em class="notifications-num">
+                                  2
+                                </em>
+                              </div>
+                            </div>
+                            <div class="stats-chart-item">
+                              <div class="stats-chart-item__wrap">
+                                <svg class="stats-chart-item__icon">
+                                  <use xlink:href="#task1"></use>
+                                </svg>
+
+                                <em class="notifications-num">
+                                  2
+                                </em>
+                              </div>
+                            </div>
+                            <div class="stats-chart-item">
+                              <div class="stats-chart-item__wrap">
+                                <svg class="stats-chart-item__icon">
+                                  <use xlink:href="#task1"></use>
+                                </svg>
+
+                                <em class="notifications-num">
+                                  2
+                                </em>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="stats-line-chart-container-wrapper">
+                    <h3 class="section-title">
+                      Ваше настроение в течении недели
+                    </h3>
+
+                    <div class="stats-line-chart-container">
+                      <div class="stats-line-chart-wrapper">
+                        <div class="stats-line-chart-wrap">
+                          <div
+                            data-prev="[0, 1, 2, 3, 5, 4, 2]"
+                            data-current="[2, 3, 1, 5, 4, 4, 3]"
+                            data-prev-color="#EBEDEF"
+                            data-current-color="#1CA7C4"
+                            class="stats-chart j_line-chart"
+                          ></div>
+
+                          <div class="stats-line-chart-moods">
+                            <div
+                              class="stats-line-chart-mood stats-line-chart-mood--green"
+                            >
+                              <svg class="stats-line-chart-mood__icon">
+                                <use xlink:href="#mood_green"></use>
+                              </svg>
+                            </div>
+                            <div
+                              class="stats-line-chart-mood stats-line-chart-mood--yellow-green"
+                            >
+                              <svg class="stats-line-chart-mood__icon">
+                                <use xlink:href="#mood_yellow-green"></use>
+                              </svg>
+                            </div>
+                            <div
+                              class="stats-line-chart-mood stats-line-chart-mood--yellow"
+                            >
+                              <svg class="stats-line-chart-mood__icon">
+                                <use xlink:href="#mood_yellow"></use>
+                              </svg>
+                            </div>
+                            <div
+                              class="stats-line-chart-mood stats-line-chart-mood--orange"
+                            >
+                              <svg class="stats-line-chart-mood__icon">
+                                <use xlink:href="#mood_orange"></use>
+                              </svg>
+                            </div>
+                            <div
+                              class="stats-line-chart-mood stats-line-chart-mood--red"
+                            >
+                              <svg class="stats-line-chart-mood__icon">
+                                <use xlink:href="#mood_red"></use>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="stats-line-chart-legends">
+                          <div
+                            class="stats-line-chart-legend stats-line-chart-legend--gray"
+                          >
+                            <i class="stats-line-chart-legend__custom"></i>
+                            <span class="stats-line-chart-legend__text">
+                              Прошлая неделя
+                            </span>
+                          </div>
+                          <div
+                            class="stats-line-chart-legend stats-line-chart-legend--blue"
+                          >
+                            <i class="stats-line-chart-legend__custom"></i>
+                            <span class="stats-line-chart-legend__text">
+                              Текущая неделя
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ./ End of wrap -->
+        </div>
+        <!-- ./ End of container -->
+      </section>
+      <!-- ./ End of results -->
+    </main>
+    ${require('./modules/components/nav-bar.html')}
+  </body>
+</html>
