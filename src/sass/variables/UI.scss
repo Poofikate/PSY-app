@@ -91,6 +91,7 @@ button {
     color: $blue-dark;
     background-color: rgba($color: $gray, $alpha: 0.2);
     border-color: transparent;
+    box-shadow: none;
 
     $color: $gray;
 
@@ -202,6 +203,7 @@ button {
     color: $blue;
     background-color: $white;
     border-radius: 20px;
+    box-shadow: none;
 
     &:nth-child(even) {
       margin-left: -30px;
