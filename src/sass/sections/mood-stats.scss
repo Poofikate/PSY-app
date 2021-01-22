@@ -1,0 +1,128 @@
+.mood-stats {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  overflow: hidden;
+}
+
+.mood-stat {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  color: $blue-dark;
+  background-color: $white;
+
+  &:not(:last-of-type) {
+    margin-bottom: 20px;
+
+    .mood-stat__assessment {
+      &::before {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        z-index: -1;
+        width: 1px;
+        height: 100px;
+        content: '';
+        background-color: $gray;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &__inner {
+    display: inline-flex;
+    flex-grow: 1;
+    align-items: center;
+    margin-right: 10px;
+  }
+
+  &__time {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.2;
+  }
+
+  &__assessment {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    min-width: 34px;
+    height: 34px;
+    min-height: 34px;
+    padding: 5px;
+    margin: 0 12px 0 15px;
+    background-color: $gray;
+    border-radius: 50%;
+
+    &--red {
+      background-color: $red;
+    }
+    &--orange {
+      background-color: $orange;
+    }
+    &--yellow {
+      background-color: $yellow;
+    }
+    &--green-yellow {
+      background-color: $green-yellow;
+    }
+    &--green {
+      background-color: $green;
+    }
+
+    .svg {
+      width: 18px;
+      height: 18px;
+      fill: $white;
+    }
+  }
+
+  &__title {
+    flex-grow: 1;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  &__tasks-wrapper {
+    @include max-width(400px) {
+      width: 100%;
+      max-width: 110px;
+    }
+
+    @include max-width(350px) {
+      width: 100%;
+      max-width: 72px;
+    }
+  }
+
+  &__tasks {
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: 0 -2px;
+  }
+
+  &__task {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    min-width: 34px;
+    height: 34px;
+    min-height: 34px;
+    padding: 5px;
+    margin: 2px;
+    background-color: $gray-light;
+    border-radius: 50%;
+  }
+
+  &__icon {
+    width: 22px;
+    height: 22px;
+    fill: $blue-dark;
+  }
+}

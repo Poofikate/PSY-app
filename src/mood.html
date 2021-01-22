@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <title>Mood</title>
+  </head>
+  <body>
+    <main>
+      <!-- mood -->
+      <section class="mood-section">
+        <div class="container">
+          <!-- wrap -->
+          <div class="mood-wrap">
+            <h6 class="subtitle subtitle--red">
+              Сегодня вы довольны!
+            </h6>
+            <h6 class="subtitle subtitle--orange">
+              Сегодня вы довольны!
+            </h6>
+            <h6 class="subtitle subtitle--yellow">
+              Сегодня вы довольны!
+            </h6>
+            <h6 class="subtitle subtitle--green-yellow">
+              Сегодня вы довольны!
+            </h6>
+            <h6 class="subtitle subtitle--green">
+              Сегодня вы довольны!
+            </h6>
+
+            ${require('./modules/components/date.html')}
+
+            <div class="tasks-card-mobile__header-mobile">
+              <h1 class="tasks-card__title">
+                Уровень беспокойства
+              </h1>
+            </div>
+
+            <!-- class for button - 'selected'  -->
+            <div class="tasks-mood">
+              <div class="mood-wrap">
+                <span class="mood__text">
+                  Вечерняя оценка
+                </span>
+
+                <div class="mood-list">
+                  <label class="radio radio-music radio-mood radio-mood--red">
+                    <input class="radio__input" type="radio" name="audio" />
+                    <div class="radio__custom">
+                      <svg class="radio__icon">
+                        <use xlink:href="#mood_red"></use>
+                      </svg>
+                    </div>
+                  </label>
+                  <label
+                    class="radio radio-music radio-mood radio-mood--orange"
+                  >
+                    <input class="radio__input" type="radio" name="audio" />
+                    <div class="radio__custom">
+                      <svg class="radio__icon">
+                        <use xlink:href="#mood_orange"></use>
+                      </svg>
+                    </div>
+                  </label>
+                  <label
+                    class="radio radio-music radio-mood radio-mood--yellow"
+                  >
+                    <input class="radio__input" type="radio" name="audio" />
+                    <div class="radio__custom">
+                      <svg class="radio__icon">
+                        <use xlink:href="#mood_yellow"></use>
+                      </svg>
+                    </div>
+                  </label>
+                  <label
+                    class="radio radio-music radio-mood radio-mood--yellow-green"
+                  >
+                    <input class="radio__input" type="radio" name="audio" />
+                    <div class="radio__custom">
+                      <svg class="radio__icon">
+                        <use xlink:href="#mood_yellow-green"></use>
+                      </svg>
+                    </div>
+                  </label>
+                  <label class="radio radio-music radio-mood radio-mood--green">
+                    <input class="radio__input" type="radio" name="audio" />
+                    <div class="radio__custom">
+                      <svg class="radio__icon">
+                        <use xlink:href="#mood_green"></use>
+                      </svg>
+                    </div>
+                  </label>
+                </div>
+
+                <button
+                  class="button button--gray tasks-mood__button"
+                  type="button"
+                >
+                  Отправить
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- ./ End of wrap -->
+        </div>
+        <!-- ./ End of container -->
+      </section>
+      <!-- ./ End of mood -->
+
+      <!-- mood-stats -->
+      <section class="mood-stats-section">
+        <div class="container">
+          <!-- wrap -->
+          <div class="mood-stats-wrap">
+            <div class="tasks-card-mobile__header-mobile">
+              <h2 class="h1 tasks-card__title">
+                Настроение в течении дня
+              </h2>
+            </div>
+
+            <div class="mood-stats">
+              <div class="mood-stat">
+                <div class="mood-stat__inner">
+                  <time class="mood-stat__time">
+                    07:20
+                  </time>
+
+                  <div class="mood-stat__assessment mood-stat__assessment--red">
+                    <svg class="svg">
+                      <use xlink:href="#mood_red"></use>
+                    </svg>
+                  </div>
+
+                  <span class="mood-stat__title">
+                    Зол
+                  </span>
+                </div>
+
+                <div class="mood-stat__tasks-wrapper">
+                  <div class="mood-stat__tasks">
+                    <div class="mood-stat__task">
+                      <svg class="mood-stat__icon">
+                        <use xlink:href="#task1"></use>
+                      </svg>
+                    </div>
+                    <div class="mood-stat__task">
+                      <svg class="mood-stat__icon">
+                        <use xlink:href="#task2"></use>
+                      </svg>
+                    </div>
+                    <div class="mood-stat__task">
+                      <svg class="mood-stat__icon">
+                        <use xlink:href="#task3"></use>
+                      </svg>
+                    </div>
+                    <div class="mood-stat__task">
+                      <svg class="mood-stat__icon">
+                        <use xlink:href="#task4"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mood-stat">
+                <div class="mood-stat__inner">
+                  <time class="mood-stat__time">
+                    13:20
+                  </time>
+
+                  <div
+                    class="mood-stat__assessment mood-stat__assessment--orange"
+                  >
+                    <svg class="svg">
+                      <use xlink:href="#mood_red"></use>
+                    </svg>
+                  </div>
+
+                  <span class="mood-stat__title">
+                    Нейтрально
+                  </span>
+                </div>
+
+                <div class="mood-stat__tasks-wrapper">
+                  <div class="mood-stat__tasks">
+                    <div class="mood-stat__task">
+                      <svg class="mood-stat__icon">
+                        <use xlink:href="#task1"></use>
+                      </svg>
+                    </div>
+                    <div class="mood-stat__task">
+                      <svg class="mood-stat__icon">
+                        <use xlink:href="#task2"></use>
+                      </svg>
+                    </div>
+                    <div class="mood-stat__task">
+                      <svg class="mood-stat__icon">
+                        <use xlink:href="#task3"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mood-stat">
+                <div class="mood-stat__inner">
+                  <time class="mood-stat__time">
+                    13:20
+                  </time>
+
+                  <div
+                    class="mood-stat__assessment mood-stat__assessment--yellow"
+                  >
+                    <svg class="svg">
+                      <use xlink:href="#mood_red"></use>
+                    </svg>
+                  </div>
+
+                  <span class="mood-stat__title">
+                    Нейтрально
+                  </span>
+                </div>
+
+                <div class="mood-stat__tasks-wrapper">
+                  <div class="mood-stat__tasks">
+                    <div class="mood-stat__task">
+                      <svg class="mood-stat__icon">
+                        <use xlink:href="#task1"></use>
+                      </svg>
+                    </div>
+                    <div class="mood-stat__task">
+                      <svg class="mood-stat__icon">
+                        <use xlink:href="#task2"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mood-stat">
+                <div class="mood-stat__inner">
+                  <time class="mood-stat__time">
+                    13:20
+                  </time>
+
+                  <div
+                    class="mood-stat__assessment mood-stat__assessment--green-yellow"
+                  >
+                    <svg class="svg">
+                      <use xlink:href="#mood_red"></use>
+                    </svg>
+                  </div>
+
+                  <span class="mood-stat__title">
+                    Нейтрально
+                  </span>
+                </div>
+
+                <div class="mood-stat__tasks-wrapper">
+                  <div class="mood-stat__tasks">
+                    <div class="mood-stat__task">
+                      <svg class="mood-stat__icon">
+                        <use xlink:href="#task1"></use>
+                      </svg>
+                    </div>
+                    <div class="mood-stat__task">
+                      <svg class="mood-stat__icon">
+                        <use xlink:href="#task6"></use>
+                      </svg>
+                    </div>
+                    <div class="mood-stat__task">
+                      <svg class="mood-stat__icon">
+                        <use xlink:href="#task7"></use>
+                      </svg>
+                    </div>
+                    <div class="mood-stat__task">
+                      <svg class="mood-stat__icon">
+                        <use xlink:href="#task6"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mood-stat">
+                <div class="mood-stat__inner">
+                  <time class="mood-stat__time">
+                    13:20
+                  </time>
+
+                  <div
+                    class="mood-stat__assessment mood-stat__assessment--green"
+                  >
+                    <svg class="svg">
+                      <use xlink:href="#mood_red"></use>
+                    </svg>
+                  </div>
+
+                  <span class="mood-stat__title">
+                    Счастлив
+                  </span>
+                </div>
+
+                <div class="mood-stat__tasks-wrapper">
+                  <div class="mood-stat__tasks">
+                    <div class="mood-stat__task">
+                      <svg class="mood-stat__icon">
+                        <use xlink:href="#task1"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ./ End of wrap -->
+        </div>
+        <!-- ./ End of container -->
+      </section>
+      <!-- ./ End of mood-stats -->
+    </main>
+    ${require('./modules/components/nav-bar.html')}
+  </body>
+</html>

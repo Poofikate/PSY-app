@@ -1,0 +1,42 @@
+.mood-wrap {
+  text-align: center;
+}
+
+.tasks-mood {
+  width: 100%;
+  padding: 15px 20px 20px;
+  margin: 20px 0 0;
+  text-align: center;
+  background-color: $white;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba($color: $gray, $alpha: 0.5);
+
+  &.selected {
+    .tasks-mood__button {
+      display: inline-flex;
+    }
+  }
+
+  .mood-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    align-items: center;
+  }
+
+  .mood__text {
+    display: block;
+    margin: 0 0 15px;
+    font-family: $roboto-slab;
+    font-size: 16px;
+    font-weight: normal;
+    color: $blue-dark;
+    text-align: center;
+    opacity: 1;
+  }
+}
+
+.tasks-mood__button {
+  display: none;
+  min-width: 180px;
+  margin: 10px 0 5px;
+}

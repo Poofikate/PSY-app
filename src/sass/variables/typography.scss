@@ -70,4 +70,32 @@ h6,
   color: $blue-dark;
   background-color: $gray-light;
   border-radius: 8px;
+
+  &--red {
+    color: $white;
+    background-color: $red;
+  }
+
+  &--orange {
+    color: $white;
+    background-color: $orange;
+  }
+
+  &--yellow {
+    color: $white;
+    background-color: $yellow;
+  }
+
+  &--green-yellow {
+    color: $white;
+    background-color: $green-yellow;
+  }
+
+  &--green {
+    color: $white;
+    background-color: $green;
+  }
+  + .date-wrapper {
+    margin-top: 0;
+  }
 }
