@@ -54,6 +54,7 @@ const config = {
     main: './src/js/_main.js',
     index: './src/js/_index.js',
     results: './src/js/_results.js',
+    meditation: './src/js/_meditation.js',
   },
   output: {
     filename: (chunkData) => {

@@ -34,6 +34,7 @@ $gr-beige: #f2daac;
 $gr-black: #273245;
 
 /* Global */
+$screen-height: calc(100vh - 70px);
 // media
 $desktop-sm: 1200px;
 $tablet: 1024px;
@@ -112,8 +113,8 @@ $button-font-size: 14px;
 $button-font-weight: normal;
 $button-line-height: 1.3;
 $button-border-radius: 20px;
-$button-padding: 0.715em 1.7535em;
-$button-padding-sm: 0.715em 1.7535em;
+$button-padding: 0.858em 1.7535em;
+$button-padding-sm: 0.858em 1.7535em;
 $button-min-width: 120px;
 $button-margin: 5px;
 
@@ -130,8 +131,8 @@ $input-color: $blue-dark;
 $input-color-placeholder: $gray;
 $input-border-color: $gray-light;
 $input-border-radius: 20px;
-$input-padding: 0.715em 1.43em;
-$input-padding-sm: 0.715em 1.43em;
+$input-padding: 0.858em 1.43em;
+$input-padding-sm: 0.858em 1.43em;
 $input-bg-color: $white;
 $input-margin: 5px;
 

@@ -34,19 +34,21 @@
     opacity: 1;
   }
 
+  .radio__icon {
+    @include max-width(350px) {
+      width: 22px;
+      height: 22px;
+    }
+  }
+}
+
+.mood-list {
   .radio__custom {
     @include max-width(350px) {
       width: 44px;
       min-width: 44px;
       height: 44px;
       min-height: 44px;
-    }
-  }
-
-  .radio__icon {
-    @include max-width(350px) {
-      width: 22px;
-      height: 22px;
     }
   }
 }

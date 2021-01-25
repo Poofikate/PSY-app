@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <title>Meditation</title>
+  </head>
+  <body>
+    <main>
+      <!-- meditation -->
+      <section class="meditation-section">
+        <div class="container">
+          <!-- wrap -->
+          <div class="wrap">
+            <!-- header -->
+            <div class="meditation-header">
+              <div class="meditation-header__img-wrapper">
+                <img
+                  src="./img/meditation.svg"
+                  alt=""
+                  class="meditation-header__img"
+                />
+              </div>
+
+              <div class="meditation-header__info">
+                <h3 class="meditation-header__title">
+                  От 5 минут
+                </h3>
+
+                <p class="meditation-header__text">
+                  Лучше выполнять во второй половине дня
+                </p>
+              </div>
+            </div>
+            <!-- ./ End of header -->
+
+            <!-- card-wrapper -->
+            <div class="card-wrapper">
+              <!-- card -->
+              <div class="card">
+                <!-- timer -->
+                <div class="card-wrap meditation-form">
+                  <div class="meditation-musics">
+                    <div class="meditation-music">
+                      <span class="meditation-music__title">
+                        Время медитации
+                      </span>
+
+                      <form class="meditation-music-form j_times">
+                        <label class="radio radio-music">
+                          <input
+                            data-time="03"
+                            class="radio__input"
+                            type="radio"
+                            checked
+                            name="minutes"
+                          />
+                          <div class="radio__custom">
+                            <p class="radio__text">
+                              <em>3</em>
+                              мин
+                            </p>
+                          </div>
+                        </label>
+                        <label class="radio radio-music">
+                          <input
+                            data-time="05"
+                            class="radio__input"
+                            type="radio"
+                            name="minutes"
+                          />
+                          <div class="radio__custom">
+                            <p class="radio__text">
+                              <em>5</em>
+                              мин
+                            </p>
+                          </div>
+                        </label>
+                        <label class="radio radio-music">
+                          <input
+                            data-time="07"
+                            class="radio__input"
+                            type="radio"
+                            name="minutes"
+                          />
+                          <div class="radio__custom">
+                            <p class="radio__text">
+                              <em>7</em>
+                              мин
+                            </p>
+                          </div>
+                        </label>
+                        <label class="radio radio-music">
+                          <input
+                            data-time="10"
+                            class="radio__input"
+                            type="radio"
+                            name="minutes"
+                          />
+                          <div class="radio__custom">
+                            <p class="radio__text">
+                              <em>10</em>
+                              мин
+                            </p>
+                          </div>
+                        </label>
+                        <label class="radio radio-music">
+                          <input
+                            data-time="15"
+                            class="radio__input"
+                            type="radio"
+                            name="minutes"
+                          />
+                          <div class="radio__custom">
+                            <p class="radio__text">
+                              <em>15</em>
+                              мин
+                            </p>
+                          </div>
+                        </label>
+                        <label class="radio radio-music">
+                          <input
+                            data-time="20"
+                            class="radio__input"
+                            type="radio"
+                            name="minutes"
+                          />
+                          <div class="radio__custom">
+                            <p class="radio__text">
+                              <em>20</em>
+                              мин
+                            </p>
+                          </div>
+                        </label>
+                      </form>
+                    </div>
+
+                    <div class="meditation-music">
+                      <span class="meditation-music__title">
+                        Фоновая музыка
+                      </span>
+
+                      <form class="meditation-music-form j_audio-form">
+                        <label
+                          data-id="audio0"
+                          class="radio radio-music j_audio"
+                        >
+                          <input
+                            class="radio__input"
+                            type="radio"
+                            checked
+                            name="audio"
+                          />
+                          <div class="radio__custom">
+                            <svg class="radio__icon">
+                              <use xlink:href="#mute"></use>
+                            </svg>
+                          </div>
+                        </label>
+
+                        <label
+                          data-id="audio1"
+                          class="radio radio-music j_audio"
+                        >
+                          <input
+                            class="radio__input"
+                            type="radio"
+                            name="audio"
+                          />
+                          <div class="radio__custom">
+                            <svg class="radio__icon">
+                              <use xlink:href="#fire"></use>
+                            </svg>
+                          </div>
+
+                          <audio class="audio">
+                            <source
+                              src="https://cloud.google.com/text-to-speech/docs/audio/phone-profile.wav"
+                              type="audio/wav"
+                            />
+                          </audio>
+                        </label>
+
+                        <label
+                          data-id="audio2"
+                          class="radio radio-music j_audio"
+                        >
+                          <input
+                            class="radio__input"
+                            type="radio"
+                            name="audio"
+                          />
+                          <div class="radio__custom">
+                            <svg class="radio__icon">
+                              <use xlink:href="#wind"></use>
+                            </svg>
+                          </div>
+
+                          <audio class="audio">
+                            <source
+                              src="https://cdn.plyr.io/static/demo/Kishi_Bashi_-_It_All_Began_With_a_Burst.mp3"
+                              type="audio/mp3"
+                            />
+                          </audio>
+                        </label>
+                      </form>
+                    </div>
+                  </div>
+
+                  <div class="buttons">
+                    <button class="button button--dark j_start" type="submit">
+                      Начать медитацию
+                    </button>
+                  </div>
+                </div>
+                <!-- ./ End of timer -->
+              </div>
+              <!-- ./ End of card -->
+            </div>
+            <!-- ./ End of card-wrapper -->
+
+            <div class="card-desc">
+              <!-- list -->
+              <ul class="meditation__list">
+                <li class="meditation__item">
+                  <p class="meditation__text">
+                    Сначала нужно приготовить свечу.
+                    <b>Хорошо закрепите</b> её.
+                  </p>
+                </li>
+                <li class="meditation__item">
+                  <p class="meditation__text">
+                    Погасите свет. Примите <b>удобную позу</b>. Включите таймер
+                    медитации.
+                  </p>
+                </li>
+                <li class="meditation__item">
+                  <p class="meditation__text">
+                    Попытайтесь <b>максимально расслабиться</b>. Свеча должна
+                    располагаться на расстоянии примерно полуметра от вас.
+                  </p>
+                </li>
+                <li class="meditation__item">
+                  <p class="meditation__text">
+                    Начинайте вглядываться в пламя свечи, в центр языка пламени.
+                    Постарайтесь <b>мысленно слиться с пламенем</b>. Если
+                    почувствуете резь в глазах, прикройте их и дайте отдохнуть.
+                  </p>
+                </li>
+                <li class="meditation__item">
+                  <p class="meditation__text">
+                    Представьте, что в этом пламени <b>сгорают</b> все ваши
+                    дневные заботы, тревоги, проблемы и комплексы.
+                  </p>
+                </li>
+              </ul>
+              <!-- ./ End of list -->
+            </div>
+          </div>
+          <!-- ./ End of wrap -->
+        </div>
+        <!-- ./ End of container -->
+      </section>
+      <!-- ./ End of meditation -->
+      <!-- timer -->
+      <section class="timer-section">
+        <div class="container">
+          <!-- wrap -->
+          <div class="timer-wrap">
+            <div class="timer-time-wrapper">
+              <input
+                type="text"
+                readonly
+                class="input meditation-timer-time j_time"
+                value="17:00"
+              />
+
+              <div class="meditation-music">
+                <form class="meditation-music-form j_audio-form">
+                  <label class="radio radio-music j_mute">
+                    <input class="radio__input" type="checkbox" name="mute" />
+                    <div class="radio__custom">
+                      <svg class="radio__icon">
+                        <use xlink:href="#mute"></use>
+                      </svg>
+                    </div>
+                  </label>
+                </form>
+              </div>
+            </div>
+
+            <div class="buttons">
+              <button
+                class="button button--dark button--invert j_pause"
+                type="button"
+              >
+                Пауза
+              </button>
+              <button
+                class="button button--dark button--invert j_start"
+                type="button"
+              >
+                Продолжить
+              </button>
+              <button class="button button--dark" type="button">
+                Завершить
+              </button>
+            </div>
+          </div>
+          <!-- ./ End of wrap -->
+        </div>
+        <!-- ./ End of container -->
+      </section>
+      <!-- ./ End of timer -->
+      ${require('./modules/mood-rating.html')}
+    </main>
+    ${require('./modules/components/nav-bar.html')}
+  </body>
+</html>

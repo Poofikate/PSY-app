@@ -230,6 +230,22 @@ button {
   }
 }
 
+.buttons {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 50px 0 0;
+
+  .button {
+    width: 100%;
+    margin: 0;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
 .tabs {
   display: flex;
   align-items: center;
@@ -566,17 +582,6 @@ button {
 .radio-music {
   margin: 4px;
 
-  &:hover {
-    .radio__custom {
-      background-color: $blue-dark;
-      border-color: $blue-dark;
-    }
-
-    .radio__icon {
-      fill: $white;
-    }
-  }
-
   .plyr--audio {
     display: none;
   }
@@ -597,6 +602,8 @@ button {
     min-height: 50px;
     margin: 0;
     background-color: $gray-light;
+    border-color: $gray-light;
+    box-shadow: none;
 
     &::before {
       content: none;
@@ -613,14 +620,6 @@ button {
 
 .radio-mood {
   margin: 5px;
-
-  &:hover {
-    .radio__custom {
-      background-color: currentColor;
-      border-color: currentColor;
-      opacity: 0.6;
-    }
-  }
 
   .radio__input:checked + .radio__custom {
     background-color: currentColor;

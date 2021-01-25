@@ -1,0 +1,38 @@
+.timer-section {
+  display: flex;
+  min-height: $screen-height;
+}
+
+.timer-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+
+  .meditation-music {
+    width: auto;
+  }
+
+  .radio-music {
+    &.hidden {
+      display: none;
+    }
+  }
+
+  .buttons {
+    margin-top: auto;
+  }
+
+  .button {
+    &.hidden {
+      display: none;
+    }
+  }
+}
+
+.timer-time-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto 0;
+}

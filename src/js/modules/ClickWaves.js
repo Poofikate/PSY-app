@@ -10,3 +10,4 @@ Waves.attach('.button--dark:not(.button--invert)', [
   'waves-light',
 ]);
 Waves.attach('.task', ['waves-float']);
+Waves.attach('.radio-music .radio__custom', ['waves-float']);
