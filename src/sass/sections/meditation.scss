@@ -102,13 +102,20 @@
 .card-wrapper {
   flex-grow: 1;
   width: 100%;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .card {
   position: relative;
   display: flex;
   flex-direction: column;
+
+  .button-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+  }
 }
 
 .card-wrap {
@@ -117,60 +124,6 @@
   flex-grow: 1;
   justify-content: center;
   width: 100%;
-
-  .radio-music {
-    margin: 4px;
-
-    .plyr--audio {
-      display: none;
-    }
-
-    .radio__input:checked + .radio__custom {
-      background-color: $blue;
-      border: 1px solid $blue;
-
-      .radio__icon {
-        fill: $white;
-      }
-
-      .radio__text {
-        color: $white;
-      }
-    }
-
-    .radio__custom {
-      width: 50px;
-      min-width: 50px;
-      height: 50px;
-      min-height: 50px;
-      margin: 0;
-      background-color: $gray-light;
-
-      &::before {
-        content: none;
-      }
-    }
-
-    .radio__icon {
-      width: 30px;
-      height: 30px;
-      opacity: 1;
-      fill: $blue-dark;
-    }
-
-    .radio__text {
-      margin-bottom: 5px;
-      font-family: $roboto-slab;
-      font-size: 14px;
-      font-weight: normal;
-      line-height: 1.1;
-      text-align: center;
-
-      em {
-        display: block;
-      }
-    }
-  }
 }
 
 .meditation-timer-time {

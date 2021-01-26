@@ -1,0 +1,18 @@
+.settings-section {
+  display: flex;
+  min-height: $screen-height;
+}
+
+.settings-wrap {
+  height: 100%;
+
+  .water-form {
+    margin: auto 0;
+  }
+}
+
+.settings {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}

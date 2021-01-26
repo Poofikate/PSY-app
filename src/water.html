@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <title>Water</title>
+  </head>
+  <body>
+    ${require('./modules/components/nav-bar.html')}
+    ${require('./modules/menu.html')}
+
+    <!-- clip -->
+    <svg
+      viewBox="0 0 175 249"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      style="position: absolute; width: 0; height: 0;"
+    >
+      <clipPath id="mask">
+        <path
+          d="M174.786 8.3294L154.415 213.946C152.448 233.792 134.398 248.753 112.427 248.753H62.5735C40.6024 248.753 22.5518 233.792 20.5855 213.946L0.202148 8.20727C54.8793 -7.95041 117.507 5.38609 174.786 8.3294Z"
+          fill="#E8F0F3"
+        />
+      </clipPath>
+    </svg>
+
+    <main>
+      <!-- water -->
+      <section class="water-section">
+        <div class="container">
+          <!-- wrap -->
+          <div class="wrap">
+            <!-- header -->
+            <div class="meditation-header">
+              <div class="meditation-header__img-wrapper">
+                <img
+                  src="./img/meditation.svg"
+                  alt=""
+                  class="meditation-header__img"
+                />
+              </div>
+
+              <div class="meditation-header__info">
+                <h3 class="meditation-header__title">
+                  От 5 минут
+                </h3>
+
+                <p class="meditation-header__text">
+                  Лучше выполнять во второй половине дня
+                </p>
+              </div>
+            </div>
+            <!-- ./ End of header -->
+
+            <!-- card-wrapper -->
+            <div class="card-wrapper">
+              <!-- card -->
+              <div class="card">
+                <button class="button button-icon" type="button">
+                  <svg class="svg">
+                    <use xlink:href="#settings"></use>
+                  </svg>
+                </button>
+
+                <!-- water-wrapper -->
+                <div class="water-wrapper">
+                  <!-- body -->
+                  <div class="water-body">
+                    <!-- glass -->
+                    <div class="glass-wrapper">
+                      <div class="glass">
+                        <div class="glass-water">
+                          <canvas
+                            data-max="2"
+                            data-current="1.1"
+                            data-max-color="#E8F0F3"
+                            data-current-color="#B0E1F3"
+                            class="glass-canvas"
+                          ></canvas>
+                        </div>
+
+                        <div class="glass-size glass-size--normal">
+                          <p class="glass-size__text">
+                            Ваша норма
+
+                            <span class="glass-size__value">
+                              <em>0</em> л
+                            </span>
+                          </p>
+                        </div>
+
+                        <div class="glass-size glass-size--current">
+                          <p class="glass-size__text">
+                            Выпито
+
+                            <span class="glass-size__value">
+                              <em>0</em> л
+                            </span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- ./ End of glass -->
+                  </div>
+                  <!-- ./ End of body -->
+
+                  <div class="water-footer">
+                    <form class="meditation-music-form">
+                      <label class="radio radio-music">
+                        <input
+                          class="radio__input"
+                          type="radio"
+                          checked
+                          name="minutes"
+                        />
+                        <div class="radio__custom">
+                          <p class="radio__text">
+                            0,1л
+                          </p>
+                        </div>
+                      </label>
+                      <label class="radio radio-music">
+                        <input
+                          class="radio__input"
+                          type="radio"
+                          name="minutes"
+                        />
+                        <div class="radio__custom">
+                          <p class="radio__text">
+                            0,2л
+                          </p>
+                        </div>
+                      </label>
+                      <label class="radio radio-music">
+                        <input
+                          class="radio__input"
+                          type="radio"
+                          name="minutes"
+                        />
+                        <div class="radio__custom">
+                          <p class="radio__text">
+                            0,3л
+                          </p>
+                        </div>
+                      </label>
+                      <label class="radio radio-music">
+                        <input
+                          class="radio__input"
+                          type="radio"
+                          name="minutes"
+                        />
+                        <div class="radio__custom">
+                          <p class="radio__text">
+                            0,4л
+                          </p>
+                        </div>
+                      </label>
+                      <label class="radio radio-music">
+                        <input
+                          class="radio__input"
+                          type="radio"
+                          name="minutes"
+                        />
+                        <div class="radio__custom">
+                          <p class="radio__text">
+                            0,5л
+                          </p>
+                        </div>
+                      </label>
+                      <label class="radio radio-music">
+                        <input
+                          class="radio__input"
+                          type="radio"
+                          name="minutes"
+                        />
+                        <div class="radio__custom">
+                          <p class="radio__text">
+                            0,6л
+                          </p>
+                        </div>
+                      </label>
+                    </form>
+
+                    <div class="buttons">
+                      <button class="button button--dark" type="button">
+                        Добавить прием
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <!-- ./ End of water-wrapper -->
+              </div>
+              <!-- ./ End of card -->
+            </div>
+            <!-- ./ End of card-wrapper -->
+
+            <div class="card-desc">
+              <!-- list -->
+              <ul class="meditation__list">
+                <li class="meditation__item">
+                  <p class="meditation__text">
+                    Сначала нужно приготовить свечу.
+                    <b>Хорошо закрепите</b> её.
+                  </p>
+                </li>
+                <li class="meditation__item">
+                  <p class="meditation__text">
+                    Погасите свет. Примите <b>удобную позу</b>. Включите таймер
+                    медитации.
+                  </p>
+                </li>
+                <li class="meditation__item">
+                  <p class="meditation__text">
+                    Попытайтесь <b>максимально расслабиться</b>. Свеча должна
+                    располагаться на расстоянии примерно полуметра от вас.
+                  </p>
+                </li>
+                <li class="meditation__item">
+                  <p class="meditation__text">
+                    Начинайте вглядываться в пламя свечи, в центр языка пламени.
+                    Постарайтесь <b>мысленно слиться с пламенем</b>. Если
+                    почувствуете резь в глазах, прикройте их и дайте отдохнуть.
+                  </p>
+                </li>
+                <li class="meditation__item">
+                  <p class="meditation__text">
+                    Представьте, что в этом пламени <b>сгорают</b> все ваши
+                    дневные заботы, тревоги, проблемы и комплексы.
+                  </p>
+                </li>
+              </ul>
+              <!-- ./ End of list -->
+            </div>
+          </div>
+          <!-- ./ End of wrap -->
+        </div>
+        <!-- ./ End of container -->
+      </section>
+      <!-- ./ End of water -->
+      <!-- settings -->
+      <section class="settings-section">
+        <div class="container">
+          <!-- wrap -->
+          <div class="settings-wrap">
+            <div class="settings">
+              <div class="water-form">
+                <div class="input-wrapper">
+                  <span class="input-subtitle">
+                    Укажите ваш вес
+                  </span>
+                  <input type="text" class="input" />
+                </div>
+                <div class="input-wrapper">
+                  <span class="input-subtitle">
+                    Напомнить за, мин
+                  </span>
+                  <input type="text" class="input" />
+                </div>
+              </div>
+
+              <div class="buttons">
+                <button
+                  class="button button--dark button--invert"
+                  type="button"
+                >
+                  Отмена
+                </button>
+                <button class="button button--dark" type="submit">
+                  Сохранить
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- ./ End of wrap -->
+        </div>
+        <!-- ./ End of container -->
+      </section>
+      <!-- ./ End of settings -->
+    </main>
+  </body>
+</html>
