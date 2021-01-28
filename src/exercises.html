@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <title>Exercises</title>
+  </head>
+  <body>
+    ${require('./modules/components/nav-bar.html')}
+    ${require('./modules/menu.html')}
+
+    <main>
+      <!-- exercises -->
+      <section class="exercises-section">
+        <div class="container">
+          <!-- wrap -->
+          <div class="wrap">
+            <!-- header -->
+            <div class="meditation-header">
+              <div class="meditation-header__img-wrapper">
+                <img
+                  src="./img/meditation.svg"
+                  alt=""
+                  class="meditation-header__img"
+                />
+              </div>
+
+              <div class="meditation-header__info">
+                <h3 class="meditation-header__title">
+                  От 5 минут
+                </h3>
+
+                <p class="meditation-header__text">
+                  Лучше выполнять во второй половине дня
+                </p>
+              </div>
+            </div>
+            <!-- ./ End of header -->
+
+            <!-- card-wrapper -->
+            <div class="card-wrapper">
+              <!-- card -->
+              <div class="card card--exercises">
+                <!-- exercises-wrapper -->
+                <div class="exercises-wrapper">
+                  <!-- slider-wrapper -->
+                  <div class="exercises-videos-slider-wrapper not-slider">
+                    <button
+                      class="button button-arrow button-arrow--prev exercises-videos-slider--prev"
+                      type="button"
+                    >
+                      <svg class="svg">
+                        <use xlink:href="#arrow"></use>
+                      </svg>
+                    </button>
+
+                    <!-- slider -->
+                    <div class="exercises-videos-slider swiper-container">
+                      <div class="swiper-wrapper">
+                        <div
+                          class="exercises-video swiper-slide j_video-link"
+                          data-provider="html5"
+                          data-video="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4"
+                          data-poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg"
+                        >
+                          <div class="exercises-video__img-wrapper">
+                            <img
+                              src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg"
+                              alt=""
+                              class="exercises-video__img"
+                            />
+                          </div>
+
+                          <div class="exercises-video-info">
+                            <time class="exercises-video__time">
+                              5 минут
+                            </time>
+                            <span class="exercises-video__title">
+                              Зарядка бодрое утро
+                            </span>
+                          </div>
+
+                          <button
+                            class="button button-arrow button-arrow--next"
+                            type="button"
+                          >
+                            <svg class="svg">
+                              <use xlink:href="#arrow"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div
+                          class="exercises-video swiper-slide j_video-link"
+                          data-provider="youtube"
+                          data-video="bTqVqk7FSmY"
+                          data-poster="images/meditation.svg"
+                        >
+                          <div class="exercises-video__img-wrapper">
+                            <img
+                              src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg"
+                              alt=""
+                              class="exercises-video__img"
+                            />
+                          </div>
+
+                          <div class="exercises-video-info">
+                            <time class="exercises-video__time">
+                              15 минут
+                            </time>
+                            <span class="exercises-video__title">
+                              Зарядка бодрое утро
+                            </span>
+                          </div>
+
+                          <button
+                            class="button button-arrow button-arrow--next"
+                            type="button"
+                          >
+                            <svg class="svg">
+                              <use xlink:href="#arrow"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- ./ End of slider -->
+
+                    <button
+                      class="button button-arrow button-arrow--next exercises-videos-slider--next"
+                      type="button"
+                    >
+                      <svg class="svg">
+                        <use xlink:href="#arrow"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <!-- ./ End of slider-wrapper -->
+                </div>
+                <!-- ./ End of exercises-wrapper -->
+              </div>
+              <!-- ./ End of card -->
+            </div>
+            <!-- ./ End of card-wrapper -->
+          </div>
+          <!-- ./ End of wrap -->
+        </div>
+        <!-- ./ End of container -->
+      </section>
+      <!-- ./ End of exercises -->
+      <!-- settings -->
+      <section class="settings-section">
+        <div class="container">
+          <!-- wrap -->
+          <div class="settings-wrap">
+            <div class="settings">
+              <!-- video-wrapper -->
+              <div class="exercises-video-wrapper">
+                <video
+                  id="video-player"
+                  class="j_video-player"
+                  playsinline
+                  controls
+                  data-poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg"
+                >
+                  <source
+                    src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+
+                <div class="exercises-video-placeholder">
+                  <button
+                    class="button button-icon exercises-video-placeholder__button j_video-play"
+                    type="button"
+                  >
+                    <svg class="svg">
+                      <use xlink:href="#arrow"></use>
+                    </svg>
+                  </button>
+
+                  <div class="exercises-video-info">
+                    <time class="exercises-video__time j_video-time">
+                      110 минут
+                    </time>
+                    <span class="exercises-video__title j_video-title">
+                      Зарядка бодрое утро
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <!-- ./ End of video-wrapper -->
+
+              <div class="buttons">
+                <button
+                  class="button button--dark button--invert"
+                  type="button"
+                >
+                  Отмена
+                </button>
+                <button class="button button--dark" type="submit">
+                  Сохранить
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- ./ End of wrap -->
+        </div>
+        <!-- ./ End of container -->
+      </section>
+      <!-- ./ End of settings -->
+    </main>
+  </body>
+</html>
