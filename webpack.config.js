@@ -56,6 +56,7 @@ const config = {
     results: './src/js/_results.js',
     meditation: './src/js/_meditation.js',
     water: './src/js/_water.js',
+    sleep: './src/js/_sleep.js',
   },
   output: {
     filename: (chunkData) => {

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <title>Sleep</title>
+  </head>
+  <body>
+    ${require('./modules/components/nav-bar.html')}
+    ${require('./modules/menu.html')}
+
+    <main>
+      <!-- water -->
+      <section class="water-section">
+        <div class="container">
+          <!-- wrap -->
+          <div class="wrap">
+            <!-- header -->
+            <div class="meditation-header">
+              <div class="meditation-header__img-wrapper">
+                <img
+                  src="./img/meditation.svg"
+                  alt=""
+                  class="meditation-header__img"
+                />
+              </div>
+
+              <div class="meditation-header__info">
+                <h3 class="meditation-header__title">
+                  От 5 минут
+                </h3>
+
+                <p class="meditation-header__text">
+                  Лучше выполнять во второй половине дня
+                </p>
+              </div>
+            </div>
+            <!-- ./ End of header -->
+
+            <!-- card-wrapper -->
+            <div class="card-wrapper">
+              <!-- card -->
+              <div class="card">
+                <button class="button button-icon" type="button">
+                  <svg class="svg">
+                    <use xlink:href="#settings"></use>
+                  </svg>
+                </button>
+
+                <!-- sleep-wrapper -->
+                <div class="sleep-wrapper">
+                  <!-- clock -->
+                  <div class="sleep-clock">
+                    <div class="sleep-clock-wrap">
+                      <div
+                        data-yellow="0.2"
+                        data-green="0.2"
+                        data-gray="0.2"
+                        data-interval="0.9"
+                        data-start="9"
+                        data-yellow-color="rgba(228, 232, 72, 0.4)"
+                        data-green-color="rgba(107, 214, 0, 1)"
+                        data-gray-color="rgba(236, 241, 245, 1)"
+                        class="sleep-clock-chart j_chart"
+                      ></div>
+
+                      <span class="sleep-clock__type">PM</span>
+                    </div>
+
+                    <div class="sleep-clock-number">
+                      <!-- time -->
+                      <input
+                        type="text"
+                        readonly
+                        class="input meditation-timer-time j_time"
+                        value=""
+                      />
+                      <!-- ./ End of time -->
+
+                      <p class="sleep-clock-number__text">
+                        Ценность 1 час сна сейчас = 0.3 часа
+                      </p>
+                    </div>
+                  </div>
+                  <!-- ./ End of clock -->
+                </div>
+                <!-- ./ End of sleep-wrapper -->
+              </div>
+              <!-- ./ End of card -->
+            </div>
+            <!-- ./ End of card-wrapper -->
+
+            <div class="card-desc">
+              <!-- list -->
+              <ul class="meditation__list">
+                <li class="meditation__item">
+                  <p class="meditation__text">
+                    Сначала нужно приготовить свечу.
+                    <b>Хорошо закрепите</b> её.
+                  </p>
+                </li>
+                <li class="meditation__item">
+                  <p class="meditation__text">
+                    Погасите свет. Примите <b>удобную позу</b>. Включите таймер
+                    медитации.
+                  </p>
+                </li>
+                <li class="meditation__item">
+                  <p class="meditation__text">
+                    Попытайтесь <b>максимально расслабиться</b>. Свеча должна
+                    располагаться на расстоянии примерно полуметра от вас.
+                  </p>
+                </li>
+                <li class="meditation__item">
+                  <p class="meditation__text">
+                    Начинайте вглядываться в пламя свечи, в центр языка пламени.
+                    Постарайтесь <b>мысленно слиться с пламенем</b>. Если
+                    почувствуете резь в глазах, прикройте их и дайте отдохнуть.
+                  </p>
+                </li>
+                <li class="meditation__item">
+                  <p class="meditation__text">
+                    Представьте, что в этом пламени <b>сгорают</b> все ваши
+                    дневные заботы, тревоги, проблемы и комплексы.
+                  </p>
+                </li>
+              </ul>
+              <!-- ./ End of list -->
+            </div>
+          </div>
+          <!-- ./ End of wrap -->
+        </div>
+        <!-- ./ End of container -->
+      </section>
+      <!-- ./ End of water -->
+      <!-- settings -->
+      <section class="settings-section">
+        <div class="container">
+          <!-- wrap -->
+          <div class="settings-wrap">
+            <div class="settings">
+              <form class="water-form">
+                <div class="input-wrapper">
+                  <span class="input-subtitle">
+                    Надо встать в
+                  </span>
+                  <input type="time" class="input" />
+                </div>
+                <div class="input-wrapper">
+                  <span class="input-subtitle">
+                    Напомнить за, мин
+                  </span>
+                  <input type="text" class="input" />
+                </div>
+
+                <div class="input-wrapper">
+                  <span class="input-subtitle">
+                    Напомнить за, мин
+                  </span>
+
+                  <div
+                    data-dropdown-select
+                    class="dropdown j_dropdown j_naming"
+                    id="dropdown1"
+                  >
+                    <button
+                      data-dropdown-target="#dropdown1"
+                      class="button dropdown__button"
+                      type="button"
+                    >
+                      <span data-naming>
+                        Время сна
+                      </span>
+
+                      <svg class="svg">
+                        <use xlink:href="#arrow"></use>
+                      </svg>
+                    </button>
+
+                    <select class="dropdown__select">
+                      <option value="0">Время сна</option>
+                      <option value="1">Время сна2</option>
+                      <option value="2">Время сна3</option>
+                    </select>
+
+                    <div data-naming-triggers class="dropdown__content">
+                      <div class="dropdown__scroller">
+                        <ul class="dropdown__list">
+                          <li class="dropdown__item">
+                            <label class="radio">
+                              <input
+                                class="radio__input"
+                                type="radio"
+                                name="radio1"
+                                value="0"
+                              />
+                              <div class="radio__custom">
+                                <span class="radio__text">
+                                  Время сна
+                                </span>
+                              </div>
+                            </label>
+                          </li>
+                          <li class="dropdown__item">
+                            <label class="radio">
+                              <input
+                                class="radio__input"
+                                type="radio"
+                                name="radio1"
+                                value="1"
+                              />
+                              <div class="radio__custom">
+                                <span class="radio__text">
+                                  Время сна2
+                                </span>
+                              </div>
+                            </label>
+                          </li>
+                          <li class="dropdown__item">
+                            <label class="radio">
+                              <input
+                                class="radio__input"
+                                type="radio"
+                                name="radio1"
+                                value="2"
+                              />
+                              <div class="radio__custom">
+                                <span class="radio__text">
+                                  Время сна3
+                                </span>
+                              </div>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+
+              <div class="buttons">
+                <button
+                  class="button button--dark button--invert"
+                  type="button"
+                >
+                  Отмена
+                </button>
+                <button class="button button--dark" type="submit">
+                  Сохранить
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- ./ End of wrap -->
+        </div>
+        <!-- ./ End of container -->
+      </section>
+      <!-- ./ End of settings -->
+    </main>
+  </body>
+</html>

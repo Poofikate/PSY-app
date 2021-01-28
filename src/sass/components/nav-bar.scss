@@ -23,11 +23,13 @@ main {
   color: $gray;
   text-align: center;
   text-decoration: none;
+  background-color: transparent;
   border: none;
   border-radius: 15px;
   outline: none;
   box-shadow: none;
   transition: color 0.2s;
+  appearance: none;
 
   &:active {
     box-shadow: none;
