@@ -1,0 +1,213 @@
+.wheel-section {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.wheel-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-content: unset;
+  padding: 0;
+  margin-top: 60px;
+}
+
+.wheel-wrap {
+  position: relative;
+  width: 240px;
+  margin: 0;
+}
+
+.wheel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 0 40px;
+
+  > .button {
+    margin: 20px 0 0;
+  }
+}
+
+.wheel {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  overflow: hidden;
+  border-radius: 50%;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    content: '';
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 2px $blue;
+  }
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    width: 10px;
+    height: 10px;
+    content: '';
+    background-color: $blue;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.wheel-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 8s cubic-bezier(0.25, 0.15, 0.15, 1);
+}
+
+.wheel div.sec {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-color: $blue transparent;
+  border-style: solid;
+  border-width: 130px 75px 0;
+  opacity: 1;
+  transform: translate(-50%, -100%);
+  transform-origin: 75px 130px;
+
+  &:nth-child(odd) {
+    border-color: $gray-light transparent;
+  }
+  &:nth-child(even) {
+    border-color: $white transparent;
+  }
+  &:nth-child(1) {
+    transform: translate(-50%, -100%) rotate(60deg);
+  }
+  &:nth-child(2) {
+    transform: translate(-50%, -100%) rotate(120deg);
+  }
+  &:nth-child(3) {
+    transform: translate(-50%, -100%) rotate(180deg);
+  }
+  &:nth-child(4) {
+    transform: translate(-50%, -100%) rotate(240deg);
+  }
+  &:nth-child(5) {
+    transform: translate(-50%, -100%) rotate(300deg);
+  }
+  &:nth-child(6) {
+    transform: translate(-50%, -100%) rotate(360deg);
+  }
+
+  &.active {
+    .sec__svg {
+      fill: $blue;
+    }
+  }
+}
+
+.sec__svg {
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin-top: -90px;
+  margin-left: -15px;
+  fill: $gray;
+  transition: fill 0.3s ease-in-out;
+}
+
+.wheel__triangle {
+  position: absolute;
+  top: -6px;
+  left: calc(50% - 10px);
+  z-index: 2;
+  width: 12px;
+  height: 12px;
+  text-align: left;
+  background-color: $blue;
+  border-top-right-radius: 50%;
+  transform: rotate(-120deg) skewX(-30deg) scale(1, 0.9);
+
+  &::before,
+  &::after {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    content: '';
+    background-color: inherit;
+    border-top-right-radius: 50%;
+  }
+
+  &::before {
+    transform: rotate(-135deg) skewX(-45deg) scale(1.4, 0.7) translate(0, -50%);
+  }
+
+  &::after {
+    transform: rotate(135deg) skewY(-45deg) scale(0.7, 1.4) translate(50%);
+  }
+}
+
+.wheel__list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.wheel__item {
+  &:not(:last-of-type) {
+    margin-bottom: 15px;
+  }
+}
+
+.wheel-chance {
+  display: inline-flex;
+  align-items: flex-start;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.3;
+  transition: opacity 0.5s ease-in-out;
+
+  &.active {
+    color: $blue;
+
+    .wheel-chance__percent {
+      color: currentColor;
+    }
+  }
+
+  &.not-active {
+    opacity: 0.3;
+  }
+
+  &__icon {
+    display: block;
+    width: 22px;
+    min-width: 22px;
+    height: 22px;
+    min-height: 22px;
+    margin-right: 12px;
+    fill: currentColor;
+    transition: color 0.5s ease-in-out;
+  }
+
+  &__text {
+    color: currentColor;
+    transition: color 0.5s ease-in-out;
+  }
+
+  &__percent {
+    color: $gray;
+    transition: color 0.5s ease-in-out;
+  }
+}

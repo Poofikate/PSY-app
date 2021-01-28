@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <title>Wheel</title>
+  </head>
+  <body>
+    ${require('./modules/components/nav-bar.html')}
+    ${require('./modules/menu.html')}
+
+    <main>
+      <!-- wheel -->
+      <section class="wheel-section">
+        <div class="container">
+          <!-- wrap -->
+          <div class="wrap">
+            <!-- header -->
+            <div class="meditation-header">
+              <div class="meditation-header__img-wrapper">
+                <img
+                  src="./img/meditation.svg"
+                  alt=""
+                  class="meditation-header__img"
+                />
+              </div>
+
+              <div class="meditation-header__info">
+                <h3 class="meditation-header__title">
+                  От 5 минут
+                </h3>
+
+                <p class="meditation-header__text">
+                  Лучше выполнять во второй половине дня
+                </p>
+              </div>
+            </div>
+            <!-- ./ End of header -->
+
+            <!-- card-wrapper -->
+            <div class="card-wrapper">
+              <!-- card -->
+              <div class="card">
+                <button class="button button-icon" type="button">
+                  <svg class="svg">
+                    <use xlink:href="#gift"></use>
+                  </svg>
+                </button>
+
+                <!-- wheel-wrapper -->
+                <div class="wheel-wrapper">
+                  <div class="wheel-container">
+                    <div class="wheel-wrap">
+                      <!-- wheel -->
+                      <div
+                        data-url="http://localhost:3000/db"
+                        data-duration="8"
+                        data-times="6"
+                        data-timing-function="cubic-bezier(0.25, 0.15, 0.15, 1)"
+                        class="wheel j_wheel"
+                      >
+                        <div class="wheel-inner">
+                          <div data-prize="tariff" class="sec">
+                            <svg class="sec__svg">
+                              <use xlink:href="#tariff"></use>
+                            </svg>
+                          </div>
+                          <div data-prize="consulting" class="sec">
+                            <svg class="sec__svg">
+                              <use xlink:href="#smile"></use>
+                            </svg>
+                          </div>
+                          <div data-prize="loss" class="sec">
+                            <svg class="sec__svg">
+                              <use xlink:href="#snowflake"></use>
+                            </svg>
+                          </div>
+                          <div data-prize="half-price" class="sec">
+                            <svg class="sec__svg">
+                              <use xlink:href="#star"></use>
+                            </svg>
+                          </div>
+                          <div data-prize="bonus" class="sec">
+                            <svg class="sec__svg">
+                              <use xlink:href="#scale"></use>
+                            </svg>
+                          </div>
+                          <div data-prize="discount" class="sec">
+                            <svg class="sec__svg">
+                              <use xlink:href="#basket"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- ./ End of wheel -->
+
+                      <div class="wheel__triangle"></div>
+                    </div>
+
+                    <div class="buttons">
+                      <button class="button button--dark" type="button">
+                        Вращать рулетку
+                      </button>
+                    </div>
+                  </div>
+
+                  <ul class="wheel__list">
+                    <li class="wheel__item">
+                      <div data-prize-info="discount" class="wheel-chance">
+                        <svg class="wheel-chance__icon">
+                          <use xlink:href="#basket"></use>
+                        </svg>
+
+                        <div class="wheel-chance__info">
+                          <p class="wheel-chance__text">
+                            Скидка 10% на все товары магазина
+                          </p>
+
+                          <i class="wheel-chance__percent">
+                            Шанс - 6%
+                          </i>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="wheel__item">
+                      <div data-prize-info="tariff" class="wheel-chance">
+                        <svg class="wheel-chance__icon">
+                          <use xlink:href="#tariff"></use>
+                        </svg>
+
+                        <div class="wheel-chance__info">
+                          <p class="wheel-chance__text">
+                            Максимальный тариф на 1 неделю
+                          </p>
+
+                          <i class="wheel-chance__percent">
+                            Шанс - 3%
+                          </i>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="wheel__item">
+                      <div data-prize-info="consulting" class="wheel-chance">
+                        <svg class="wheel-chance__icon">
+                          <use xlink:href="#smile"></use>
+                        </svg>
+
+                        <div class="wheel-chance__info">
+                          <p class="wheel-chance__text">
+                            Консультация психолога 30 минут
+                          </p>
+
+                          <i class="wheel-chance__percent">
+                            Шанс - 1%
+                          </i>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="wheel__item">
+                      <div data-prize-info="loss" class="wheel-chance">
+                        <svg class="wheel-chance__icon">
+                          <use xlink:href="#snowflake"></use>
+                        </svg>
+
+                        <div class="wheel-chance__info">
+                          <p class="wheel-chance__text">
+                            Попробуйте в другой раз...
+                          </p>
+
+                          <i class="wheel-chance__percent">
+                            Шанс - 80%
+                          </i>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="wheel__item">
+                      <div data-prize-info="half-price" class="wheel-chance">
+                        <svg class="wheel-chance__icon">
+                          <use xlink:href="#star"></use>
+                        </svg>
+
+                        <div class="wheel-chance__info">
+                          <p class="wheel-chance__text">
+                            Следующий месяц за пол цены!
+                          </p>
+
+                          <i class="wheel-chance__percent">
+                            Шанс - 15%
+                          </i>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="wheel__item">
+                      <div data-prize-info="bonus" class="wheel-chance">
+                        <svg class="wheel-chance__icon">
+                          <use xlink:href="#scale"></use>
+                        </svg>
+
+                        <div class="wheel-chance__info">
+                          <p class="wheel-chance__text">
+                            30% бонус на следующий платеж!
+                          </p>
+
+                          <i class="wheel-chance__percent">
+                            Шанс - 5%
+                          </i>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <!-- ./ End of wheel-wrapper -->
+              </div>
+              <!-- ./ End of card -->
+            </div>
+            <!-- ./ End of card-wrapper -->
+          </div>
+          <!-- ./ End of wrap -->
+        </div>
+        <!-- ./ End of container -->
+      </section>
+      <!-- ./ End of wheel -->
+    </main>
+  </body>
+</html>

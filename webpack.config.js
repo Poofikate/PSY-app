@@ -60,6 +60,7 @@ const config = {
     exercises: './src/js/_exercises.js',
     music: './src/js/_music.js',
     walk: './src/js/_walk.js',
+    wheel: './src/js/_wheel.js',
   },
   output: {
     filename: (chunkData) => {
