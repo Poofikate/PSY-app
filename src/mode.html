@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <title>Mode</title>
+  </head>
+  <body>
+    ${require('./modules/components/nav-bar.html')}
+    ${require('./modules/menu.html')}
+
+    <main>
+      <!-- mode -->
+      <section class="mode-section">
+        <div class="container">
+          <!-- wrap -->
+          <div class="wrap">
+            <!-- header -->
+            <div class="meditation-header">
+              <div class="meditation-header__img-wrapper">
+                <img
+                  src="./img/meditation.svg"
+                  alt=""
+                  class="meditation-header__img"
+                />
+              </div>
+
+              <div class="meditation-header__info">
+                <h3 class="meditation-header__title">
+                  От 5 минут
+                </h3>
+
+                <p class="meditation-header__text">
+                  Лучше выполнять во второй половине дня
+                </p>
+              </div>
+            </div>
+            <!-- ./ End of header -->
+
+            <!-- card-wrapper -->
+            <div class="card-wrapper">
+              <!-- card -->
+              <div class="card">
+                <button
+                  class="button button-icon button-icon--plus"
+                  type="button"
+                >
+                  <i class="button-icon__plus">+</i>
+                </button>
+
+                <!-- mode-wrapper -->
+                <div class="mode-wrapper">
+                  <div class="mode">
+                    <ul class="mode__list">
+                      <li class="mode__item">
+                        <div class="mode-task late">
+                          <div class="mode-task__wrap">
+                            <div class="mode-task__left">
+                              <em class="mode-task__num">-200</em>
+                            </div>
+
+                            <div class="mode-task__info">
+                              <span class="mode-task__title">
+                                Завтрак
+                              </span>
+                              <time class="mode-task__time">
+                                07:00 - 08:00
+                              </time>
+                            </div>
+                            <div class="mode-task-status">
+                              <svg class="mode-task-status__icon">
+                                <use xlink:href="#cross"></use>
+                              </svg>
+                              <time class="mode-task-status__time">
+                                08:10
+                              </time>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="button button-icon" type="button">
+                          <svg class="svg">
+                            <use xlink:href="#edit"></use>
+                          </svg>
+                        </button>
+                      </li>
+                      <li class="mode__item">
+                        <div class="mode-task completed">
+                          <div class="mode-task__wrap">
+                            <div class="mode-task__left">
+                              <svg class="mode-task__icon">
+                                <use xlink:href="#sleeping"></use>
+                              </svg>
+                            </div>
+                            <div class="mode-task__info">
+                              <span class="mode-task__title">
+                                Пробежка
+                              </span>
+                              <time class="mode-task__time">
+                                07:20 - 08:50
+                              </time>
+                            </div>
+                            <div class="mode-task-status">
+                              <svg class="mode-task-status__icon">
+                                <use xlink:href="#done"></use>
+                              </svg>
+                              <time class="mode-task-status__time">
+                                08:10
+                              </time>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="button button-icon" type="button">
+                          <svg class="svg">
+                            <use xlink:href="#edit"></use>
+                          </svg>
+                        </button>
+                      </li>
+                      <li class="mode__item">
+                        <div class="mode-task in-process">
+                          <div class="mode-task__wrap">
+                            <div class="mode-task__left">
+                              <svg class="mode-task__icon">
+                                <use xlink:href="#sleeping"></use>
+                              </svg>
+                            </div>
+                            <div class="mode-task__info">
+                              <span class="mode-task__title">
+                                Завтрак
+                              </span>
+                              <time class="mode-task__time">
+                                12:00 - 02:00
+                              </time>
+                            </div>
+                            <div class="mode-task-status">
+                              <p class="mode-task-status__text">
+                                Время выполнить
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="button button-icon" type="button">
+                          <svg class="svg">
+                            <use xlink:href="#edit"></use>
+                          </svg>
+                        </button>
+                      </li>
+                      <li class="mode__item">
+                        <div class="mode-task">
+                          <div class="mode-task__wrap">
+                            <div class="mode-task__left">
+                              <svg class="mode-task__icon">
+                                <use xlink:href="#sleeping"></use>
+                              </svg>
+                            </div>
+                            <div class="mode-task__info">
+                              <span class="mode-task__title">
+                                Пробежка после Завтрака и Пробежки
+                              </span>
+                              <time
+                                class="mode-task__time mode-task__time--red"
+                              >
+                                12:00 - 02:00
+                              </time>
+                            </div>
+                            <div class="mode-task-status"> </div>
+                          </div>
+                        </div>
+                        <button class="button button-icon" type="button">
+                          <svg class="svg">
+                            <use xlink:href="#edit"></use>
+                          </svg>
+                        </button>
+                      </li>
+                      <li class="mode__item">
+                        <div class="mode-task late with-buttons">
+                          <div class="mode-task__wrap">
+                            <div class="mode-task__left">
+                              <em class="mode-task__num">-200</em>
+                            </div>
+
+                            <div class="mode-task__info">
+                              <span class="mode-task__title">
+                                класс для кнопок: with-buttons
+                              </span>
+                              <time class="mode-task__time">
+                                07:00 - 08:00
+                              </time>
+                            </div>
+                            <div class="mode-task-status">
+                              <svg class="mode-task-status__icon">
+                                <use xlink:href="#cross"></use>
+                              </svg>
+                              <time class="mode-task-status__time">
+                                08:10
+                              </time>
+                            </div>
+                          </div>
+
+                          <div class="mode-task-btns">
+                            <button class="button button--gray" type="button">
+                              Выполнил сейчас
+                            </button>
+                            <button class="button button--gray" type="button">
+                              Выполнил в срок
+                            </button>
+                          </div>
+                        </div>
+                        <button class="button button-icon" type="button">
+                          <svg class="svg">
+                            <use xlink:href="#edit"></use>
+                          </svg>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- ./ End of mode-wrapper -->
+              </div>
+              <!-- ./ End of card -->
+            </div>
+            <!-- ./ End of card-wrapper -->
+
+            <div class="card-desc">
+              <!-- list -->
+              <ul class="meditation__list">
+                <li class="meditation__item">
+                  <p class="meditation__text">
+                    Сначала нужно приготовить свечу.
+                    <b>Хорошо закрепите</b> её.
+                  </p>
+                </li>
+                <li class="meditation__item">
+                  <p class="meditation__text">
+                    Погасите свет. Примите <b>удобную позу</b>. Включите таймер
+                    медитации.
+                  </p>
+                </li>
+                <li class="meditation__item">
+                  <p class="meditation__text">
+                    Попытайтесь <b>максимально расслабиться</b>. Свеча должна
+                    располагаться на расстоянии примерно полуметра от вас.
+                  </p>
+                </li>
+                <li class="meditation__item">
+                  <p class="meditation__text">
+                    Начинайте вглядываться в пламя свечи, в центр языка пламени.
+                    Постарайтесь <b>мысленно слиться с пламенем</b>. Если
+                    почувствуете резь в глазах, прикройте их и дайте отдохнуть.
+                  </p>
+                </li>
+                <li class="meditation__item">
+                  <p class="meditation__text">
+                    Представьте, что в этом пламени <b>сгорают</b> все ваши
+                    дневные заботы, тревоги, проблемы и комплексы.
+                  </p>
+                </li>
+              </ul>
+              <!-- ./ End of list -->
+            </div>
+          </div>
+          <!-- ./ End of wrap -->
+        </div>
+        <!-- ./ End of container -->
+      </section>
+      <!-- ./ End of mode -->
+      <!-- settings -->
+      <section class="settings-section">
+        <div class="container">
+          <!-- wrap -->
+          <div class="settings-wrap">
+            <div class="settings">
+              <!-- form -->
+              <form class="water-form">
+                <div class="input-wrapper">
+                  <span class="input-subtitle">
+                    Введите название
+                  </span>
+                  <input type="text" class="input" />
+                </div>
+                <div class="input-wrapper">
+                  <span class="input-subtitle">
+                    Время когда выполняете
+                  </span>
+                  <div class="input-wrapper-wrap">
+                    <input type="text" class="input" />
+                    <input type="text" class="input" />
+                  </div>
+                </div>
+              </form>
+              <!-- ./ End of form -->
+
+              <div class="buttons">
+                <button
+                  class="button button--dark button--invert"
+                  type="button"
+                >
+                  Отмена
+                </button>
+                <button class="button button--dark" type="submit">
+                  Добавить
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- ./ End of wrap -->
+        </div>
+        <!-- ./ End of container -->
+      </section>
+      <!-- ./ End of settings -->
+    </main>
+  </body>
+</html>

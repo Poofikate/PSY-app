@@ -193,6 +193,16 @@ button {
       height: 30px;
       margin: 0;
     }
+
+    &--plus {
+      background-color: $blue;
+    }
+
+    &__plus {
+      font-size: 36px;
+      font-weight: 300;
+      color: $white;
+    }
   }
 
   &-tab {
