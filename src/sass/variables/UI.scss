@@ -429,6 +429,14 @@ button {
       &::before {
         opacity: 1;
       }
+
+      + .radio__text {
+        color: $blue;
+
+        .radio__link {
+          color: $blue-dark;
+        }
+      }
     }
   }
 
@@ -998,5 +1006,113 @@ button {
     color: $gray-dark;
     background-color: transparent;
     border: none;
+  }
+}
+
+// range slider
+.range-slider-wrapper {
+  width: 100%;
+  max-width: 360px;
+  padding-top: 40px;
+  margin-top: 40px;
+
+  .noUi-target {
+    height: 4px;
+    background: $gray-light;
+    border: 1px solid $gray-light;
+
+    .noUi-handle {
+      top: -14px;
+      right: -14px;
+      width: 28px;
+      height: 28px;
+      font-size: 16px;
+      cursor: pointer;
+      background: $blue-dark;
+      border: 1px solid $blue-dark;
+      border-radius: 50%;
+      outline: none;
+      box-shadow: none;
+
+      &::before,
+      &::after {
+        top: calc(50% - 6px);
+        color: $white;
+        content: '...';
+        background-color: transparent;
+        transform: translate(-50%, -50%) rotate(90deg);
+      }
+
+      &::before {
+        left: calc(50% + 3px);
+      }
+      &::after {
+        left: calc(50% + 8px);
+      }
+    }
+  }
+
+  .noUi-pips-horizontal {
+    top: auto;
+    bottom: 15px;
+    height: 20px;
+    padding: 0;
+  }
+
+  .noUi-marker {
+    display: none;
+  }
+
+  .noUi-value-large {
+    color: transparent !important;
+  }
+
+  .noUi-value {
+    font-size: 10px;
+    font-weight: bold;
+    color: $gray;
+    cursor: pointer;
+    // transition: color 0.1s ease-in-out, transform 0.1s ease-in-out,
+    //   bottom 0.1s ease-in-out;
+
+    &:hover {
+      color: $blue-dark;
+
+      &::before {
+        background: $blue-dark;
+      }
+    }
+
+    &.large {
+      bottom: 15px;
+      color: $blue-dark;
+      transform: translate(-50%, 50%) scale(2);
+
+      &::before {
+        transform: translate(-50%, -10px) scale(0.5);
+      }
+    }
+
+    &.medium {
+      bottom: 10px;
+      color: $blue-dark;
+      transform: translate(-50%, 50%) scale(1.4);
+
+      &::before {
+        transform: translate(-50%, -7px);
+      }
+    }
+
+    &::before {
+      position: absolute;
+      top: calc(100% + 15px);
+      left: 50%;
+      width: 8px;
+      height: 8px;
+      content: '';
+      background-color: $gray;
+      border-radius: 50%;
+      transform: translate(-50%, 0);
+    }
   }
 }
