@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <title>Exercises</title>
+  </head>
+  <body>
+    ${require('./modules/components/nav-bar.html')}
+    ${require('./modules/menu.html')}
+
+    <main>
+      <!-- music -->
+      <section class="music-section">
+        <div class="container">
+          <!-- wrap -->
+          <div class="wrap">
+            <!-- header -->
+            <div class="meditation-header">
+              <div class="meditation-header__img-wrapper">
+                <img
+                  src="./img/meditation.svg"
+                  alt=""
+                  class="meditation-header__img"
+                />
+              </div>
+
+              <div class="meditation-header__info">
+                <h3 class="meditation-header__title">
+                  От 5 минут
+                </h3>
+
+                <p class="meditation-header__text">
+                  Лучше выполнять во второй половине дня
+                </p>
+              </div>
+            </div>
+            <!-- ./ End of header -->
+
+            <!-- card-wrapper -->
+            <div class="card-wrapper">
+              <!-- card -->
+              <div class="card card--music">
+                <!-- music -->
+                <div class="music">
+                  
+                  <ul class="music-list">
+                    <li class="music-item">
+                      <!-- song -->
+                      <div id="music1" class="music-song">
+                        <p class="music-song__text">
+                          Музыка природы для глубокого релакса
+                        </p>
+
+                        <div class="music-song__wrap">
+                          <audio class="music-song__audio">
+                            <source
+                              src="https://cdn.plyr.io/static/demo/Kishi_Bashi_-_It_All_Began_With_a_Burst.mp3"
+                              type="audio/mp3"
+                            />
+                          </audio>
+
+                          <div class="music-song__controls">
+                            <div class="music-song__volume">
+                              <!-- slider -->
+                              <div class="range-slider-wrapper">
+                                <div
+                                  id="year-range-slider"
+                                  data-start="1"
+                                  data-step="0.1"
+                                  data-min="0"
+                                  data-max="1"
+                                  class="range-slider"
+                                ></div>
+                              </div>
+                              <!-- ./ End of slider -->
+                            </div>
+
+                            <button
+                              class="button button--gray button-play music-song__mute"
+                              type="button"
+                            >
+                              <svg class="svg">
+                                <use xlink:href="#volume"></use>
+                              </svg>
+                              <svg class="svg for-active">
+                                <use xlink:href="#mute"></use>
+                              </svg>
+                            </button>
+
+                            <button
+                              class="button button--gray button-play music-song__play"
+                              type="button"
+                            >
+                              <svg class="svg">
+                                <use xlink:href="#play"></use>
+                              </svg>
+                              <svg class="svg for-active">
+                                <use xlink:href="#pause"></use>
+                              </svg>
+                            </button>
+
+                            <button
+                              class="button button--gray button-play music-song__stop"
+                              type="button"
+                            >
+                              <svg class="svg">
+                                <use xlink:href="#stop"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- ./ End of song -->
+                    </li>
+                    <li class="music-item">
+                      <!-- song -->
+                      <div id="music2" class="music-song">
+                        <p class="music-song__text">
+                          Музыка природы для глубокого релакса c очень длинным
+                          названием
+                        </p>
+
+                        <div class="music-song__wrap">
+                          <audio class="music-song__audio">
+                            <source
+                              src="https://cdn.plyr.io/static/demo/Kishi_Bashi_-_It_All_Began_With_a_Burst.mp3"
+                              type="audio/mp3"
+                            />
+                          </audio>
+
+                          <div class="music-song__controls">
+                            <div class="music-song__volume">
+                              <!-- slider -->
+                              <div class="range-slider-wrapper">
+                                <div
+                                  id="year-range-slider"
+                                  data-start="1"
+                                  data-step="0.1"
+                                  data-min="0"
+                                  data-max="1"
+                                  class="range-slider"
+                                ></div>
+                              </div>
+                              <!-- ./ End of slider -->
+                            </div>
+
+                            <button
+                              class="button button--gray button-play music-song__mute"
+                              type="button"
+                            >
+                              <svg class="svg">
+                                <use xlink:href="#volume"></use>
+                              </svg>
+                              <svg class="svg for-active">
+                                <use xlink:href="#mute"></use>
+                              </svg>
+                            </button>
+
+                            <button
+                              class="button button--gray button-play music-song__play"
+                              type="button"
+                            >
+                              <svg class="svg">
+                                <use xlink:href="#play"></use>
+                              </svg>
+                              <svg class="svg for-active">
+                                <use xlink:href="#pause"></use>
+                              </svg>
+                            </button>
+
+                            <button
+                              class="button button--gray button-play music-song__stop"
+                              type="button"
+                            >
+                              <svg class="svg">
+                                <use xlink:href="#stop"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- ./ End of song -->
+                    </li>
+                    <li class="music-item">
+                      <!-- song -->
+                      <div id="music3" class="music-song">
+                        <p class="music-song__text">
+                          Музыка природы для глубокого релакса
+                        </p>
+
+                        <div class="music-song__wrap">
+                          <audio class="music-song__audio">
+                            <source
+                              src="https://cdn.plyr.io/static/demo/Kishi_Bashi_-_It_All_Began_With_a_Burst.mp3"
+                              type="audio/mp3"
+                            />
+                          </audio>
+
+                          <div class="music-song__controls">
+                            <div class="music-song__volume">
+                              <!-- slider -->
+                              <div class="range-slider-wrapper">
+                                <div
+                                  id="year-range-slider"
+                                  data-start="1"
+                                  data-step="0.1"
+                                  data-min="0"
+                                  data-max="1"
+                                  class="range-slider"
+                                ></div>
+                              </div>
+                              <!-- ./ End of slider -->
+                            </div>
+
+                            <button
+                              class="button button--gray button-play music-song__mute"
+                              type="button"
+                            >
+                              <svg class="svg">
+                                <use xlink:href="#volume"></use>
+                              </svg>
+                              <svg class="svg for-active">
+                                <use xlink:href="#mute"></use>
+                              </svg>
+                            </button>
+
+                            <button
+                              class="button button--gray button-play music-song__play"
+                              type="button"
+                            >
+                              <svg class="svg">
+                                <use xlink:href="#play"></use>
+                              </svg>
+                              <svg class="svg for-active">
+                                <use xlink:href="#pause"></use>
+                              </svg>
+                            </button>
+
+                            <button
+                              class="button button--gray button-play music-song__stop"
+                              type="button"
+                            >
+                              <svg class="svg">
+                                <use xlink:href="#stop"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- ./ End of song -->
+                    </li>
+                    <li class="music-item">
+                      <!-- song -->
+                      <div id="music4" class="music-song">
+                        <p class="music-song__text">
+                          Музыка природы для глубокого релакса c очень длинным
+                          названием
+                        </p>
+
+                        <div class="music-song__wrap">
+                          <audio class="music-song__audio">
+                            <source
+                              src="https://cdn.plyr.io/static/demo/Kishi_Bashi_-_It_All_Began_With_a_Burst.mp3"
+                              type="audio/mp3"
+                            />
+                          </audio>
+
+                          <div class="music-song__controls">
+                            <div class="music-song__volume">
+                              <!-- slider -->
+                              <div class="range-slider-wrapper">
+                                <div
+                                  id="year-range-slider"
+                                  data-start="1"
+                                  data-step="0.1"
+                                  data-min="0"
+                                  data-max="1"
+                                  class="range-slider"
+                                ></div>
+                              </div>
+                              <!-- ./ End of slider -->
+                            </div>
+
+                            <button
+                              class="button button--gray button-play music-song__mute"
+                              type="button"
+                            >
+                              <svg class="svg">
+                                <use xlink:href="#volume"></use>
+                              </svg>
+                              <svg class="svg for-active">
+                                <use xlink:href="#mute"></use>
+                              </svg>
+                            </button>
+
+                            <button
+                              class="button button--gray button-play music-song__play"
+                              type="button"
+                            >
+                              <svg class="svg">
+                                <use xlink:href="#play"></use>
+                              </svg>
+                              <svg class="svg for-active">
+                                <use xlink:href="#pause"></use>
+                              </svg>
+                            </button>
+
+                            <button
+                              class="button button--gray button-play music-song__stop"
+                              type="button"
+                            >
+                              <svg class="svg">
+                                <use xlink:href="#stop"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- ./ End of song -->
+                    </li>
+                  </ul>
+                </div>
+                <!-- ./ End of music -->
+              </div>
+              <!-- ./ End of card -->
+            </div>
+            <!-- ./ End of card-wrapper -->
+          </div>
+          <!-- ./ End of wrap -->
+        </div>
+        <!-- ./ End of container -->
+      </section>
+      <!-- ./ End of music -->
+    </main>
+  </body>
+</html>
