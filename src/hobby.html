@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <title>Hobby</title>
+  </head>
+  <body>
+    ${require('./modules/components/nav-bar.html')}
+    ${require('./modules/menu.html')}
+
+    <main>
+      <!-- meditation -->
+      <section class="meditation-section">
+        <div class="container">
+          <!-- wrap -->
+          <div class="wrap">
+            <!-- header -->
+            <div class="meditation-header">
+              <div class="meditation-header__img-wrapper">
+                <img
+                  src="./img/meditation.svg"
+                  alt=""
+                  class="meditation-header__img"
+                />
+              </div>
+
+              <div class="meditation-header__info">
+                <h3 class="meditation-header__title">
+                  От 5 минут
+                </h3>
+
+                <p class="meditation-header__text">
+                  Лучше выполнять во второй половине дня
+                </p>
+              </div>
+            </div>
+            <!-- ./ End of header -->
+
+            <!-- card-wrapper -->
+            <div class="card-wrapper">
+              <!-- card -->
+              <div class="card">
+                <!-- hobby-wrapper -->
+                <div class="hobby-wrapper">
+                  <div class="hobby">
+                    <div class="hobby-timer">
+                      <!-- time -->
+                      <input
+                        type="text"
+                        readonly
+                        class="input meditation-timer-time j_time"
+                        value="02:19"
+                      />
+                      <!-- ./ End of time -->
+
+                      <div class="buttons">
+                        <button
+                          class="button button--dark button--invert"
+                          type="button"
+                        >
+                          Пауза
+                        </button>
+                        <button class="button button--dark" type="button">
+                          Завершить
+                        </button>
+                      </div>
+
+                      <p class="sleep-clock-number__text">
+                        Нужно немного больше времени на себя!
+                      </p>
+                    </div>
+
+                    <div class="hobby-status-wrapper">
+                      <div class="hobby-status">
+                        <div
+                          data-time="00:00"
+                          class="hobby-status__img-wrapper"
+                        >
+                          <img
+                            src="./img/bear.svg"
+                            alt=""
+                            class="hobby-status__img"
+                          />
+                        </div>
+                        <div
+                          data-time="02:20"
+                          class="hobby-status__img-wrapper"
+                        >
+                          <img
+                            src="./img/bear.svg"
+                            alt=""
+                            class="hobby-status__img"
+                          />
+                        </div>
+                        <div
+                          data-time="02:30"
+                          class="hobby-status__img-wrapper"
+                        >
+                          <img
+                            src="./img/bear.svg"
+                            alt=""
+                            class="hobby-status__img"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ./ End of hobby-wrapper -->
+              </div>
+              <!-- ./ End of card -->
+            </div>
+            <!-- ./ End of card-wrapper -->
+
+            <div class="card-desc">
+              <!-- list -->
+              <ul class="meditation__list">
+                <li class="meditation__item">
+                  <p class="meditation__text">
+                    Сначала нужно приготовить свечу.
+                    <b>Хорошо закрепите</b> её.
+                  </p>
+                </li>
+                <li class="meditation__item">
+                  <p class="meditation__text">
+                    Погасите свет. Примите <b>удобную позу</b>. Включите таймер
+                    медитации.
+                  </p>
+                </li>
+                <li class="meditation__item">
+                  <p class="meditation__text">
+                    Попытайтесь <b>максимально расслабиться</b>. Свеча должна
+                    располагаться на расстоянии примерно полуметра от вас.
+                  </p>
+                </li>
+                <li class="meditation__item">
+                  <p class="meditation__text">
+                    Начинайте вглядываться в пламя свечи, в центр языка пламени.
+                    Постарайтесь <b>мысленно слиться с пламенем</b>. Если
+                    почувствуете резь в глазах, прикройте их и дайте отдохнуть.
+                  </p>
+                </li>
+                <li class="meditation__item">
+                  <p class="meditation__text">
+                    Представьте, что в этом пламени <b>сгорают</b> все ваши
+                    дневные заботы, тревоги, проблемы и комплексы.
+                  </p>
+                </li>
+              </ul>
+              <!-- ./ End of list -->
+            </div>
+          </div>
+          <!-- ./ End of wrap -->
+        </div>
+        <!-- ./ End of container -->
+      </section>
+      <!-- ./ End of meditation -->
+    </main>
+  </body>
+</html>

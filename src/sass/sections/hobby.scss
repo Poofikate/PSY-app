@@ -1,0 +1,69 @@
+.hobby-section {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.hobby-wrapper {
+  padding: 0;
+}
+
+.hobby {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hobby-timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: center;
+
+  .meditation-timer-time {
+    margin: 15px 0;
+  }
+
+  .buttons {
+    margin: 20px 0 0;
+  }
+
+  .sleep-clock-number__text {
+    margin: 50px 0 0;
+  }
+}
+
+.hobby-status-wrapper {
+  width: 100%;
+  max-width: 160px;
+  height: auto;
+  margin-left: auto;
+}
+
+.hobby-status {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hobby-status__img-wrapper {
+  position: relative;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  &.active {
+    display: flex;
+  }
+}
+
+.hobby-status__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+}
