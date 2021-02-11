@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <title>Settings</title>
+  </head>
+  <body>
+    ${require('./modules/components/nav-bar.html')}
+    ${require('./modules/menu.html')}
+
+    <main>
+      <!-- my-settings -->
+      <section class="my-settings-section">
+        <div class="container">
+          <div class="my-settings__bg"></div>
+
+          <!-- wrap -->
+          <div class="my-settings-wrap">
+            <!-- left -->
+            <div class="my-settings-left">
+              <!-- aside -->
+              <aside class="my-settings-aside">
+                <div class="my-settings-aside__wrap">
+                  <ul class="my-settings-aside__list">
+                    <li class="my-settings-aside__item">
+                      <a href="#" class="my-settings-aside__link selected">
+                        Мой профиль
+                      </a>
+                    </li>
+                    <li class="my-settings-aside__item">
+                      <a href="#" class="my-settings-aside__link">
+                        Неделя без стресса: I ступень
+                      </a>
+                    </li>
+                    <li class="my-settings-aside__item">
+                      <a href="#" class="my-settings-aside__link">
+                        Мои покупки
+                      </a>
+                    </li>
+                    <li class="my-settings-aside__item">
+                      <a href="#" class="my-settings-aside__link">
+                        Достижения
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </aside>
+              <!-- ./ End of aside -->
+            </div>
+            <!-- ./ End of left -->
+
+            <!-- right -->
+            <div class="my-settings-right">
+              <div class="my-settings-content">
+                <!-- profile -->
+                <div class="my-settings-profile">
+                  <!-- form -->
+                  <form class="profile-form">
+                    <input type="text" class="input" placeholder="ФИО" />
+                    <input
+                      type="email"
+                      class="input"
+                      placeholder="info@555.ru"
+                    />
+                    <input
+                      type="tel"
+                      class="input j_mask"
+                      placeholder="+7 (___) ___-__-__"
+                    />
+                    <input
+                      type="text"
+                      class="input"
+                      placeholder="Образование"
+                    />
+                    <input type="text" class="input" placeholder="Полных лет" />
+                    <input
+                      type="text"
+                      class="input"
+                      placeholder="Семейное положение"
+                    />
+                    <input
+                      type="text"
+                      class="input"
+                      placeholder="Профессиональный статус"
+                    />
+
+                    <div class="radio-switcher">
+                      <label class="radio">
+                        <input
+                          class="radio__input"
+                          type="radio"
+                          name="gender"
+                          checked
+                        />
+                        <div class="radio__custom">
+                          <span class="radio__text">
+                            Муж
+                          </span>
+                        </div>
+                      </label>
+                      <label class="radio">
+                        <input
+                          class="radio__input"
+                          type="radio"
+                          name="gender"
+                        />
+                        <div class="radio__custom">
+                          <span class="radio__text">
+                            Жен
+                          </span>
+                        </div>
+                      </label>
+                    </div>
+
+                    <button class="button" type="submit">
+                      Сохранить
+                    </button>
+                  </form>
+                  <!-- ./ End of form -->
+
+                  <!-- info -->
+                  <div class="profile-info">
+                    <!-- controls -->
+                    <div class="profile-controls">
+                      <div class="item">
+                        <div class="item__wrap">
+                          <div class="item__top">
+                            <div class="item__icon-wrapper">
+                              <svg class="item__icon">
+                                <use xlink:href="#notification"></use>
+                              </svg>
+                            </div>
+
+                            <div class="tooltip">
+                              <i class="tooltip__symbol">
+                                i
+                              </i>
+                              <div class="tooltip__content">
+                                <p class="tooltip__text">
+                                  Источниками стресса могут быть положительные
+                                  или отрицательные изменения в профессиональной
+                                  сфере, ступор в карьере, сложные отношения в
+                                  рабочем коллективе или с начальством,
+                                  выполнение дополнительных обязанностей без
+                                  оплаты.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="item__titles">
+                            <h4 class="item__title">
+                              Уведомления
+                            </h4>
+                            <span class="item__subtitle">
+                              и подписки
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div data-modal-target="#modal-password" class="item">
+                        <div class="item__wrap">
+                          <div class="item__top">
+                            <div class="item__icon-wrapper">
+                              <svg class="item__icon">
+                                <use xlink:href="#key"></use>
+                              </svg>
+                            </div>
+
+                            <div class="tooltip">
+                              <i class="tooltip__symbol">
+                                i
+                              </i>
+                              <div class="tooltip__content">
+                                <p class="tooltip__text">
+                                  Источниками стресса могут быть положительные
+                                  или отрицательные изменения в профессиональной
+                                  сфере, ступор в карьере, сложные отношения в
+                                  рабочем коллективе или с начальством,
+                                  выполнение дополнительных обязанностей без
+                                  оплаты.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="item__titles">
+                            <h4 class="item__title">
+                              Сменить пароль
+                            </h4>
+                            <span class="item__subtitle">
+                              Ваша безопасность
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- ./ End of controls -->
+
+                    <!-- tariff -->
+                    <div class="profile-tariff">
+                      <div class="profile-tariff__wrap">
+                        <div class="profile-tariff-name">
+                          <span class="profile-tariff-name__key">
+                            Ваш тариф:
+                          </span>
+                          <span class="profile-tariff-name__value">
+                            Неделя без стресса: I ступень
+                          </span>
+                        </div>
+                        <div class="profile-tariff-info">
+                          <div class="profile-tariff-info-block">
+                            <em class="profile-tariff-info-block__num">
+                              25
+                            </em>
+                            <p class="profile-tariff-info-block__text">
+                              Дней до конца подписки
+                            </p>
+                          </div>
+                          <div class="profile-tariff-info-block">
+                            <em class="profile-tariff-info-block__num">
+                              149
+                            </em>
+                            <p class="profile-tariff-info-block__text">
+                              Рублей/мес.
+                            </p>
+                          </div>
+                        </div>
+                        <button class="button button--big" type="button">
+                          Пополнить баланс
+                        </button>
+                      </div>
+                    </div>
+                    <!-- ./ End of tariff -->
+                  </div>
+                  <!-- ./ End of info -->
+                </div>
+                <!-- ./ End of profile -->
+              </div>
+            </div>
+            <!-- ./ End of right -->
+          </div>
+          <!-- ./ End of wrap -->
+        </div>
+        <!-- ./ End of container -->
+      </section>
+      <!-- ./ End of my-settings -->
+    </main>
+
+    <!-- modals -->
+    ${require(`./modules/modals/modal-password.html`)}
+  </body>
+</html>

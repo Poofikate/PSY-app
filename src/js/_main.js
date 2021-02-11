@@ -10,8 +10,10 @@ import './modules/polyfills/closest';
 // modules
 import './modules/ClickWaves';
 import './modules/Menu';
+import './modules/Modal';
 import './modules/datepicker';
 import './modules/TabsController';
 import './modules/Dropdown';
+import './modules/Tooltip';
 
 // sliders
