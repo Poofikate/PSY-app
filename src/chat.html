@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <title>Index</title>
+  </head>
+  <body>
+    ${require('./modules/components/nav-bar.html')}
+    ${require('./modules/menu.html')}
+    <main>
+      <!-- chat -->
+      <section class="chat-section">
+        <div class="chat-wrapper">
+          <!-- header -->
+          <div class="chat-header">
+            <div class="container">
+              <div class="diary-header">
+                <h1 class="section-title">
+                  Вы в чате
+                </h1>
+
+                <div class="colors">
+                  <span class="colors__title">
+                    Цвет фона
+                  </span>
+
+                  <div class="colors__wrap">
+                    <div data-color="green" class="color">
+                      <div class="color__wrap"></div>
+                    </div>
+                    <div data-color="blue" class="color">
+                      <div class="color__wrap"></div>
+                    </div>
+                    <div data-color="white" class="color">
+                      <div class="color__wrap"></div>
+                    </div>
+                    <div data-color="beige" class="color">
+                      <div class="color__wrap"></div>
+                    </div>
+                    <div data-color="black" class="color">
+                      <div class="color__wrap"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ./ End of header -->
+
+          <!-- wrap -->
+          <div
+            data-url="http://localhost:3000/chat"
+            data-url-keywords="http://localhost:3000/keywords"
+            data-url-images="http://localhost:3000/images"
+            data-url-answers="http://localhost:3000/answers"
+            data-delay-bad-reaction="10000"
+            data-delay-answer="15000"
+            data-src-bot="/images/panda.svg"
+            data-src-man="/images/logo-part.svg"
+            class="chat-wrap"
+          >
+            <div class="container">
+              <div id="app"></div>
+            </div>
+          </div>
+          <!-- ./ End of wrap -->
+        </div>
+      </section>
+      <!-- ./ End of chat -->
+    </main>
+  </body>
+</html>

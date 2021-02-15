@@ -64,6 +64,7 @@ const config = {
     wheel: './src/js/_wheel.js',
     hobby: './src/js/_hobby.js',
     diary: './src/js/_diary.js',
+    chat: './src/js/_chat.js',
   },
   output: {
     filename: (chunkData) => {
