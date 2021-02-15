@@ -30,7 +30,6 @@ export default class Accordion {
   init() {
     _instances[this.id] = this;
 
-    console.log(this.$el);
     this._isOpenOnLoad && this.open();
 
     if (this.$triggerBtn) {

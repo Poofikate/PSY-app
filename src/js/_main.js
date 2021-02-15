@@ -14,6 +14,7 @@ import './modules/Modal';
 import './modules/datepicker';
 import './modules/TabsController';
 import './modules/Dropdown';
+import './modules/Accordion';
 import './modules/Tooltip';
 
 // sliders

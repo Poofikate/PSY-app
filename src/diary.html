@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <title>Index</title>
+  </head>
+  <body>
+    ${require('./modules/components/nav-bar.html')}
+    ${require('./modules/menu.html')}
+    <main>
+      <!-- diary -->
+      <section class="diary-section">
+        <div class="container">
+          <!-- wrap -->
+          <div class="diary-wrap">
+            <!-- header -->
+            <div class="diary-header">
+              <div class="colors">
+                <span class="colors__title">
+                  Цвет листов
+                </span>
+
+                <div class="colors__wrap">
+                  <div data-color="green" class="color">
+                    <div class="color__wrap"></div>
+                  </div>
+                  <div data-color="blue" class="color">
+                    <div class="color__wrap"></div>
+                  </div>
+                  <div data-color="white" class="color">
+                    <div class="color__wrap"></div>
+                  </div>
+                  <div data-color="beige" class="color">
+                    <div class="color__wrap"></div>
+                  </div>
+                  <div data-color="black" class="color">
+                    <div class="color__wrap"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- ./ End of header -->
+
+            <!-- search -->
+            <div data-accordion class="diary-search">
+              <div class="diary-search__header">
+                <h3 class="diary-new-note-accordion__title">
+                  Поиск записей
+                </h3>
+
+                <button
+                  class="button diary-new-note-accordion__button accordion-button"
+                  type="button"
+                >
+                  <p class="diary-new-note-accordion__button-text">
+                    <span class="for-open">Открыть</span>
+                    <span class="for-close">Скрыть</span>
+                  </p>
+
+                  <svg class="diary-new-note-accordion__button-icon">
+                    <use xlink:href="#arrow"></use>
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="diary-search__wrap diary-new-note-accordion__content accordion-content"
+              >
+                <div class="diary-search__top">
+                  <label class="input-label">
+                    <svg class="input__icon">
+                      <use xlink:href="#search"></use>
+                    </svg>
+
+                    <input
+                      class="input input--gray"
+                      type="text"
+                      placeholder="Поиск по заметкам..."
+                    />
+                  </label>
+                </div>
+
+                <div class="diary-search__bottom">
+                  <div class="diary-search-datepicker-wrapper">
+                    <span class="diary-search__title">
+                      Показать период
+                    </span>
+
+                    <div class="diary-search-datepicker">
+                      <div class="input-label j_datepicker">
+                        <svg class="input__icon">
+                          <use xlink:href="#calendar"></use>
+                        </svg>
+
+                        <input
+                          type="text"
+                          class="input"
+                          placeholder="25 окт 2020 - 25 ноя 2020"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="diary-search__feelings">
+                    <label class="checkbox checkbox-feeling">
+                      <input class="checkbox__input" type="checkbox" />
+                      <div class="checkbox__custom">
+                        <img
+                          src="./img/angry.svg"
+                          alt=""
+                          class="checkbox__img"
+                        />
+
+                        <span class="checkbox__text">
+                          Гнев
+                        </span>
+                      </div>
+                    </label>
+                    <label class="checkbox checkbox-feeling">
+                      <input class="checkbox__input" type="checkbox" />
+                      <div class="checkbox__custom">
+                        <img
+                          src="./img/scared.svg"
+                          alt=""
+                          class="checkbox__img"
+                        />
+
+                        <span class="checkbox__text">
+                          Страх
+                        </span>
+                      </div>
+                    </label>
+                    <label class="checkbox checkbox-feeling">
+                      <input class="checkbox__input" type="checkbox" />
+                      <div class="checkbox__custom">
+                        <img src="./img/sad.svg" alt="" class="checkbox__img" />
+
+                        <span class="checkbox__text">
+                          Печаль
+                        </span>
+                      </div>
+                    </label>
+                    <label class="checkbox checkbox-feeling">
+                      <input class="checkbox__input" type="checkbox" />
+                      <div class="checkbox__custom">
+                        <img
+                          src="./img/grinning.svg"
+                          alt=""
+                          class="checkbox__img"
+                        />
+
+                        <span class="checkbox__text">
+                          Радость
+                        </span>
+                      </div>
+                    </label>
+                    <label class="checkbox checkbox-feeling">
+                      <input class="checkbox__input" type="checkbox" />
+                      <div class="checkbox__custom">
+                        <img
+                          src="./img/smile.svg"
+                          alt=""
+                          class="checkbox__img"
+                        />
+
+                        <span class="checkbox__text">
+                          Любовь
+                        </span>
+                      </div>
+                    </label>
+                  </div>
+
+                  <div class="diary-search__save">
+                    <span class="diary-search__title">
+                      Вы можете сохранить дневник
+                    </span>
+
+                    <button class="button button--gray" type="button">
+                      Выгрузить период в PDF
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- ./ End of search -->
+
+            <!-- new-note -->
+            <div class="diary-new-note">
+              <div data-accordion class="diary-new-note-accordion active">
+                <div class="diary-new-note-accordion__header">
+                  <h3 class="diary-new-note-accordion__title">
+                    Новая запись в дневнике
+                  </h3>
+
+                  <button
+                    class="button diary-new-note-accordion__button accordion-button"
+                    type="button"
+                  >
+                    <p class="diary-new-note-accordion__button-text">
+                      <span class="for-open">Открыть</span>
+                      <span class="for-close">Скрыть</span>
+                    </p>
+
+                    <svg class="diary-new-note-accordion__button-icon">
+                      <use xlink:href="#arrow"></use>
+                    </svg>
+                  </button>
+                </div>
+
+                <div
+                  class="diary-new-note-accordion__content accordion-content"
+                >
+                  <div class="diary-new-note-accordion__body">
+                    <div class="textarea-wrapper">
+                      <textarea
+                        class="textarea j_autosize"
+                        placeholder="Поделитесь своими мыслями..."
+                      ></textarea>
+                    </div>
+                    <div class="diary-new-note-accordion__feeling">
+                      <div class="diary-new-note-accordion__mood">
+                        <span class="diary-new-note-accordion__subtitle">
+                          Как Вы себя чувствуете?
+                        </span>
+
+                        <div class="mood-range">
+                          <div class="mood-range__icon-wrapper">
+                            <svg class="mood-range__icon">
+                              <use xlink:href="#mood_red"></use>
+                            </svg>
+                          </div>
+                          <div class="mood-range__wrap j_mood-range"></div>
+                          <div class="mood-range__icon-wrapper">
+                            <svg class="mood-range__icon">
+                              <use xlink:href="#mood_green"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="diary-new-note-accordion__emotion">
+                        <span class="diary-new-note-accordion__subtitle">
+                          Что Вы чувствуете?
+                        </span>
+
+                        <button
+                          data-modal-target="#modal-feeling"
+                          class="button button--gray"
+                          type="button"
+                        >
+                          Выбрать эмоции
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="diary-new-note-accordion__footer">
+                    <div class="diary-new-note-accordion__tags-wrapper">
+                      <div class="diary-new-note-accordion__tags">
+                        <span class="tag">
+                          Любовь к себе
+                        </span>
+                        <span class="tag tag--red">
+                          Ярость
+                        </span>
+                        <span class="tag tag--blue">
+                          Ошеломленность
+                        </span>
+                        <span class="tag tag--blue-light">
+                          Скорбь
+                        </span>
+                        <span class="tag tag--yellow">
+                          Умиротворение
+                        </span>
+                        <span class="tag tag--purple">
+                          Спокойствие
+                        </span>
+
+                        <span class="tag">
+                          Любовь к себе
+                        </span>
+                        <span class="tag tag--red">
+                          Ярость
+                        </span>
+                        <span class="tag tag--blue">
+                          Ошеломленность
+                        </span>
+                        <span class="tag tag--blue-light">
+                          Скорбь
+                        </span>
+                        <span class="tag tag--yellow">
+                          Умиротворение
+                        </span>
+                        <span class="tag tag--purple">
+                          Спокойствие
+                        </span>
+                      </div>
+                    </div>
+                    <button disabled class="button button--big" type="submit">
+                      Готово
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- ./ End of new-note -->
+
+            <!-- notes -->
+            <div class="diary-notes">
+              <div class="notes j_masonry">
+                <div class="note">
+                  <div class="note__container">
+                    <div class="note__wrap">
+                      <div class="note__header">
+                        <time class="note__date">
+                          25 окт 2020
+                        </time>
+                      </div>
+
+                      <div class="note__body">
+                        <p class="note__text">
+                          Я вернулся из отпуска и начался период легкой
+                          меланхолии. Какой-то энергетический спад, хочется
+                          лежать под пледиком и читать книжку, а не вот это вот
+                          всё.
+                        </p>
+                      </div>
+
+                      <div class="note__footer">
+                        <div class="note__mood">
+                          <div class="note__mood-imgs">
+                            <div class="mood-range__icon-wrapper">
+                              <svg class="mood-range__icon">
+                                <use xlink:href="#mood_red"></use>
+                              </svg>
+                            </div>
+                            <div class="mood-range__icon-wrapper">
+                              <svg class="mood-range__icon">
+                                <use xlink:href="#mood_red"></use>
+                              </svg>
+                            </div>
+                          </div>
+
+                          <em class="note__mood-text">
+                            5/10
+                          </em>
+                        </div>
+
+                        <div class="note__tags">
+                          <span class="tag tag--blue-light">
+                            Скорбь
+                          </span>
+                          <span class="tag tag--yellow">
+                            Умиротворение
+                          </span>
+                          <span class="tag tag--purple">
+                            Спокойствие
+                          </span>
+                        </div>
+                      </div>
+
+                      <button class="hamburger note__delete" type="button">
+                        <svg class="hamburger__icon">
+                          <use xlink:href="#close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="note">
+                  <div class="note__container">
+                    <div class="note__wrap">
+                      <div class="note__header">
+                        <time class="note__date">
+                          25 окт 2020
+                        </time>
+                      </div>
+
+                      <div class="note__body">
+                        <p class="note__text">
+                          Я вернулся из отпуска и начался период легкой
+                          меланхолии. Какой-то энергетический спад, хочется
+                          лежать под пледиком и читать книжку, а не вот это вот
+                          всё. Я вернулся из отпуска и начался период легкой
+                          меланхолии. Какой-то энергетический спад, хочется
+                          лежать под пледиком и читать книжку, а не вот это вот
+                          всё.
+                        </p>
+                      </div>
+
+                      <div class="note__footer">
+                        <div class="note__mood">
+                          <div class="note__mood-imgs">
+                            <div class="mood-range__icon-wrapper">
+                              <svg class="mood-range__icon">
+                                <use xlink:href="#mood_red"></use>
+                              </svg>
+                            </div>
+                            <div class="mood-range__icon-wrapper">
+                              <svg class="mood-range__icon">
+                                <use xlink:href="#mood_red"></use>
+                              </svg>
+                            </div>
+                          </div>
+
+                          <em class="note__mood-text">
+                            5/10
+                          </em>
+                        </div>
+
+                        <div class="note__tags">
+                          <span class="tag tag--blue-light">
+                            Скорбь
+                          </span>
+                          <span class="tag tag--yellow">
+                            Умиротворение
+                          </span>
+                          <span class="tag tag--purple">
+                            Спокойствие
+                          </span>
+                        </div>
+                      </div>
+
+                      <button class="hamburger note__delete" type="button">
+                        <svg class="hamburger__icon">
+                          <use xlink:href="#close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="note">
+                  <div class="note__container">
+                    <div class="note__wrap">
+                      <div class="note__header">
+                        <time class="note__date">
+                          25 окт 2020
+                        </time>
+                      </div>
+
+                      <div class="note__body">
+                        <p class="note__text">
+                          Я вернулся из отпуска и начался период легкой
+                          меланхолии. Какой-то энергетический спад, хочется
+                          лежать под пледиком и читать книжку, а не вот это вот
+                          всё.
+                        </p>
+                      </div>
+
+                      <div class="note__footer">
+                        <div class="note__mood">
+                          <div class="note__mood-imgs">
+                            <div class="mood-range__icon-wrapper">
+                              <svg class="mood-range__icon">
+                                <use xlink:href="#mood_red"></use>
+                              </svg>
+                            </div>
+                            <div class="mood-range__icon-wrapper">
+                              <svg class="mood-range__icon">
+                                <use xlink:href="#mood_red"></use>
+                              </svg>
+                            </div>
+                          </div>
+
+                          <em class="note__mood-text">
+                            5/10
+                          </em>
+                        </div>
+
+                        <div class="note__tags">
+                          <span class="tag tag--blue-light">
+                            Скорбь
+                          </span>
+                          <span class="tag tag--yellow">
+                            Умиротворение
+                          </span>
+                          <span class="tag tag--purple">
+                            Спокойствие
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="note">
+                  <div class="note__container">
+                    <div class="note__wrap">
+                      <div class="note__header">
+                        <time class="note__date">
+                          25 окт 2020
+                        </time>
+                      </div>
+
+                      <div class="note__body">
+                        <p class="note__text">
+                          Я вернулся из отпуска и начался период легкой
+                          меланхолии. Какой-то энергетический спад, хочется
+                          лежать под пледиком и читать книжку, а не вот это вот
+                          всё. Я вернулся из отпуска и начался период легкой
+                          меланхолии. Какой-то энергетический спад, хочется
+                          лежать под пледиком и читать книжку, а не вот это вот
+                          всё.
+                        </p>
+                      </div>
+
+                      <div class="note__footer">
+                        <div class="note__mood">
+                          <div class="note__mood-imgs">
+                            <div class="mood-range__icon-wrapper">
+                              <svg class="mood-range__icon">
+                                <use xlink:href="#mood_red"></use>
+                              </svg>
+                            </div>
+                            <div class="mood-range__icon-wrapper">
+                              <svg class="mood-range__icon">
+                                <use xlink:href="#mood_red"></use>
+                              </svg>
+                            </div>
+                          </div>
+
+                          <em class="note__mood-text">
+                            5/10
+                          </em>
+                        </div>
+
+                        <div class="note__tags">
+                          <span class="tag tag--blue-light">
+                            Скорбь
+                          </span>
+                          <span class="tag tag--yellow">
+                            Умиротворение
+                          </span>
+                          <span class="tag tag--purple">
+                            Спокойствие
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="note">
+                  <div class="note__container">
+                    <div class="note__wrap">
+                      <div class="note__header">
+                        <time class="note__date">
+                          25 окт 2020
+                        </time>
+                      </div>
+
+                      <div class="note__body">
+                        <p class="note__text">
+                          Я вернулся из отпуска и начался период легкой
+                          меланхолии. Какой-то энергетический спад, хочется
+                          лежать под пледиком и читать книжку, а не вот это вот
+                          всё.
+                        </p>
+                      </div>
+
+                      <div class="note__footer">
+                        <div class="note__mood">
+                          <div class="note__mood-imgs">
+                            <div class="mood-range__icon-wrapper">
+                              <svg class="mood-range__icon">
+                                <use xlink:href="#mood_red"></use>
+                              </svg>
+                            </div>
+                            <div class="mood-range__icon-wrapper">
+                              <svg class="mood-range__icon">
+                                <use xlink:href="#mood_red"></use>
+                              </svg>
+                            </div>
+                          </div>
+
+                          <em class="note__mood-text">
+                            5/10
+                          </em>
+                        </div>
+
+                        <div class="note__tags">
+                          <span class="tag tag--blue-light">
+                            Скорбь
+                          </span>
+                          <span class="tag tag--yellow">
+                            Умиротворение
+                          </span>
+                          <span class="tag tag--purple">
+                            Спокойствие
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="note">
+                  <div class="note__container">
+                    <div class="note__wrap">
+                      <div class="note__header">
+                        <time class="note__date">
+                          25 окт 2020
+                        </time>
+                      </div>
+
+                      <div class="note__body">
+                        <p class="note__text">
+                          Я вернулся из отпуска и начался период легкой
+                          меланхолии. Какой-то энергетический спад, хочется
+                          лежать под пледиком и читать книжку, а не вот это вот
+                          всё. Я вернулся из отпуска и начался период легкой
+                          меланхолии. Какой-то энергетический спад, хочется
+                          лежать под пледиком и читать книжку, а не вот это вот
+                          всё.
+                        </p>
+                      </div>
+
+                      <div class="note__footer">
+                        <div class="note__mood">
+                          <div class="note__mood-imgs">
+                            <div class="mood-range__icon-wrapper">
+                              <svg class="mood-range__icon">
+                                <use xlink:href="#mood_red"></use>
+                              </svg>
+                            </div>
+                            <div class="mood-range__icon-wrapper">
+                              <svg class="mood-range__icon">
+                                <use xlink:href="#mood_red"></use>
+                              </svg>
+                            </div>
+                          </div>
+
+                          <em class="note__mood-text">
+                            5/10
+                          </em>
+                        </div>
+
+                        <div class="note__tags">
+                          <span class="tag tag--blue-light">
+                            Скорбь
+                          </span>
+                          <span class="tag tag--yellow">
+                            Умиротворение
+                          </span>
+                          <span class="tag tag--purple">
+                            Спокойствие
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="note">
+                  <div class="note__container">
+                    <div class="note__wrap">
+                      <div class="note__header">
+                        <time class="note__date">
+                          25 окт 2020
+                        </time>
+                      </div>
+
+                      <div class="note__body">
+                        <p class="note__text">
+                          Я вернулся из отпуска и начался период легкой
+                          меланхолии. Какой-то энергетический спад, хочется
+                          лежать под пледиком и читать книжку, а не вот это вот
+                          всё.
+                        </p>
+                      </div>
+
+                      <div class="note__footer">
+                        <div class="note__mood">
+                          <div class="note__mood-imgs">
+                            <div class="mood-range__icon-wrapper">
+                              <svg class="mood-range__icon">
+                                <use xlink:href="#mood_red"></use>
+                              </svg>
+                            </div>
+                            <div class="mood-range__icon-wrapper">
+                              <svg class="mood-range__icon">
+                                <use xlink:href="#mood_red"></use>
+                              </svg>
+                            </div>
+                          </div>
+
+                          <em class="note__mood-text">
+                            5/10
+                          </em>
+                        </div>
+
+                        <div class="note__tags">
+                          <span class="tag tag--blue-light">
+                            Скорбь
+                          </span>
+                          <span class="tag tag--yellow">
+                            Умиротворение
+                          </span>
+                          <span class="tag tag--purple">
+                            Спокойствие
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="note">
+                  <div class="note__container">
+                    <div class="note__wrap">
+                      <div class="note__header">
+                        <time class="note__date">
+                          25 окт 2020
+                        </time>
+                      </div>
+
+                      <div class="note__body">
+                        <p class="note__text">
+                          Я вернулся из отпуска и начался период легкой
+                          меланхолии. Какой-то энергетический спад, хочется
+                          лежать под пледиком и читать книжку, а не вот это вот
+                          всё. Я вернулся из отпуска и начался период легкой
+                          меланхолии. Какой-то энергетический спад, хочется
+                          лежать под пледиком и читать книжку, а не вот это вот
+                          всё.
+                        </p>
+                      </div>
+
+                      <div class="note__footer">
+                        <div class="note__mood">
+                          <div class="note__mood-imgs">
+                            <div class="mood-range__icon-wrapper">
+                              <svg class="mood-range__icon">
+                                <use xlink:href="#mood_red"></use>
+                              </svg>
+                            </div>
+                            <div class="mood-range__icon-wrapper">
+                              <svg class="mood-range__icon">
+                                <use xlink:href="#mood_red"></use>
+                              </svg>
+                            </div>
+                          </div>
+
+                          <em class="note__mood-text">
+                            5/10
+                          </em>
+                        </div>
+
+                        <div class="note__tags">
+                          <span class="tag tag--blue-light">
+                            Скорбь
+                          </span>
+                          <span class="tag tag--yellow">
+                            Умиротворение
+                          </span>
+                          <span class="tag tag--purple">
+                            Спокойствие
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="note">
+                  <div class="note__container">
+                    <div class="note__wrap">
+                      <div class="note__header">
+                        <time class="note__date">
+                          25 окт 2020
+                        </time>
+                      </div>
+
+                      <div class="note__body">
+                        <p class="note__text">
+                          Я вернулся из отпуска и начался период легкой
+                          меланхолии. Какой-то энергетический спад, хочется
+                          лежать под пледиком и читать книжку, а не вот это вот
+                          всё. Я вернулся из отпуска и начался период легкой
+                          меланхолии. Какой-то энергетический спад, хочется
+                          лежать под пледиком и читать книжку, а не вот это вот
+                          всё.
+                        </p>
+                      </div>
+
+                      <div class="note__footer">
+                        <div class="note__mood">
+                          <div class="note__mood-imgs">
+                            <div class="mood-range__icon-wrapper">
+                              <svg class="mood-range__icon">
+                                <use xlink:href="#mood_red"></use>
+                              </svg>
+                            </div>
+                            <div class="mood-range__icon-wrapper">
+                              <svg class="mood-range__icon">
+                                <use xlink:href="#mood_red"></use>
+                              </svg>
+                            </div>
+                          </div>
+
+                          <em class="note__mood-text">
+                            5/10
+                          </em>
+                        </div>
+
+                        <div class="note__tags">
+                          <span class="tag tag--blue-light">
+                            Скорбь
+                          </span>
+                          <span class="tag tag--yellow">
+                            Умиротворение
+                          </span>
+                          <span class="tag tag--purple">
+                            Спокойствие
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="note">
+                  <div class="note__container">
+                    <div class="note__wrap">
+                      <div class="note__header">
+                        <time class="note__date">
+                          25 окт 2020
+                        </time>
+                      </div>
+
+                      <div class="note__body">
+                        <p class="note__text">
+                          Я вернулся из отпуска и начался период легкой
+                          меланхолии. Какой-то энергетический спад, хочется
+                          лежать под пледиком и читать книжку, а не вот это вот
+                          всё.
+                        </p>
+                      </div>
+
+                      <div class="note__footer">
+                        <div class="note__mood">
+                          <div class="note__mood-imgs">
+                            <div class="mood-range__icon-wrapper">
+                              <svg class="mood-range__icon">
+                                <use xlink:href="#mood_red"></use>
+                              </svg>
+                            </div>
+                            <div class="mood-range__icon-wrapper">
+                              <svg class="mood-range__icon">
+                                <use xlink:href="#mood_red"></use>
+                              </svg>
+                            </div>
+                          </div>
+
+                          <em class="note__mood-text">
+                            5/10
+                          </em>
+                        </div>
+
+                        <div class="note__tags">
+                          <span class="tag tag--blue-light">
+                            Скорбь
+                          </span>
+                          <span class="tag tag--yellow">
+                            Умиротворение
+                          </span>
+                          <span class="tag tag--purple">
+                            Спокойствие
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="note">
+                  <div class="note__container">
+                    <div class="note__wrap">
+                      <div class="note__header">
+                        <time class="note__date">
+                          25 окт 2020
+                        </time>
+                      </div>
+
+                      <div class="note__body">
+                        <p class="note__text">
+                          Я вернулся из отпуска и начался период легкой
+                          меланхолии. Какой-то энергетический спад, хочется
+                          лежать под пледиком и читать книжку, а не вот это вот
+                          всё. Я вернулся из отпуска и начался период легкой
+                          меланхолии. Какой-то энергетический спад, хочется
+                          лежать под пледиком и читать книжку, а не вот это вот
+                          всё.
+                        </p>
+                      </div>
+
+                      <div class="note__footer">
+                        <div class="note__mood">
+                          <div class="note__mood-imgs">
+                            <div class="mood-range__icon-wrapper">
+                              <svg class="mood-range__icon">
+                                <use xlink:href="#mood_red"></use>
+                              </svg>
+                            </div>
+                            <div class="mood-range__icon-wrapper">
+                              <svg class="mood-range__icon">
+                                <use xlink:href="#mood_red"></use>
+                              </svg>
+                            </div>
+                          </div>
+
+                          <em class="note__mood-text">
+                            5/10
+                          </em>
+                        </div>
+
+                        <div class="note__tags">
+                          <span class="tag tag--blue-light">
+                            Скорбь
+                          </span>
+                          <span class="tag tag--yellow">
+                            Умиротворение
+                          </span>
+                          <span class="tag tag--purple">
+                            Спокойствие
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- ./ End of notes -->
+          </div>
+          <!-- ./ End of wrap -->
+        </div>
+        <!-- ./ End of container -->
+      </section>
+      <!-- ./ End of diary -->
+    </main>
+
+    <!-- modals -->
+    ${require('./modules/modals/modal-feeling.html')}
+  </body>
+</html>
