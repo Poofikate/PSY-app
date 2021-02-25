@@ -1,4 +1,5 @@
 .meditation-section {
+  padding-top: 0;
   overflow: hidden;
 }
 
@@ -6,7 +7,6 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  padding-top: 10px;
 }
 
 .aside__info {
@@ -102,7 +102,6 @@
 .card-wrapper {
   flex-grow: 1;
   width: 100%;
-  margin-top: 20px;
 }
 
 .card {
@@ -124,6 +123,70 @@
   flex-grow: 1;
   justify-content: center;
   width: 100%;
+}
+
+.meditation-range-slider {
+  min-height: 90px;
+  padding: 10px 30px;
+  margin-bottom: 25px;
+  background-color: $white;
+  border-radius: 40px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  &__wrap {
+    margin: 10px 0;
+
+    &.noUi-horizontal {
+      height: 6px;
+      background-color: $gray-light;
+      border: none;
+    }
+
+    .noUi-connect {
+      background-color: $turq;
+    }
+
+    .noUi-handle {
+      top: -11px;
+      right: -11px;
+      width: 26px;
+      height: 26px;
+      background-color: $turq;
+      border: none;
+      border-radius: 50%;
+      box-shadow: none;
+
+      &::before,
+      &::after {
+        content: none;
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__img {
+    display: block;
+    width: 16px;
+    min-width: 16px;
+    height: 16px;
+    min-height: 16px;
+    object-fit: contain;
+  }
 }
 
 .meditation-timer-time {
@@ -155,12 +218,13 @@
 .meditation-music__title {
   display: inline-block;
   margin-bottom: 15px;
+  font-family: $roboto-slab;
   font-size: 16px;
-  color: $gray;
+  color: $blue-dark;
 }
 
 .meditation-music-form {
   display: flex;
   flex-wrap: wrap;
-  margin: -4px;
+  margin: -3px;
 }

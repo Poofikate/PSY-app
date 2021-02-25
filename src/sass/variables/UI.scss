@@ -606,7 +606,7 @@ button {
 }
 
 .radio-music {
-  margin: 4px;
+  margin: 3px;
 
   .plyr--audio {
     display: none;
@@ -631,8 +631,8 @@ button {
     height: 50px;
     min-height: 50px;
     margin: 0;
-    background-color: $gray-light;
-    border-color: $gray-light;
+    background-color: $white;
+    border-color: $white;
     box-shadow: none;
 
     &::before {
@@ -698,6 +698,39 @@ button {
   }
   &--green {
     color: $green;
+  }
+}
+
+.checkbox-switch {
+  .checkbox__input {
+    &:checked + .checkbox-switch__custom-wrapper {
+      background-color: $pale-turq;
+
+      .checkbox-switch__custom {
+        background-color: $turq;
+        transform: translateX(100%);
+      }
+    }
+  }
+
+  &__custom-wrapper {
+    width: 40px;
+    min-width: 40px;
+    height: 20px;
+    min-height: 20px;
+    background-color: $gray-light;
+    border-radius: 15px;
+    transition: background-color 0.2s ease;
+  }
+
+  &__custom {
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    min-height: 20px;
+    background-color: $blue-dark;
+    border-radius: 50%;
+    transition: transform 0.2s ease, background-color 0.2s ease;
   }
 }
 
