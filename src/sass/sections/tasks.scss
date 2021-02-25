@@ -1,6 +1,9 @@
 .tasks-section {
-  padding-top: 0;
   padding-bottom: 20px;
+
+  &:first-of-type {
+    padding-top: 0;
+  }
 }
 
 .tasks-wrap {

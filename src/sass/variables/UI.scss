@@ -198,6 +198,13 @@ button {
       background-color: $blue;
     }
 
+    &--close {
+      .svg {
+        width: 22px;
+        height: 22px;
+      }
+    }
+
     &__plus {
       font-size: 36px;
       font-weight: 300;

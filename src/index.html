@@ -10,10 +10,10 @@
     <title>Index</title>
   </head>
   <body>
+    ${require('./modules/components/header.html')}
     ${require('./modules/components/nav-bar.html')}
     ${require('./modules/menu.html')}
-    ${require('./modules/components/progress.html')}
-    ${require('./modules/components/date.html')}
+
     <main>
       <!-- tasks -->
       <section class="tasks-section">
@@ -22,12 +22,6 @@
           <div class="tasks-wrap">
             <div class="tasks-cards">
               <div class="tasks-card-mobile">
-                <div class="tasks-card-mobile__header-mobile">
-                  <h1 class="h1 tasks-card__title">
-                    Физические задачи
-                  </h1>
-                </div>
-
                 <div class="tasks">
                   <a href="#" class="task">
                     <div class="task__icon-wrapper">
