@@ -20,6 +20,7 @@ $pale-blue-light: #c3eff8;
 $pale-yellow: #feeed0;
 $pale-purple: #f3e5f2;
 
+$gr-body: linear-gradient(180deg, #e4eff4 0%, rgba(228, 239, 244, 0) 100%), #fff;
 $gr-green: #c4db8b;
 $gr-blue: linear-gradient(
   45deg,
@@ -32,6 +33,11 @@ $gr-blue: linear-gradient(
 $gr-white: $white;
 $gr-beige: #f2daac;
 $gr-black: #273245;
+$gr-task-of-day: linear-gradient(90deg, #217bfc 0%, #31cae4 110%),
+  linear-gradient(90deg, #2bc0de 0%, #77e6f9 100%);
+$gr-task-completed: linear-gradient(90deg, #a3eeff -15%, #f9ecd8 110%), #fff;
+$gr-task-status: linear-gradient(0deg, #92e2d9, #92e2d9),
+  linear-gradient(90deg, #23a3cf 0%, #25d4ca 102.44%);
 
 /* Global */
 $screen-height: calc(100vh - 70px);

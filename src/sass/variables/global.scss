@@ -2,11 +2,29 @@
   box-sizing: border-box;
 }
 
+body {
+  padding-bottom: 70px;
+}
+
+main {
+  &.bg {
+    padding-bottom: 110px;
+    background-image: url(../img/body_png.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+  }
+}
+
 .container {
   width: 100%;
   max-width: $container-max-width;
   padding: $container-padding;
   margin: 0 auto;
+
+  @include max-width(360px) {
+    padding: 0 10px;
+  }
 }
 
 section {

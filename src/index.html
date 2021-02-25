@@ -14,7 +14,7 @@
     ${require('./modules/components/nav-bar.html')}
     ${require('./modules/menu.html')}
 
-    <main>
+    <main class="bg">
       <!-- tasks -->
       <section class="tasks-section">
         <div class="container">
@@ -23,17 +23,28 @@
             <div class="tasks-cards">
               <div class="tasks-card-mobile">
                 <div class="tasks">
-                  <a href="#" class="task">
+                  <a href="#" class="task task--progress">
+                    <div class="task__info">
+                      <span class="task__title">
+                        Процент выполнения
+                      </span>
+                    </div>
+
+                    <div class="task-progress">
+                      <em class="task-progress__num">
+                        40%
+                      </em>
+                      <div class="task-progress__wrap">
+                        <div style="max-width: 40%;" class="task-progress__bar">
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="task of-day">
                     <div class="task__icon-wrapper">
                       <svg class="task__icon">
                         <use xlink:href="#task1"></use>
                       </svg>
-
-                      <div class="task-done">
-                        <svg class="task-done__icon">
-                          <use xlink:href="#done"></use>
-                        </svg>
-                      </div>
                     </div>
 
                     <div class="task__info">
@@ -41,143 +52,88 @@
                         Медитация
                       </span>
                       <p class="task__text">
-                        5 10 минут
+                        Задание дня
                       </p>
                     </div>
 
-                    <svg class="task__arrow">
-                      <use xlink:href="#arrow"></use>
-                    </svg>
+                    <div class="task-time">
+                      <svg class="task-time__icon">
+                        <use xlink:href="#time"></use>
+                      </svg>
+                      <time class="task-time__value">
+                        5—10 мин
+                      </time>
+                    </div>
                   </a>
-                  <a href="#" class="task completed">
+                  <a href="#" class="task">
                     <div class="task__icon-wrapper">
                       <svg class="task__icon">
-                        <use xlink:href="#task1"></use>
+                        <use xlink:href="#task2"></use>
                       </svg>
-
-                      <div class="task-done">
-                        <svg class="task-done__icon">
-                          <use xlink:href="#done"></use>
-                        </svg>
-                      </div>
                     </div>
 
                     <div class="task__info">
                       <span class="task__title">
-                        Сон
+                        Хобби
                       </span>
                       <p class="task__text">
-                        Ложиться спать раньше
+                        Улучшайте состояние через упражнения
                       </p>
                     </div>
 
-                    <svg class="task__arrow">
-                      <use xlink:href="#arrow"></use>
-                    </svg>
+                    <div class="task-time">
+                      <svg class="task-time__icon">
+                        <use xlink:href="#time"></use>
+                      </svg>
+                      <time class="task-time__value">
+                        5—10 мин
+                      </time>
+                    </div>
                   </a>
                   <a href="#" class="task">
                     <div class="task__icon-wrapper">
                       <svg class="task__icon">
                         <use xlink:href="#task3"></use>
                       </svg>
-
-                      <div class="task-done">
-                        <svg class="task-done__icon">
-                          <use xlink:href="#done"></use>
-                        </svg>
-                      </div>
                     </div>
 
                     <div class="task__info">
                       <span class="task__title">
-                        Медитация
+                        Сон
                       </span>
                       <p class="task__text">
-                        5 10 минут
+                        Улучшайте свое состояние через сон
                       </p>
                     </div>
 
-                    <svg class="task__arrow">
-                      <use xlink:href="#arrow"></use>
-                    </svg>
+                    <div class="task-time">
+                      <svg class="task-time__icon">
+                        <use xlink:href="#time"></use>
+                      </svg>
+                      <time class="task-time__value">
+                        15—20 мин
+                      </time>
+                    </div>
                   </a>
                   <a href="#" class="task completed">
                     <div class="task__icon-wrapper">
                       <svg class="task__icon">
                         <use xlink:href="#task4"></use>
                       </svg>
-
-                      <div class="task-done">
-                        <svg class="task-done__icon">
-                          <use xlink:href="#done"></use>
-                        </svg>
-                      </div>
                     </div>
 
                     <div class="task__info">
                       <span class="task__title">
-                        Сон
+                        Зарядка
                       </span>
                       <p class="task__text">
-                        Ложиться спать раньше
+                        Улучшайте состояние через упражнения
                       </p>
                     </div>
 
-                    <svg class="task__arrow">
-                      <use xlink:href="#arrow"></use>
-                    </svg>
-                  </a>
-                  <a href="#" class="task">
-                    <div class="task__icon-wrapper">
-                      <svg class="task__icon">
-                        <use xlink:href="#task5"></use>
-                      </svg>
-
-                      <div class="task-done">
-                        <svg class="task-done__icon">
-                          <use xlink:href="#done"></use>
-                        </svg>
-                      </div>
-                    </div>
-
-                    <div class="task__info">
-                      <span class="task__title">
-                        Медитация
-                      </span>
-                      <p class="task__text">
-                        5 10 минут
-                      </p>
-                    </div>
-
-                    <svg class="task__arrow">
-                      <use xlink:href="#arrow"></use>
-                    </svg>
-                  </a>
-                  <a href="#" class="task completed">
-                    <div class="task__icon-wrapper">
-                      <svg class="task__icon">
-                        <use xlink:href="#task6"></use>
-                      </svg>
-
-                      <div class="task-done">
-                        <svg class="task-done__icon">
-                          <use xlink:href="#done"></use>
-                        </svg>
-                      </div>
-                    </div>
-
-                    <div class="task__info">
-                      <span class="task__title">
-                        Сон
-                      </span>
-                      <p class="task__text">
-                        Ложиться спать раньше
-                      </p>
-                    </div>
-
-                    <svg class="task__arrow">
-                      <use xlink:href="#arrow"></use>
-                    </svg>
+                    <span class="task__status">
+                      Выполнено!
+                    </span>
                   </a>
                 </div>
               </div>
