@@ -1,0 +1,17 @@
+.us-section {
+  padding-top: 20px;
+}
+
+.us__text {
+  font-family: $roboto-slab;
+  font-size: 16px;
+  line-height: 1.5;
+  color: $blue-dark;
+  text-align: center;
+
+  em {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+  }
+}
