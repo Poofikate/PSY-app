@@ -6,6 +6,7 @@
 @import '~Datepicker.js/dist/css/datepicker.material.css';
 @import '~plyr/dist/plyr.css';
 @import '~nouislider/distribute/nouislider.css';
+@import '~swiper/swiper-bundle.min.css';
 
 // Variables - Переменные
 @import 'variables/fonts';
@@ -26,6 +27,7 @@
 // Sections - Разделы сайта
 @import 'sections/menu';
 @import 'sections/tasks';
+@import 'sections/bonus-tasks';
 @import 'sections/advices';
 @import 'sections/results';
 @import 'sections/mood';

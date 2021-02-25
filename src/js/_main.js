@@ -19,3 +19,4 @@ import './modules/Accordion';
 import './modules/Tooltip';
 
 // sliders
+import './sliders/bonus-tasks';
