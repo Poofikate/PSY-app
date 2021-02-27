@@ -11,6 +11,7 @@ import './modules/polyfills/closest';
 import './modules/ClickWaves';
 import './modules/Menu';
 import './modules/Modal';
+import './modules/mask';
 import './modules/datepicker';
 import './modules/TabsController';
 import './modules/Dropdown';

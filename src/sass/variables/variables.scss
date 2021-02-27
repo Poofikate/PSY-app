@@ -41,6 +41,33 @@ $gr-task-completed: linear-gradient(90deg, #a3eeff -15%, #f9ecd8 110%), #fff;
 $gr-task-status: linear-gradient(0deg, #92e2d9, #92e2d9),
   linear-gradient(90deg, #23a3cf 0%, #25d4ca 102.44%);
 
+$gr-blue-start: #29bddc;
+$gr-blue-end: #38d4ea;
+$gr-blue-dark-start: #1d72bf;
+$gr-blue-dark-end: #24a8e1;
+$gr-pink-start: #874cb5;
+$gr-pink-end: #f37799;
+
+$gr-blue: linear-gradient(
+  to bottom,
+  $gr-blue-start 0%,
+  $gr-blue-end 50%,
+  $gr-blue-start 100%
+);
+$gr-blue-light: linear-gradient(180deg, #16b0f2 0%, #35cfff 100%);
+$gr-blue-dark: linear-gradient(
+  to bottom,
+  $gr-blue-dark-start 0%,
+  $gr-blue-dark-end 50%,
+  $gr-blue-dark-start 100%
+);
+$gr-pink: linear-gradient(
+  to bottom,
+  $gr-pink-start 0%,
+  $gr-pink-end 50%,
+  $gr-pink-start 100%
+);
+
 /* Global */
 $screen-height: calc(100vh - 70px);
 // media
@@ -120,7 +147,7 @@ $button-font: $roboto-slab;
 $button-font-size: 14px;
 $button-font-weight: normal;
 $button-line-height: 1.3;
-$button-border-radius: 20px;
+$button-border-radius: 30px;
 $button-padding: 0.858em 1.7535em;
 $button-padding-sm: 0.858em 1.7535em;
 $button-min-width: 120px;
@@ -138,7 +165,7 @@ $input-line-height: 1.3;
 $input-color: $blue-dark;
 $input-color-placeholder: $gray;
 $input-border-color: $gray-light;
-$input-border-radius: 20px;
+$input-border-radius: 30px;
 $input-padding: 0.858em 1.43em;
 $input-padding-sm: 0.858em 1.43em;
 $input-bg-color: $white;

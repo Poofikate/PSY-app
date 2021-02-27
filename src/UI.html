@@ -91,6 +91,39 @@
 
         <br />
 
+        <button class="button button-gradient" type="button">
+          Кнопка обычная
+        </button>
+        <button
+          class="button button-gradient button-gradient--blue-light"
+          type="button"
+        >
+          <svg class="svg">
+            <use xlink:href="#vk"></use>
+          </svg>
+          Кнопка обычная
+        </button>
+        <button
+          class="button button-gradient button-gradient--blue-dark"
+          type="button"
+        >
+          <svg class="svg">
+            <use xlink:href="#f"></use>
+          </svg>
+          Кнопка обычная
+        </button>
+        <button
+          class="button button-gradient button-gradient--pink"
+          type="button"
+        >
+          <svg class="svg">
+            <use xlink:href="#inst"></use>
+          </svg>
+          Кнопка обычная
+        </button>
+
+        <br />
+
         <button class="button button-icon" type="button">
           <svg class="svg">
             <use xlink:href="#settings"></use>
@@ -183,11 +216,21 @@
         style="display: flex; flex-direction: column; align-items: flex-start; padding: 20px;margin: 20px 0;"
       >
         <input class="input" type="text" placeholder="Placeholder Input" />
-        <input
-          class="input input--not-valid"
-          type="text"
-          placeholder="Placeholder Input"
-        />
+        <input class="input" type="text" placeholder="Placeholder Input" />
+
+        <div class="input-wrapper">
+          <label class="input-label">
+            <input
+              required
+              class="input"
+              type="text"
+              placeholder="Placeholder Input"
+            />
+            <div class="input__placeholder">
+              <span>Placeholder Input</span>
+            </div>
+          </label>
+        </div>
 
         <textarea
           id=""
