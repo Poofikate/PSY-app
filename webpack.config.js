@@ -65,6 +65,7 @@ const config = {
     hobby: './src/js/_hobby.js',
     diary: './src/js/_diary.js',
     chat: './src/js/_chat.js',
+    'before-reg': './src/js/_before-reg.js',
   },
   output: {
     filename: (chunkData) => {
