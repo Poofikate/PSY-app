@@ -13,6 +13,15 @@ $roboto-slab: 'Roboto Slab';
 @font-face {
   font-family: $roboto;
   font-style: normal;
+  font-weight: 100;
+  src: local('Roboto-Thin'), local('Roboto-Thin'),
+    url($roboto-path+'Roboto-Thin.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $roboto;
+  font-style: normal;
   font-weight: 300;
   src: local('Roboto-Light'), local('Roboto-Light'),
     url($roboto-path+'Roboto-Light.woff') format('woff');
