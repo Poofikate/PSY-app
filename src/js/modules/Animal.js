@@ -4,8 +4,8 @@ export default class Animal {
   constructor($el) {
     this.$el = $el;
     this.$controls = this.$el.querySelectorAll('[data-control]');
-    this.$imgsWrap = document.querySelector('[data-animals]');
-    this.$imgsContainer = document.querySelector('[data-animals-wrap]');
+    this.$imgsWrap = this.$el.querySelector('[data-animals]');
+    this.$imgsContainer = this.$el.querySelector('[data-animals-wrap]');
     this.$imgs = this.$el.querySelectorAll('[data-img]');
 
     this.delay = 300;
