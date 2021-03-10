@@ -6,6 +6,14 @@ body {
   padding-bottom: 70px;
 }
 
+.without-navbar {
+  padding-bottom: 0;
+
+  .reg-section {
+    min-height: 100vh;
+  }
+}
+
 main {
   &.bg {
     padding-bottom: 110px;

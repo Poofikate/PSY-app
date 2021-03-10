@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <title>Greeting</title>
+  </head>
+  <body class="without-navbar">
+    <main>
+      <!-- greeting -->
+      <section class="reg-section greeting-section">
+        <div class="container">
+          <!-- wrap -->
+          <div class="reg-wrap">
+            <!-- left -->
+            <div class="reg-left">
+              <div class="greeting-wrapper">
+                <ul class="greeting__list">
+                  <li class="greeting__item">
+                    Привет! Я буду твоим личным помощником по системе. Давай
+                    познакомимся? =)
+                  </li>
+                  <li class="greeting__item greeting__item--my">
+                    Меня зовут Андрей!
+                  </li>
+                  <li class="greeting__item">
+                    Я думаю, тебе стоит расслабиться и жить в настоящем моменте.
+                    Делать то, что от тебя требуется спокойно и тщательно, не
+                    ожидая высоких результатов.
+                  </li>
+                  <li class="greeting__item hidden">
+                    Я думаю, тебе стоит расслабиться и жить в настоящем моменте.
+                    Делать то, что от тебя требуется спокойно и тщательно, не
+                    ожидая высоких результатов. Я думаю, тебе стоит расслабиться
+                    и жить в настоящем моменте. Делать то, что от тебя требуется
+                    спокойно и тщательно, не ожидая высоких результатов.
+                  </li>
+                </ul>
+
+                <div class="greeting__bottom">
+                  <div class="greeting-answer hidden">
+                    <a href="#" class="reg-form__link">
+                      Пропустить знакомство
+                    </a>
+
+                    <img
+                      src="./img/progress_animal3.svg"
+                      alt=""
+                      class="greeting__img"
+                    />
+                  </div>
+
+                  <form class="greeting__form">
+                    <div class="greeting__inputs">
+                      <div class="input-wrapper">
+                        <label class="input-label">
+                          <input
+                            required
+                            class="input"
+                            type="text"
+                            placeholder="Сколько вам лет?"
+                          />
+                          <div class="input__placeholder">
+                            <span>Сколько вам лет?</span>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="dropdown j_dropdown" id="dropdown1">
+                        <button
+                          data-dropdown-target="#dropdown1"
+                          class="button dropdown__button"
+                          type="button"
+                        >
+                          <span>
+                            1Семейное положение
+                          </span>
+
+                          <svg class="svg">
+                            <use xlink:href="#arrow"></use>
+                          </svg>
+                        </button>
+
+                        <div class="dropdown__content">
+                          <div class="dropdown__scroller">
+                            <ul class="dropdown__list">
+                              <li class="dropdown__item">
+                                <label class="checkbox">
+                                  <input
+                                    class="checkbox__input"
+                                    type="checkbox"
+                                  />
+                                  <div class="checkbox__custom">
+                                    <span class="checkbox__text">
+                                      1Семейное положение
+                                    </span>
+                                  </div>
+                                </label>
+                              </li>
+                              <li class="dropdown__item">
+                                <label class="checkbox">
+                                  <input
+                                    class="checkbox__input"
+                                    type="checkbox"
+                                  />
+                                  <div class="checkbox__custom">
+                                    <span class="checkbox__text">
+                                      2Семейное положение
+                                    </span>
+                                  </div>
+                                </label>
+                              </li>
+                              <li class="dropdown__item">
+                                <label class="checkbox">
+                                  <input
+                                    class="checkbox__input"
+                                    type="checkbox"
+                                  />
+                                  <div class="checkbox__custom">
+                                    <span class="checkbox__text">
+                                      3Семейное положение
+                                    </span>
+                                  </div>
+                                </label>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="button button-gradient" type="button">
+                      Ответить
+                    </button>
+
+                    <a href="#" class="reg-form__link">
+                      Пропустить вопрос
+                    </a>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <!-- ./ End of left -->
+          </div>
+          <!-- ./ End of wrap -->
+        </div>
+        <!-- ./ End of container -->
+      </section>
+      <!-- ./ End of greeting -->
+    </main>
+
+    ${require('./modules/modals/modal-animal.html')}
+  </body>
+</html>

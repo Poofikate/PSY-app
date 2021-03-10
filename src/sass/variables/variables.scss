@@ -38,8 +38,9 @@ $gr-black: #273245;
 $gr-task-of-day: linear-gradient(90deg, #217bfc 0%, #31cae4 110%),
   linear-gradient(90deg, #2bc0de 0%, #77e6f9 100%);
 $gr-task-completed: linear-gradient(90deg, #a3eeff -15%, #f9ecd8 110%), #fff;
-$gr-task-status: linear-gradient(0deg, #92e2d9, #92e2d9),
-  linear-gradient(90deg, #23a3cf 0%, #25d4ca 102.44%);
+$gr-task-status: linear-gradient(0deg, $turq, $turq),
+  linear-gradient(90deg, #23a3cf 0%, #25d4ca 100%);
+$gr-turq: linear-gradient(90deg, #1ca7c4 0%, #92e2d8 100%);
 
 $gr-blue-start: #29bddc;
 $gr-blue-end: #38d4ea;
