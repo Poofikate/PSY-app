@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  min-height: 100vh;
+}
+
 body {
   padding-bottom: 70px;
 }

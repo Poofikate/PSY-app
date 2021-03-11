@@ -10,6 +10,7 @@
     <title>Water</title>
   </head>
   <body>
+    ${require('./modules/components/header2.html')}
     ${require('./modules/components/nav-bar.html')}
     ${require('./modules/menu.html')}
 
@@ -34,27 +35,7 @@
         <div class="container">
           <!-- wrap -->
           <div class="wrap">
-            <!-- header -->
-            <div class="meditation-header">
-              <div class="meditation-header__img-wrapper">
-                <img
-                  src="./img/meditation.svg"
-                  alt=""
-                  class="meditation-header__img"
-                />
-              </div>
-
-              <div class="meditation-header__info">
-                <h3 class="meditation-header__title">
-                  От 5 минут
-                </h3>
-
-                <p class="meditation-header__text">
-                  Лучше выполнять во второй половине дня
-                </p>
-              </div>
-            </div>
-            <!-- ./ End of header -->
+            ${require('./modules/components/notify-range.html')}
 
             <!-- card-wrapper -->
             <div class="card-wrapper">
@@ -186,8 +167,8 @@
                     </form>
 
                     <div class="buttons">
-                      <button class="button button--dark" type="button">
-                        Добавить прием
+                      <button class="button button-gradient" type="button">
+                        Добавить прием воды
                       </button>
                     </div>
                   </div>
@@ -197,7 +178,47 @@
               <!-- ./ End of card -->
             </div>
             <!-- ./ End of card-wrapper -->
+          </div>
+          <!-- ./ End of wrap -->
+        </div>
+        <!-- ./ End of container -->
+      </section>
+      <!-- ./ End of water -->
 
+      <!-- settings -->
+      <section class="settings-section">
+        <div class="container">
+          <!-- wrap -->
+          <div class="settings-wrap">
+            <div class="settings">
+              <div class="water-form">
+                <div class="input-wrapper">
+                  <span class="input-subtitle">
+                    Укажите ваш вес
+                  </span>
+                  <input type="text" class="input" />
+                </div>
+              </div>
+
+              <div class="buttons">
+                <button class="button button--gray" type="button">
+                  Отмена
+                </button>
+                <button class="button button-gradient" type="submit">
+                  Сохранить
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- ./ End of wrap -->
+        </div>
+        <!-- ./ End of container -->
+      </section>
+      <!-- ./ End of settings -->
+
+      <section class="desc-section">
+        <div class="container">
+          <div class="desc-wrap">
             <div class="card-desc">
               <!-- list -->
               <ul class="meditation__list">
@@ -236,50 +257,11 @@
               <!-- ./ End of list -->
             </div>
           </div>
-          <!-- ./ End of wrap -->
         </div>
-        <!-- ./ End of container -->
       </section>
-      <!-- ./ End of water -->
-      <!-- settings -->
-      <section class="settings-section">
-        <div class="container">
-          <!-- wrap -->
-          <div class="settings-wrap">
-            <div class="settings">
-              <div class="water-form">
-                <div class="input-wrapper">
-                  <span class="input-subtitle">
-                    Укажите ваш вес
-                  </span>
-                  <input type="text" class="input" />
-                </div>
-                <div class="input-wrapper">
-                  <span class="input-subtitle">
-                    Напомнить за, мин
-                  </span>
-                  <input type="text" class="input" />
-                </div>
-              </div>
-
-              <div class="buttons">
-                <button
-                  class="button button--dark button--invert"
-                  type="button"
-                >
-                  Отмена
-                </button>
-                <button class="button button--dark" type="submit">
-                  Сохранить
-                </button>
-              </div>
-            </div>
-          </div>
-          <!-- ./ End of wrap -->
-        </div>
-        <!-- ./ End of container -->
-      </section>
-      <!-- ./ End of settings -->
     </main>
+
+    <!-- modals -->
+    ${require('./modules/modals/modal-mood.html')}
   </body>
 </html>

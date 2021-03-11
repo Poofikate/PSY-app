@@ -1,6 +1,7 @@
 .settings-section {
   display: flex;
-  min-height: $screen-height;
+  // min-height: $screen-height;
+  padding-top: 60px;
 }
 
 .settings-wrap {
@@ -15,6 +16,10 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+
+  .buttons {
+    margin: 20px 0 0;
+  }
 
   .exercises-video-wrapper {
     margin: auto 0;

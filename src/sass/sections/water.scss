@@ -74,14 +74,14 @@
   &__text {
     display: block;
     font-size: 14px;
+    font-weight: bold;
     line-height: 1.3;
   }
 
   &__value {
     display: block;
-    margin-top: 5px;
     font-size: 30px;
-    font-weight: 300;
+    font-weight: normal;
   }
 }
 
