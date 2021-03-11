@@ -65,12 +65,9 @@
 
 .sleep-wrapper {
   display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
   justify-content: space-between;
-
-  @include max-width($touch) {
-    flex-direction: column-reverse;
-    align-items: center;
-  }
 }
 
 .sleep-clock {
@@ -78,13 +75,9 @@
   flex-direction: column;
   flex-grow: 1;
   align-items: center;
-  padding-top: 40px;
+  padding-top: 0;
+  margin-top: 10px;
   text-align: center;
-
-  @include max-width($touch) {
-    padding-top: 0;
-    margin-top: 30px;
-  }
 }
 
 .sleep-clock__type {
@@ -103,9 +96,6 @@
 
 .sleep-clock-wrap {
   position: relative;
-  // overflow: hidden;
-  // pointer-events: none;
-
   border: 2px solid $blue;
   border-radius: 50%;
 
