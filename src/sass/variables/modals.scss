@@ -689,6 +689,7 @@
     max-width: none;
     height: 100%;
     padding: 20px 20px 30px;
+    border-radius: 0;
 
     &::before {
       position: absolute;
@@ -835,4 +836,115 @@
   font-weight: bold;
   color: $white;
   letter-spacing: 0.5px;
+}
+
+.modal-mood {
+  .modal {
+    background: $gr-body;
+  }
+
+  .modal-body {
+    display: flex;
+    flex-direction: column;
+
+    &.completed {
+      .mood-wrap {
+        display: none;
+      }
+
+      .mood-completed {
+        display: block;
+      }
+
+      .button--gray {
+        display: none;
+      }
+
+      .button-gradient {
+        display: inline-flex;
+      }
+    }
+
+    > .buttons {
+      margin-top: auto;
+    }
+
+    .button-gradient {
+      display: none;
+    }
+  }
+
+  .mood-wrap {
+    margin-top: auto;
+
+    .mood__text {
+      display: block;
+      margin: 0 0 25px;
+      font-family: $roboto-slab;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+    .radio-mood {
+      @include max-width($phone-sm) {
+        margin: 3px;
+      }
+    }
+  }
+
+  .mood-completed {
+    display: none;
+  }
+
+  .modal-header {
+    color: $blue-dark;
+
+    .header__title {
+      color: $blue-dark;
+    }
+  }
+}
+
+.mood-completed {
+  &__title {
+    display: block;
+    margin: 40px 0 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: $blue;
+
+    @include max-width($phone-sm) {
+      margin: 25px 0 15px;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: $blue-dark;
+
+    b {
+      color: $blue;
+    }
+  }
+
+  &__img-wrapper {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    max-height: 220px;
+    margin: 50px auto 0;
+
+    @include max-width($phone-sm) {
+      margin: 30px auto 0;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+  }
 }
