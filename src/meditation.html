@@ -229,19 +229,24 @@
                       </form>
                     </div>
                   </div>
-
-                  <div class="buttons">
-                    <button class="button button--dark j_start" type="submit">
-                      Начать медитацию
-                    </button>
-                  </div>
                 </div>
                 <!-- ./ End of timer -->
               </div>
               <!-- ./ End of card -->
             </div>
             <!-- ./ End of card-wrapper -->
+          </div>
+          <!-- ./ End of wrap -->
+        </div>
+        <!-- ./ End of container -->
+      </section>
+      <!-- ./ End of meditation -->
 
+      ${require('./modules/bonus-tasks.html')}
+
+      <section class="desc-section">
+        <div class="container">
+          <div class="desc-wrap">
             <div class="card-desc">
               <!-- list -->
               <ul class="meditation__list">
@@ -280,66 +285,13 @@
               <!-- ./ End of list -->
             </div>
           </div>
-          <!-- ./ End of wrap -->
         </div>
-        <!-- ./ End of container -->
       </section>
-      <!-- ./ End of meditation -->
-
-      ${require('./modules/bonus-tasks.html')}
-
-      <!-- timer -->
-      <section class="timer-section">
-        <div class="container">
-          <!-- wrap -->
-          <div class="timer-wrap">
-            <div class="timer-time-wrapper">
-              <input
-                type="text"
-                readonly
-                class="input meditation-timer-time j_time"
-                value="17:00"
-              />
-
-              <div class="meditation-music">
-                <form class="meditation-music-form j_audio-form">
-                  <label class="radio radio-music j_mute">
-                    <input class="radio__input" type="checkbox" name="mute" />
-                    <div class="radio__custom">
-                      <svg class="radio__icon">
-                        <use xlink:href="#mute"></use>
-                      </svg>
-                    </div>
-                  </label>
-                </form>
-              </div>
-            </div>
-
-            <div class="buttons">
-              <button
-                class="button button--dark button--invert j_pause"
-                type="button"
-              >
-                Пауза
-              </button>
-              <button
-                class="button button--dark button--invert j_start"
-                type="button"
-              >
-                Продолжить
-              </button>
-              <button class="button button--dark" type="button">
-                Завершить
-              </button>
-            </div>
-          </div>
-          <!-- ./ End of wrap -->
-        </div>
-        <!-- ./ End of container -->
-      </section>
-      <!-- ./ End of timer -->
 
       ${require('./modules/mood-rating.html')}
     </main>
+
+    <!-- modals -->
+    ${require('./modules/modals/modal-meditation.html')}
   </body>
 </html>

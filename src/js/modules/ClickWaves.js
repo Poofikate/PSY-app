@@ -14,5 +14,6 @@ Waves.attach('.button--dark:not(.button--invert)', [
 Waves.attach('.task', ['waves-float']);
 Waves.attach('.radio-music .radio__custom', ['waves-float']);
 Waves.attach('.button-icon', ['waves-float']);
+Waves.attach('.button-play', ['waves-float']);
 Waves.attach('.exercises-video', ['waves-float']);
 Waves.attach('.bonus-task__img-wrapper', ['waves-float']);

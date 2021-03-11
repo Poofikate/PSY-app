@@ -106,6 +106,18 @@ button {
     }
   }
 
+  &--white {
+    color: $white;
+    background-color: rgba($white, $alpha: 0.5);
+    border-color: transparent;
+
+    $color: $gray;
+
+    .svg {
+      fill: $white;
+    }
+  }
+
   &--gray-dark {
     color: $white;
     background-color: $gray;
@@ -161,15 +173,15 @@ button {
   }
 
   &-play {
-    width: 40px;
-    min-width: 40px;
-    height: 40px;
-    min-height: 40px;
+    width: 60px;
+    min-width: 60px;
+    height: 60px;
+    min-height: 60px;
     padding: 10px;
 
     .svg {
-      width: 18px;
-      height: 18px;
+      width: 24px;
+      height: 24px;
       margin: 0;
       fill: currentColor;
     }

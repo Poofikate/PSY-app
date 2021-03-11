@@ -679,3 +679,160 @@
     margin: 0;
   }
 }
+
+.modal-meditation {
+  padding: 0;
+  overflow: hidden;
+
+  .modal {
+    position: relative;
+    max-width: none;
+    height: 100%;
+    padding: 20px 20px 30px;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      visibility: hidden;
+      content: '';
+      background: linear-gradient(89.95deg, #217bfc 0.02%, #31cae4 111.05%),
+        linear-gradient(90deg, #23a3cf 0%, #25d4ca 102.44%);
+      opacity: 0;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    &.locked {
+      &::before {
+        visibility: visible;
+        opacity: 0.8;
+      }
+
+      .modal-header {
+        opacity: 0;
+      }
+
+      .meditation-buttons {
+        .button-play {
+          display: none;
+
+          &.j_unlock {
+            display: inline-flex;
+          }
+        }
+      }
+
+      .player-wrapper {
+        opacity: 0;
+        transform: translateY(100%);
+      }
+    }
+
+    .modal-wrap {
+      display: flex;
+      flex-direction: column;
+      max-width: none;
+      height: 100%;
+    }
+  }
+
+  .modal-header {
+    color: $white;
+    transition: opacity 0.3s ease;
+  }
+
+  .modal-body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+
+  .timer-wrap {
+    width: 100%;
+  }
+
+  .meditation-timer-time {
+    position: relative;
+    z-index: 2;
+    padding: 0;
+    margin-top: auto;
+    color: $white;
+  }
+
+  .timer-time-wrapper {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+
+  .meditation-buttons {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+
+    .button-play {
+      margin: 7px;
+
+      &.j_unlock {
+        display: none;
+      }
+    }
+  }
+}
+
+.modal__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.player-wrapper {
+  width: 100%;
+  margin-top: auto;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+
+  .plyr__controls {
+    padding: 0;
+    background: transparent;
+
+    .plyr__time {
+      &--current {
+        display: none;
+      }
+    }
+
+    input[type='range'] {
+      color: $white;
+
+      &::-webkit-slider-thumb {
+        width: 26px;
+        height: 26px;
+        margin-top: -10px;
+      }
+
+      &::-webkit-slider-runnable-track {
+        height: 6px;
+      }
+    }
+  }
+}
+
+.player-times {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -2px;
+  font-family: $roboto;
+  font-size: 12px;
+  font-weight: bold;
+  color: $white;
+  letter-spacing: 0.5px;
+}

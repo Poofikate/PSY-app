@@ -32,9 +32,6 @@ export default class AudioList {
     });
 
     this.mute.$wrapper.addEventListener('change', (e) => {
-      console.log(e.target);
-      console.log(this.currentAudio);
-
       if (e.target.checked) {
         this.currentAudio.audio.volume = 0;
         this._isMutedPlay = true;
@@ -65,6 +62,8 @@ export default class AudioList {
   }
 
   checkMuted() {
+    if (!this.mute) return false;
+
     if (this.currentAudio._isMuted) {
       this.mute.$wrapper.classList.add('hidden');
     } else {

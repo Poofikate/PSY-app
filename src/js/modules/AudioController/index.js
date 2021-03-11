@@ -5,11 +5,17 @@ import TimeController from './TimeController';
 
 // Audio
 const $audios = document.querySelectorAll('.j_audio');
-const audios = Array.from($audios).map(($audio) => new Audio($audio));
+let audios = null;
+if ($audios.length) {
+  audios = Array.from($audios).map(($audio) => new Audio($audio));
+}
 
 // Mute
 const $mute = document.querySelector('.j_mute');
-const mute = new Audio($mute);
+let mute = null;
+if ($mute) {
+  mute = new Audio($mute);
+}
 
 // AudioList
 const ap = new AudioList({ audios, mute });
