@@ -10,6 +10,7 @@
     <title>Sleep</title>
   </head>
   <body>
+    ${require('./modules/components/header2.html')}
     ${require('./modules/components/nav-bar.html')}
     ${require('./modules/menu.html')}
 
@@ -62,9 +63,9 @@
                         data-gray="0.2"
                         data-interval="0.9"
                         data-start="9"
-                        data-yellow-color="rgba(228, 232, 72, 0.4)"
+                        data-yellow-color="rgba(228, 232, 72, 0.8)"
                         data-green-color="rgba(107, 214, 0, 1)"
-                        data-gray-color="rgba(236, 241, 245, 1)"
+                        data-gray-color="rgba(255, 255, 255, 1)"
                         class="sleep-clock-chart j_chart"
                       ></div>
 
@@ -261,5 +262,8 @@
       </section>
       <!-- ./ End of settings -->
     </main>
+
+    <!-- modals -->
+    ${require('./modules/modals/modal-mood.html')}
   </body>
 </html>

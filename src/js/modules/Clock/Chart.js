@@ -380,6 +380,24 @@ export default class Chart {
 
     this.chart.setOption(this.opts, true);
   }
+
+  highlightPhase(index) {
+    const map = [];
+    this.opts.series.reduce((prev, curr, i) => {
+      map[i] = [prev + 1, prev + 2, prev + 3];
+      return prev + 4;
+    }, 0);
+
+    for (const key in this.opts.series[0].data) {
+      this.opts.series[0].data[key].itemStyle.opacity = 0.5;
+    }
+
+    map[index].forEach((i) => {
+      this.opts.series[0].data[i].itemStyle.opacity = 1;
+    });
+
+    this.chart.setOption(this.opts, true);
+  }
 }
 
 const $chart = document.querySelector('.j_chart');
