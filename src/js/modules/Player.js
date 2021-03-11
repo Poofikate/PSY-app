@@ -11,8 +11,11 @@ export default class Player {
     this.controls = {};
     this.controls.start = this.$container.querySelector('.j_start');
     this.controls.pause = this.$container.querySelector('.j_pause');
+    this.controls.stop = this.$container.querySelector('.j_stop');
 
     this.lockTimeout = null;
+    this.durationlockTimeout =
+      +this.$container.getAttribute('data-lock-timeout') || 10000;
 
     this._type = this.$player.tagName;
     this._isLocked = false;
@@ -78,6 +81,7 @@ export default class Player {
 
     this.controls.start.addEventListener('click', () => this.player.play());
     this.controls.pause.addEventListener('click', () => this.player.pause());
+    this.controls.stop.addEventListener('click', () => this.player.stop());
 
     document.addEventListener('touchstart', this.startTimerToLocked.bind(this));
     document.addEventListener('touchmove', this.startTimerToLocked.bind(this));
