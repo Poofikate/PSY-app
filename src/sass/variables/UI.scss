@@ -896,8 +896,6 @@ button {
 
     .dropdown__button {
       border-color: $gray;
-      border-bottom-color: transparent;
-      border-radius: 8px 8px 0 0;
       box-shadow: none;
 
       .svg {
@@ -908,8 +906,6 @@ button {
     .dropdown__content {
       visibility: visible;
       border-color: $gray;
-      border-top-color: transparent;
-      border-radius: 0 0 8px 8px;
       box-shadow: none;
       opacity: 1;
       transform: translate(-50%, 0);
@@ -959,12 +955,18 @@ button {
     border-color: $gray-light;
     border-style: solid;
     border-width: 1px;
-    border-radius: 8px;
+    border-radius: 30px;
     box-shadow: 0 4px 10px rgba(176, 189, 191, 0.45);
     opacity: 0;
     transition: transform 0.3s, opacity 0.3s, visibility 0.3s, border 0.3s,
       border-radius 0.3s, box-shadow 0.3s;
     transform: translate(-50%, 10px);
+
+    &--top {
+      top: auto;
+      bottom: calc(100% + 1px);
+      transform: translate(-50%, -10px);
+    }
   }
 
   &__list {

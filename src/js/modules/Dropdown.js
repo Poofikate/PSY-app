@@ -11,27 +11,44 @@ export default class Dropdown extends ClassToggler {
   }
 
   init() {
+    window.addEventListener('load', () => this.checkPosition());
+    window.addEventListener('resize', () => this.checkPosition());
+
     _instances[this.id] = this;
+  }
+
+  checkPosition() {
+    const $content = this.$el.querySelector('.dropdown__content');
+    const coordsEl = $content.getBoundingClientRect();
+    const coordsDoc = document.documentElement.getBoundingClientRect();
+
+    if (coordsEl.bottom > coordsDoc.bottom) {
+      $content.classList.add('dropdown__content--top');
+    } else {
+      $content.classList.remove('dropdown__content--top');
+    }
   }
 
   static initAll() {
     const $dropdowns = document.querySelectorAll('.j_dropdown');
 
-    $dropdowns.forEach(($dropdown) => {
-      const id = $dropdown.getAttribute('id');
-      const $triggers = document.querySelectorAll(
-        `[data-dropdown-target="#${id}"]`
-      );
+    if ($dropdowns.length) {
+      $dropdowns.forEach(($dropdown) => {
+        const id = $dropdown.getAttribute('id');
+        const $triggers = document.querySelectorAll(
+          `[data-dropdown-target="#${id}"]`
+        );
 
-      // eslint-disable-next-line no-new
-      new Dropdown({
-        id: id,
-        $toggleBtns: $triggers,
-        $openBtns: $dropdown.querySelectorAll('.j_openDropdown'),
-        $closeBtns: $dropdown.querySelectorAll('.j_closeDropdown'),
-        $el: $dropdown,
+        // eslint-disable-next-line no-new
+        new Dropdown({
+          id: id,
+          $toggleBtns: $triggers,
+          $openBtns: $dropdown.querySelectorAll('.j_openDropdown'),
+          $closeBtns: $dropdown.querySelectorAll('.j_closeDropdown'),
+          $el: $dropdown,
+        });
       });
-    });
+    }
   }
 
   static closeAll() {
