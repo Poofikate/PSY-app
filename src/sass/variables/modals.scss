@@ -948,3 +948,31 @@
     object-fit: contain;
   }
 }
+
+.modal-video {
+  .plyr {
+    position: static;
+    overflow: unset;
+
+    .plyr__controls {
+      position: static;
+      width: 100%;
+    }
+
+    .plyr__video-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .player {
+      object-fit: cover;
+    }
+
+    .plyr__poster {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+}

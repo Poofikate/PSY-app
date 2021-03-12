@@ -1,5 +1,7 @@
 import Plyr from 'plyr';
 
+const _instances = {};
+
 export default class Player {
   constructor(options) {
     this.$container = options.$container;
@@ -7,6 +9,7 @@ export default class Player {
     this.$times = this.$container.querySelectorAll('.j_current');
     this.$duration = this.$container.querySelector('.j_duration');
     this.$currentTime = null;
+    this.id = this.$player.getAttribute('id');
     this.duration = '';
     this.controls = {};
     this.controls.start = this.$container.querySelector('.j_start');
@@ -86,6 +89,36 @@ export default class Player {
     document.addEventListener('touchstart', this.startTimerToLocked.bind(this));
     document.addEventListener('touchmove', this.startTimerToLocked.bind(this));
     document.addEventListener('touchend', this.startTimerToLocked.bind(this));
+
+    _instances[this.id] = this;
+  }
+
+  loadMedia() {
+    const provider = this.$container.getAttribute('data-provider');
+    const type = this.$container.getAttribute('data-type');
+    const src = this.$container.getAttribute('data-src');
+    const poster = this.$container.getAttribute('data-poster');
+
+    if (src) {
+      this.player.source = {
+        type: type,
+        class: 'j_player',
+        sources: [
+          {
+            src: src,
+            provider: provider,
+          },
+        ],
+      };
+
+      if (poster) {
+        this.player.poster = poster;
+      } else {
+        console.error(`Failed Loading Poster! Invalid URL (${poster});`);
+      }
+    } else {
+      console.error(`Failed Loading Video! Invalid URL (${src});`);
+    }
   }
 
   showControl(control) {
@@ -115,6 +148,12 @@ export default class Player {
           $player,
         });
       });
+    }
+  }
+
+  static loadMedia() {
+    for (const key in _instances) {
+      _instances[key].loadMedia();
     }
   }
 }
