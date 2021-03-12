@@ -1,7 +1,7 @@
 import noUiSlider from 'nouislider';
 import wNumb from 'wnumb';
 
-class MeditationRange {
+class Range {
   constructor($slider, $title, options) {
     this.$slider = $slider;
     this.$title = $title;
@@ -31,9 +31,14 @@ class MeditationRange {
 
     this.$slider.noUiSlider.on('update', (values, handle) => {
       const value = +values[0];
-      if (this.$title) this.$title.textContent = `${value}:00`;
+      const hh = Math.floor(value / 60);
+      let mm = value % 60;
+      if (mm < 10) mm = '0' + mm;
+      const newValue = `${hh}:${mm}`;
+      if (this.$title) this.$title.textContent = newValue;
+
       // eslint-disable-next-line no-useless-call
-      this.onUpdateCallback.apply(this, [value]);
+      this.onUpdateCallback.apply(this, [newValue]);
     });
   }
 
@@ -45,12 +50,17 @@ class MeditationRange {
 const $slider = document.querySelector('.j_meditation-range');
 if ($slider) {
   const $title = document.querySelector('.j_meditation-range-time');
-  const meditationRange = new MeditationRange($slider, $title, {
-    step: 1,
-    min: 0,
-    max: 23,
-    start: 7,
+  const step = +$slider.getAttribute('data-step') || 5;
+  const min = +$slider.getAttribute('data-min') || 0;
+  const max = +$slider.getAttribute('data-max') || 1440;
+  const start = +$slider.getAttribute('data-start') || 720;
+
+  const range = new Range($slider, $title, {
+    step,
+    min,
+    max,
+    start,
   });
 
-  window.meditationRange = meditationRange;
+  window.range = range;
 }

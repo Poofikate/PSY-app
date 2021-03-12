@@ -18,7 +18,7 @@ import './modules/Dropdown';
 import './modules/Select';
 import './modules/Accordion';
 import './modules/Tooltip';
-import './modules/MeditationRange';
+import './modules/Range';
 
 // sliders
 import './sliders/bonus-tasks';
