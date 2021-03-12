@@ -1,0 +1,90 @@
+<div class="modal-wrapper j_modal modal-meditation" id="modal-video">
+  <div data-lock-timeout="5000" class="modal modal--small j_player-container">
+    <img
+      src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg"
+      class="modal__bg"
+    />
+
+    <div class="modal-wrap">
+      <div class="modal-header">
+        <div class="header-left__wrap">
+          <h1 class="header__title">
+            Медитация
+          </h1>
+          <p class="header__text">
+            Выгорание. Подвержены ли вы?
+          </p>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <div class="timer-wrap">
+          <div class="timer-time-wrapper">
+            <time class="input meditation-timer-time j_current">00:00</time>
+
+            <div class="meditation-music">
+              <div class="meditation-buttons">
+                <button
+                  class="button button--white button-play j_pause"
+                  type="button"
+                >
+                  <svg class="svg">
+                    <use xlink:href="#pause2"></use>
+                  </svg>
+                </button>
+
+                <button
+                  class="button button--white button-play j_start"
+                  type="button"
+                >
+                  <svg class="svg">
+                    <use xlink:href="#play2"></use>
+                  </svg>
+                </button>
+
+                <button
+                  class="button button--white button-play j_stop"
+                  type="button"
+                >
+                  <svg class="svg">
+                    <use xlink:href="#stop2"></use>
+                  </svg>
+                </button>
+
+                <button
+                  class="button button--white button-play j_unlock"
+                  type="button"
+                >
+                  <svg class="svg">
+                    <use xlink:href="#touch"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="player-wrapper">
+              <video
+                id="player"
+                class="player j_player"
+                playsinline
+                controls
+                data-poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg"
+              >
+                <source
+                  src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4"
+                  type="video/mp4"
+                />
+              </video>
+
+              <div class="player-times">
+                <time class="player-current j_current"></time>
+                <time class="player-duration j_duration"></time>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--./ End of Modal -->

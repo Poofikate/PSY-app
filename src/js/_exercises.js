@@ -1,1 +1,1 @@
-import './modules/VideoPlayer';
+import './modules/Player';
