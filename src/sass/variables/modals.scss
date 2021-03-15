@@ -993,3 +993,25 @@
     }
   }
 }
+
+.modal-hobby {
+  .modal {
+    &.locked {
+      .meditation-buttons {
+        .button-play {
+          &:not(.hidden) {
+            display: inline-flex;
+          }
+
+          &.j_unlock {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .meditation-music {
+    margin-bottom: auto;
+  }
+}

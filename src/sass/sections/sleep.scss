@@ -126,23 +126,16 @@
   &__text {
     position: relative;
     z-index: 1;
-    width: calc(100% + 30px);
-    padding: 15px 20px;
-    margin-left: -15px;
+    max-width: 180px;
     font-size: 14px;
+    font-style: italic;
+    font-weight: bold;
     line-height: 1.3;
-    color: $white;
+    color: $blue-dark;
+    text-align: left;
 
-    &::before {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      z-index: -1;
-      width: 100vw;
-      height: 100%;
-      content: '';
-      background-color: $blue;
-      transform: translateX(-50%);
+    b {
+      color: $blue;
     }
   }
 }

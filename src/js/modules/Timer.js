@@ -3,7 +3,10 @@ import Timer from 'easytimer.js';
 export default class TimerController {
   constructor(options) {
     this.$timer = options.$timer;
+    this.$fakeTimer = options.$fakeTimer;
     this.$contents = options.$contents;
+    this.$startArr = options.$start;
+    this.$pauseArr = options.$pause;
 
     this.startValue = this.$timer.value;
     this.startSeconds = this.getSeconds(this.startValue);
@@ -18,17 +21,41 @@ export default class TimerController {
       startValues: { seconds: this.startSeconds },
     });
 
+    this.update();
+    this.hideControl(this.$pauseArr);
+    this.showControl(this.$startArr);
+
+    this.timer.addEventListener('secondsUpdated', (instance) => this.update());
+    this.timer.addEventListener('stopped', (instance) => this.update());
+    this.timer.addEventListener('started', (instance) => {
+      this.hideControl(this.$startArr);
+      this.showControl(this.$pauseArr);
+    });
+    this.timer.addEventListener('paused', (instance) => {
+      this.hideControl(this.$pauseArr);
+      this.showControl(this.$startArr);
+    });
+    this.$startArr.forEach(($start) =>
+      $start.addEventListener('click', () => this.start())
+    );
+    this.$pauseArr.forEach(($pause) =>
+      $pause.addEventListener('click', () => this.pause())
+    );
+  }
+
+  hideControl($controls) {
+    $controls.forEach(($control) => $control.classList.add('hidden'));
+  }
+
+  showControl($controls) {
+    $controls.forEach(($control) => $control.classList.remove('hidden'));
+  }
+
+  update() {
     this.updateValue();
     this.checkContent();
 
-    this.timer.addEventListener('secondsUpdated', (instance) => {
-      this.updateValue();
-      this.checkContent();
-    });
-    this.timer.addEventListener('stopped', (instance) => {
-      this.updateValue();
-      this.checkContent();
-    });
+    this.$fakeTimer.textContent = this.$timer.value;
   }
 
   checkContent() {
@@ -76,10 +103,16 @@ export default class TimerController {
 
 const $timer = document.querySelector('.j_time');
 if ($timer) {
+  const $fakeTimer = document.querySelector('.j_time-fake');
   const $contents = document.querySelectorAll('[data-time]');
+  const $start = document.querySelectorAll('.j_start');
+  const $pause = document.querySelectorAll('.j_pause');
   const timer = new TimerController({
     $timer,
+    $fakeTimer,
     $contents,
+    $start,
+    $pause,
   });
 
   window.timer = timer;

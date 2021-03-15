@@ -10,6 +10,7 @@
     <title>Hobby</title>
   </head>
   <body>
+    ${require('./modules/components/header2.html')}
     ${require('./modules/components/nav-bar.html')}
     ${require('./modules/menu.html')}
 
@@ -19,27 +20,7 @@
         <div class="container">
           <!-- wrap -->
           <div class="wrap">
-            <!-- header -->
-            <div class="meditation-header">
-              <div class="meditation-header__img-wrapper">
-                <img
-                  src="./img/meditation.svg"
-                  alt=""
-                  class="meditation-header__img"
-                />
-              </div>
-
-              <div class="meditation-header__info">
-                <h3 class="meditation-header__title">
-                  От 5 минут
-                </h3>
-
-                <p class="meditation-header__text">
-                  Лучше выполнять во второй половине дня
-                </p>
-              </div>
-            </div>
-            <!-- ./ End of header -->
+            ${require('./modules/components/notify-range.html')}
 
             <!-- card-wrapper -->
             <div class="card-wrapper">
@@ -60,52 +41,54 @@
 
                       <div class="buttons">
                         <button
-                          class="button button--dark button--invert"
+                          class="button button--white button-play j_start"
                           type="button"
                         >
-                          Пауза
-                        </button>
-                        <button class="button button--dark" type="button">
-                          Завершить
+                          <svg class="svg">
+                            <use xlink:href="#play2"></use>
+                          </svg>
                         </button>
                       </div>
 
-                      <p class="sleep-clock-number__text">
-                        Нужно немного больше времени на себя!
-                      </p>
-                    </div>
+                      <div class="hobby-status__wrapper">
+                        <p class="sleep-clock-number__text">
+                          Представьте, что в этом пламени <b>сгорают</b> все
+                          ваши дневные заботы, тревоги, проблемы и комплексы.
+                        </p>
 
-                    <div class="hobby-status-wrapper">
-                      <div class="hobby-status">
-                        <div
-                          data-time="00:00"
-                          class="hobby-status__img-wrapper"
-                        >
-                          <img
-                            src="./img/bear.svg"
-                            alt=""
-                            class="hobby-status__img"
-                          />
-                        </div>
-                        <div
-                          data-time="02:20"
-                          class="hobby-status__img-wrapper"
-                        >
-                          <img
-                            src="./img/bear.svg"
-                            alt=""
-                            class="hobby-status__img"
-                          />
-                        </div>
-                        <div
-                          data-time="02:30"
-                          class="hobby-status__img-wrapper"
-                        >
-                          <img
-                            src="./img/bear.svg"
-                            alt=""
-                            class="hobby-status__img"
-                          />
+                        <div class="hobby-status-wrapper">
+                          <div class="hobby-status">
+                            <div
+                              data-time="00:00"
+                              class="hobby-status__img-wrapper"
+                            >
+                              <img
+                                src="./img/bear.svg"
+                                alt=""
+                                class="hobby-status__img"
+                              />
+                            </div>
+                            <div
+                              data-time="02:20"
+                              class="hobby-status__img-wrapper"
+                            >
+                              <img
+                                src="./img/bear.svg"
+                                alt=""
+                                class="hobby-status__img"
+                              />
+                            </div>
+                            <div
+                              data-time="02:30"
+                              class="hobby-status__img-wrapper"
+                            >
+                              <img
+                                src="./img/bear.svg"
+                                alt=""
+                                class="hobby-status__img"
+                              />
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -116,7 +99,16 @@
               <!-- ./ End of card -->
             </div>
             <!-- ./ End of card-wrapper -->
+          </div>
+          <!-- ./ End of wrap -->
+        </div>
+        <!-- ./ End of container -->
+      </section>
+      <!-- ./ End of meditation -->
 
+      <section class="desc-section">
+        <div class="container">
+          <div class="desc-wrap">
             <div class="card-desc">
               <!-- list -->
               <ul class="meditation__list">
@@ -155,11 +147,13 @@
               <!-- ./ End of list -->
             </div>
           </div>
-          <!-- ./ End of wrap -->
         </div>
-        <!-- ./ End of container -->
       </section>
-      <!-- ./ End of meditation -->
     </main>
+
+    <!-- modals -->
+    ${require('./modules/modals/modal-hobby.html')}
+    <!--  -->
+    ${require('./modules/modals/modal-mood.html')}
   </body>
 </html>
