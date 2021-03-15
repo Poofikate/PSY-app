@@ -11,16 +11,16 @@ export default class Dropdown extends ClassToggler {
   }
 
   init() {
-    window.addEventListener('load', () => this.checkPosition());
-    window.addEventListener('resize', () => this.checkPosition());
-
     _instances[this.id] = this;
   }
 
-  checkPosition() {
+  updatePosition() {
     const $content = this.$el.querySelector('.dropdown__content');
     const coordsEl = $content.getBoundingClientRect();
     const coordsDoc = document.documentElement.getBoundingClientRect();
+    const isTopPos = $content.classList.contains('dropdown__content--top');
+
+    if (isTopPos) return false;
 
     if (coordsEl.bottom > coordsDoc.bottom) {
       $content.classList.add('dropdown__content--top');
@@ -57,6 +57,12 @@ export default class Dropdown extends ClassToggler {
     }
   }
 
+  static updatePosition() {
+    for (const id in _instances) {
+      _instances[id].updatePosition();
+    }
+  }
+
   static open(id) {
     _instances[id].open();
   }
@@ -79,5 +85,12 @@ const defaultOptions = {
 };
 
 Dropdown.initAll();
+
+window.addEventListener('load', () => {
+  Dropdown.updatePosition();
+});
+window.addEventListener('resize', () => {
+  Dropdown.updatePosition();
+});
 
 window.Dropdown = Dropdown;
