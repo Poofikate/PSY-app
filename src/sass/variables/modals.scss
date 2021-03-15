@@ -950,6 +950,23 @@
 }
 
 .modal-video {
+  .modal-header {
+    position: relative;
+    z-index: 2;
+  }
+
+  .meditation-timer-time {
+    display: none;
+  }
+
+  .meditation-music {
+    margin-top: auto;
+  }
+
+  .player-wrapper {
+    margin: 0;
+  }
+
   .plyr {
     position: static;
     overflow: unset;

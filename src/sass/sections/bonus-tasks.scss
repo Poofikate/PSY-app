@@ -60,6 +60,32 @@
     object-fit: cover;
   }
 
+  &__duration {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    color: $white;
+  }
+
+  &__icon {
+    display: block;
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    min-height: 20px;
+    object-fit: contain;
+  }
+
+  &__time {
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
   &__info {
     margin-top: 10px;
   }
