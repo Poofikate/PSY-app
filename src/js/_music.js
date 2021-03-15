@@ -1,1 +1,1 @@
-import './modules/AudioPlayer';
+import './modules/Player';

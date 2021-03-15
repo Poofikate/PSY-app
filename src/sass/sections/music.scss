@@ -1,5 +1,4 @@
 .music-section {
-  min-height: 100vh;
   overflow: hidden;
 }
 
@@ -191,5 +190,22 @@
         display: none;
       }
     }
+  }
+}
+
+.music-label {
+  display: inline-flex;
+  margin: 5px;
+
+  &__input {
+    display: none;
+
+    &:not(:checked) + .tag {
+      background-color: $white;
+    }
+  }
+
+  .tag {
+    margin: 0;
   }
 }

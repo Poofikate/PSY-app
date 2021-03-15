@@ -10,6 +10,7 @@
     <title>Music</title>
   </head>
   <body>
+    ${require('./modules/components/header2.html')}
     ${require('./modules/components/nav-bar.html')}
     ${require('./modules/menu.html')}
 
@@ -19,27 +20,7 @@
         <div class="container">
           <!-- wrap -->
           <div class="wrap">
-            <!-- header -->
-            <div class="meditation-header">
-              <div class="meditation-header__img-wrapper">
-                <img
-                  src="./img/meditation.svg"
-                  alt=""
-                  class="meditation-header__img"
-                />
-              </div>
-
-              <div class="meditation-header__info">
-                <h3 class="meditation-header__title">
-                  От 5 минут
-                </h3>
-
-                <p class="meditation-header__text">
-                  Лучше выполнять во второй половине дня
-                </p>
-              </div>
-            </div>
-            <!-- ./ End of header -->
+            ${require('./modules/components/notify-range.html')}
 
             <!-- card-wrapper -->
             <div class="card-wrapper">
@@ -47,282 +28,163 @@
               <div class="card card--music">
                 <!-- music -->
                 <div class="music">
-                  <ul class="music-list">
-                    <li class="music-item">
-                      <!-- song -->
-                      <div id="music1" class="music-song">
-                        <p class="music-song__text">
-                          Музыка природы для глубокого релакса
-                        </p>
+                  <div class="card-wrap meditation-form">
+                    <div class="meditation-musics">
+                      <div class="meditation-music">
+                        <span class="meditation-music__title">
+                          Время музыки
+                        </span>
 
-                        <div class="music-song__wrap">
-                          <audio class="music-song__audio">
-                            <source
-                              src="https://cdn.plyr.io/static/demo/Kishi_Bashi_-_It_All_Began_With_a_Burst.mp3"
-                              type="audio/mp3"
+                        <form class="meditation-music-form j_times">
+                          <label class="radio radio-music">
+                            <input
+                              data-time="03"
+                              class="radio__input"
+                              type="radio"
+                              checked
+                              name="minutes"
                             />
-                          </audio>
-
-                          <div class="music-song__controls">
-                            <div class="music-song__volume">
-                              <!-- slider -->
-                              <div class="range-slider-wrapper">
-                                <div
-                                  id="year-range-slider"
-                                  data-start="1"
-                                  data-step="0.1"
-                                  data-min="0"
-                                  data-max="1"
-                                  class="range-slider"
-                                ></div>
-                              </div>
-                              <!-- ./ End of slider -->
+                            <div class="radio__custom">
+                              <p class="radio__text">
+                                <em>3</em>
+                                мин
+                              </p>
                             </div>
-
-                            <button
-                              class="button button--gray button-play music-song__mute"
-                              type="button"
-                            >
-                              <svg class="svg">
-                                <use xlink:href="#volume"></use>
-                              </svg>
-                              <svg class="svg for-active">
-                                <use xlink:href="#mute"></use>
-                              </svg>
-                            </button>
-
-                            <button
-                              class="button button--gray button-play music-song__play"
-                              type="button"
-                            >
-                              <svg class="svg">
-                                <use xlink:href="#play"></use>
-                              </svg>
-                              <svg class="svg for-active">
-                                <use xlink:href="#pause"></use>
-                              </svg>
-                            </button>
-
-                            <button
-                              class="button button--gray button-play music-song__stop"
-                              type="button"
-                            >
-                              <svg class="svg">
-                                <use xlink:href="#stop"></use>
-                              </svg>
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- ./ End of song -->
-                    </li>
-                    <li class="music-item">
-                      <!-- song -->
-                      <div id="music2" class="music-song">
-                        <p class="music-song__text">
-                          Музыка природы для глубокого релакса c очень длинным
-                          названием
-                        </p>
-
-                        <div class="music-song__wrap">
-                          <audio class="music-song__audio">
-                            <source
-                              src="https://cdn.plyr.io/static/demo/Kishi_Bashi_-_It_All_Began_With_a_Burst.mp3"
-                              type="audio/mp3"
+                          </label>
+                          <label class="radio radio-music">
+                            <input
+                              data-time="05"
+                              class="radio__input"
+                              type="radio"
+                              name="minutes"
                             />
-                          </audio>
-
-                          <div class="music-song__controls">
-                            <div class="music-song__volume">
-                              <!-- slider -->
-                              <div class="range-slider-wrapper">
-                                <div
-                                  id="year-range-slider"
-                                  data-start="1"
-                                  data-step="0.1"
-                                  data-min="0"
-                                  data-max="1"
-                                  class="range-slider"
-                                ></div>
-                              </div>
-                              <!-- ./ End of slider -->
+                            <div class="radio__custom">
+                              <p class="radio__text">
+                                <em>5</em>
+                                мин
+                              </p>
                             </div>
-
-                            <button
-                              class="button button--gray button-play music-song__mute"
-                              type="button"
-                            >
-                              <svg class="svg">
-                                <use xlink:href="#volume"></use>
-                              </svg>
-                              <svg class="svg for-active">
-                                <use xlink:href="#mute"></use>
-                              </svg>
-                            </button>
-
-                            <button
-                              class="button button--gray button-play music-song__play"
-                              type="button"
-                            >
-                              <svg class="svg">
-                                <use xlink:href="#play"></use>
-                              </svg>
-                              <svg class="svg for-active">
-                                <use xlink:href="#pause"></use>
-                              </svg>
-                            </button>
-
-                            <button
-                              class="button button--gray button-play music-song__stop"
-                              type="button"
-                            >
-                              <svg class="svg">
-                                <use xlink:href="#stop"></use>
-                              </svg>
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- ./ End of song -->
-                    </li>
-                    <li class="music-item">
-                      <!-- song -->
-                      <div id="music3" class="music-song">
-                        <p class="music-song__text">
-                          Музыка природы для глубокого релакса
-                        </p>
-
-                        <div class="music-song__wrap">
-                          <audio class="music-song__audio">
-                            <source
-                              src="https://cdn.plyr.io/static/demo/Kishi_Bashi_-_It_All_Began_With_a_Burst.mp3"
-                              type="audio/mp3"
+                          </label>
+                          <label class="radio radio-music">
+                            <input
+                              data-time="07"
+                              class="radio__input"
+                              type="radio"
+                              name="minutes"
                             />
-                          </audio>
-
-                          <div class="music-song__controls">
-                            <div class="music-song__volume">
-                              <!-- slider -->
-                              <div class="range-slider-wrapper">
-                                <div
-                                  id="year-range-slider"
-                                  data-start="1"
-                                  data-step="0.1"
-                                  data-min="0"
-                                  data-max="1"
-                                  class="range-slider"
-                                ></div>
-                              </div>
-                              <!-- ./ End of slider -->
+                            <div class="radio__custom">
+                              <p class="radio__text">
+                                <em>7</em>
+                                мин
+                              </p>
                             </div>
-
-                            <button
-                              class="button button--gray button-play music-song__mute"
-                              type="button"
-                            >
-                              <svg class="svg">
-                                <use xlink:href="#volume"></use>
-                              </svg>
-                              <svg class="svg for-active">
-                                <use xlink:href="#mute"></use>
-                              </svg>
-                            </button>
-
-                            <button
-                              class="button button--gray button-play music-song__play"
-                              type="button"
-                            >
-                              <svg class="svg">
-                                <use xlink:href="#play"></use>
-                              </svg>
-                              <svg class="svg for-active">
-                                <use xlink:href="#pause"></use>
-                              </svg>
-                            </button>
-
-                            <button
-                              class="button button--gray button-play music-song__stop"
-                              type="button"
-                            >
-                              <svg class="svg">
-                                <use xlink:href="#stop"></use>
-                              </svg>
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- ./ End of song -->
-                    </li>
-                    <li class="music-item">
-                      <!-- song -->
-                      <div id="music4" class="music-song">
-                        <p class="music-song__text">
-                          Музыка природы для глубокого релакса c очень длинным
-                          названием
-                        </p>
-
-                        <div class="music-song__wrap">
-                          <audio class="music-song__audio">
-                            <source
-                              src="https://cdn.plyr.io/static/demo/Kishi_Bashi_-_It_All_Began_With_a_Burst.mp3"
-                              type="audio/mp3"
+                          </label>
+                          <label class="radio radio-music">
+                            <input
+                              data-time="10"
+                              class="radio__input"
+                              type="radio"
+                              name="minutes"
                             />
-                          </audio>
-
-                          <div class="music-song__controls">
-                            <div class="music-song__volume">
-                              <!-- slider -->
-                              <div class="range-slider-wrapper">
-                                <div
-                                  id="year-range-slider"
-                                  data-start="1"
-                                  data-step="0.1"
-                                  data-min="0"
-                                  data-max="1"
-                                  class="range-slider"
-                                ></div>
-                              </div>
-                              <!-- ./ End of slider -->
+                            <div class="radio__custom">
+                              <p class="radio__text">
+                                <em>10</em>
+                                мин
+                              </p>
                             </div>
-
-                            <button
-                              class="button button--gray button-play music-song__mute"
-                              type="button"
-                            >
-                              <svg class="svg">
-                                <use xlink:href="#volume"></use>
-                              </svg>
-                              <svg class="svg for-active">
-                                <use xlink:href="#mute"></use>
-                              </svg>
-                            </button>
-
-                            <button
-                              class="button button--gray button-play music-song__play"
-                              type="button"
-                            >
-                              <svg class="svg">
-                                <use xlink:href="#play"></use>
-                              </svg>
-                              <svg class="svg for-active">
-                                <use xlink:href="#pause"></use>
-                              </svg>
-                            </button>
-
-                            <button
-                              class="button button--gray button-play music-song__stop"
-                              type="button"
-                            >
-                              <svg class="svg">
-                                <use xlink:href="#stop"></use>
-                              </svg>
-                            </button>
-                          </div>
-                        </div>
+                          </label>
+                          <label class="radio radio-music">
+                            <input
+                              data-time="15"
+                              class="radio__input"
+                              type="radio"
+                              name="minutes"
+                            />
+                            <div class="radio__custom">
+                              <p class="radio__text">
+                                <em>15</em>
+                                мин
+                              </p>
+                            </div>
+                          </label>
+                          <label class="radio radio-music">
+                            <input
+                              data-time="20"
+                              class="radio__input"
+                              type="radio"
+                              name="minutes"
+                            />
+                            <div class="radio__custom">
+                              <p class="radio__text">
+                                <em>20</em>
+                                мин
+                              </p>
+                            </div>
+                          </label>
+                        </form>
                       </div>
-                      <!-- ./ End of song -->
-                    </li>
-                  </ul>
+
+                      <div class="meditation-music">
+                        <span class="meditation-music__title">
+                          Выбор настроения
+                        </span>
+
+                        <form class="meditation-music-form">
+                          <label class="music-label">
+                            <input
+                              type="radio"
+                              name="music"
+                              class="music-label__input"
+                              checked
+                            />
+                            <span class="tag tag--red">
+                              Спокойствие
+                            </span>
+                          </label>
+                          <label class="music-label">
+                            <input
+                              type="radio"
+                              name="music"
+                              class="music-label__input"
+                            />
+                            <span class="tag tag--blue">
+                              Энергия
+                            </span>
+                          </label>
+                          <label class="music-label">
+                            <input
+                              type="radio"
+                              name="music"
+                              class="music-label__input"
+                            />
+                            <span class="tag tag--blue-light">
+                              Космос
+                            </span>
+                          </label>
+                          <label class="music-label">
+                            <input
+                              type="radio"
+                              name="music"
+                              class="music-label__input"
+                            />
+                            <span class="tag tag--yellow">
+                              Грусть
+                            </span>
+                          </label>
+                          <label class="music-label">
+                            <input
+                              type="radio"
+                              name="music"
+                              class="music-label__input"
+                            />
+                            <span class="tag tag--purple">
+                              Печаль
+                            </span>
+                          </label>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <!-- ./ End of music -->
               </div>
@@ -335,6 +197,13 @@
         <!-- ./ End of container -->
       </section>
       <!-- ./ End of music -->
+
+      ${require('./modules/bonus-tasks.html')}
     </main>
+
+    <!-- modals -->
+    ${require('./modules/modals/modal-meditation.html')}
+    <!--  -->
+    ${require('./modules/modals/modal-mood.html')}
   </body>
 </html>
