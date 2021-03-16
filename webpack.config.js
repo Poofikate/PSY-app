@@ -67,6 +67,7 @@ const config = {
     chat: './src/js/_chat.js',
     'before-reg': './src/js/_before-reg.js',
     greeting: './src/js/_greeting.js',
+    mode: './src/js/_mode.js',
   },
   output: {
     filename: (chunkData) => {

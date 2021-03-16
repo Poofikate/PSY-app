@@ -134,7 +134,7 @@
   width: 100%;
 
   &:not(:last-of-type) {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
   }
 
   .input {
@@ -169,7 +169,8 @@
 .input-subtitle {
   display: inline-block;
   margin-bottom: 10px;
-  font-size: 14px;
+  font-family: $roboto-slab;
+  font-size: 16px;
   line-height: 1.5;
 }
 
