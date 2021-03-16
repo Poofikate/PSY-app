@@ -10,36 +10,49 @@
     <title>Walk</title>
   </head>
   <body>
+    ${require('./modules/components/header2.html')}
     ${require('./modules/components/nav-bar.html')}
     ${require('./modules/menu.html')}
 
     <main>
       <!-- walk -->
       <section class="walk-section">
+        <div class="walk__bg-wrapper">
+          <img
+            data-bg="10"
+            src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg"
+            alt=""
+            class="walk__bg"
+          />
+          <img
+            data-bg="11"
+            src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg"
+            alt=""
+            class="walk__bg"
+          />
+          <img
+            data-bg="12"
+            src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg"
+            alt=""
+            class="walk__bg"
+          />
+          <img
+            data-bg="13"
+            src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg"
+            alt=""
+            class="walk__bg"
+          />
+          <img
+            data-bg="14"
+            src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg"
+            alt=""
+            class="walk__bg"
+          />
+        </div>
         <div class="container">
           <!-- wrap -->
           <div class="wrap">
-            <!-- header -->
-            <div class="meditation-header">
-              <div class="meditation-header__img-wrapper">
-                <img
-                  src="./img/meditation.svg"
-                  alt=""
-                  class="meditation-header__img"
-                />
-              </div>
-
-              <div class="meditation-header__info">
-                <h3 class="meditation-header__title">
-                  От 5 минут
-                </h3>
-
-                <p class="meditation-header__text">
-                  Лучше выполнять во второй половине дня
-                </p>
-              </div>
-            </div>
-            <!-- ./ End of header -->
+            ${require('./modules/components/notify-range.html')}
 
             <!-- card-wrapper -->
             <div class="card-wrapper">
@@ -56,13 +69,9 @@
                   <div class="walk">
                     <div class="walk-info">
                       <div class="walk-info-weather">
-                        <div class="walk-info-weather__img-wrapper">
-                          <img
-                            src="./img/weather.svg"
-                            alt=""
-                            class="walk-info-weather__img"
-                          />
-                        </div>
+                        <svg class="walk-info-weather__icon">
+                          <use xlink:href="#weather"></use>
+                        </svg>
 
                         <em class="walk-info-weather__value">
                           +10 С &deg;
@@ -276,7 +285,12 @@
 
                   <div class="settings-radios">
                     <label class="radio">
-                      <input class="radio__input" type="radio" name="name1" />
+                      <input
+                        data-input-bg="10"
+                        class="radio__input"
+                        type="radio"
+                        name="name1"
+                      />
                       <div class="radio__custom">
                         <svg class="radio__icon">
                           <use xlink:href="#done"></use>
@@ -287,7 +301,12 @@
                       </span>
                     </label>
                     <label class="radio">
-                      <input class="radio__input" type="radio" name="name1" />
+                      <input
+                        data-input-bg="11"
+                        class="radio__input"
+                        type="radio"
+                        name="name1"
+                      />
                       <div class="radio__custom">
                         <svg class="radio__icon">
                           <use xlink:href="#done"></use>
@@ -298,7 +317,12 @@
                       </span>
                     </label>
                     <label class="radio">
-                      <input class="radio__input" type="radio" name="name1" />
+                      <input
+                        data-input-bg="12"
+                        class="radio__input"
+                        type="radio"
+                        name="name1"
+                      />
                       <div class="radio__custom">
                         <svg class="radio__icon">
                           <use xlink:href="#done"></use>
@@ -309,7 +333,12 @@
                       </span>
                     </label>
                     <label class="radio">
-                      <input class="radio__input" type="radio" name="name1" />
+                      <input
+                        data-input-bg="13"
+                        class="radio__input"
+                        type="radio"
+                        name="name1"
+                      />
                       <div class="radio__custom">
                         <svg class="radio__icon">
                           <use xlink:href="#done"></use>
@@ -320,7 +349,12 @@
                       </span>
                     </label>
                     <label class="radio">
-                      <input class="radio__input" type="radio" name="name1" />
+                      <input
+                        data-input-bg="14"
+                        class="radio__input"
+                        type="radio"
+                        name="name1"
+                      />
                       <div class="radio__custom">
                         <svg class="radio__icon">
                           <use xlink:href="#done"></use>
@@ -332,16 +366,33 @@
                     </label>
                   </div>
                 </div>
+
+                <div class="input-wrapper">
+                  <div class="walk-switcher">
+                    <span class="input-subtitle">
+                      Показывать заставку
+                    </span>
+
+                    <label class="checkbox checkbox-switch">
+                      <input
+                        data-bg-switcher
+                        class="checkbox__input"
+                        type="checkbox"
+                      />
+                      <div class="checkbox-switch__custom-wrapper">
+                        <div class="checkbox-switch__custom">
+                          <svg class="checkbox__icon stroke">
+                            <use xlink:href="#done"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                </div>
               </form>
 
               <div class="buttons">
-                <button
-                  class="button button--dark button--invert"
-                  type="button"
-                >
-                  Отмена
-                </button>
-                <button class="button button--dark" type="submit">
+                <button class="button button-gradient" type="button">
                   Сохранить
                 </button>
               </div>
