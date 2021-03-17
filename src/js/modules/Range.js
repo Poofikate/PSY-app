@@ -36,6 +36,14 @@ class Range {
       if (mm < 10) mm = '0' + mm;
       const newValue = `${hh}:${mm}`;
       if (this.$title) this.$title.textContent = newValue;
+    });
+
+    this.$slider.noUiSlider.on('change', (values, handle) => {
+      const value = +values[0];
+      const hh = Math.floor(value / 60);
+      let mm = value % 60;
+      if (mm < 10) mm = '0' + mm;
+      const newValue = `${hh}:${mm}`;
 
       // eslint-disable-next-line no-useless-call
       this.onUpdateCallback.apply(this, [newValue]);
