@@ -22,3 +22,8 @@ import './modules/Range';
 
 // sliders
 import './sliders/bonus-tasks';
+
+const transitionReady = () => {
+  document.body.classList.add('transition-ready');
+};
+window.addEventListener('load', transitionReady);

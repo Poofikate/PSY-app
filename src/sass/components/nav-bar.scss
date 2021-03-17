@@ -12,7 +12,7 @@ main {
   justify-content: center;
   width: 100%;
   overflow: hidden;
-  background-color: $gray-light;
+  background: linear-gradient(180deg, #29bddc 0%, #38d4ea 100%);
 }
 
 .nav-bar-link {
@@ -21,12 +21,11 @@ main {
   flex-grow: 1;
   align-items: center;
   padding: 10px;
-  color: $gray;
+  color: $white;
   text-align: center;
   text-decoration: none;
   background-color: transparent;
   border: none;
-  border-radius: 15px;
   outline: none;
   box-shadow: none;
   transition: color 0.2s;
@@ -69,8 +68,8 @@ main {
     font-weight: 500;
     color: $white;
     text-align: center;
-    background-color: $blue;
-    border: 1px solid $white;
+    background-color: #29bddc;
+    border: 2px solid $white;
     border-radius: 50%;
   }
 
