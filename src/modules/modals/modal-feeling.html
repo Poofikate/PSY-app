@@ -1,12 +1,12 @@
 <div class="modal-wrapper j_modal modal-feeling" id="modal-feeling">
   <div class="modal modal--large modal--no-padding">
-    <button class="hamburger j_closeModal">
-      <svg class="hamburger__icon">
-        <use xlink:href="#close"></use>
-      </svg>
-    </button>
-
     <div class="modal-wrap">
+      <span class="modal__back j_closeModal">
+        <svg class="svg">
+          <use xlink:href="#arrow"></use>
+        </svg>
+        Вернуться назад
+      </span>
       <h3 class="modal-title">
         Выберите одно или несколько психо-переживаний
       </h3>
@@ -451,10 +451,28 @@
         </div>
       </form>
 
-      <div class="modal-buttons">
-        <button class="button button--big" type="button">
-          Сохранить
-        </button>
+      <div class="modal__footer">
+        <div class="diary-new-note-accordion__tags-wrapper">
+          <div class="diary-new-note-accordion__tags">
+            <span class="tag tag--red">
+              Ярость
+            </span>
+            <span class="tag tag--blue">
+              Ошеломленность
+            </span>
+            <span class="tag tag--red">
+              Ярость
+            </span>
+            <span class="tag tag--blue">
+              Ошеломленность
+            </span>
+          </div>
+        </div>
+        <div class="modal-buttons">
+          <button class="button button-gradient" type="button">
+            Выбрать
+          </button>
+        </div>
       </div>
     </div>
   </div>

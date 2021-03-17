@@ -1,6 +1,10 @@
 .diary-section {
   min-height: 100vh;
   overflow: hidden;
+
+  &:first-of-type {
+    padding-top: 50px;
+  }
 }
 
 .diary-header {
@@ -32,10 +36,14 @@
   margin: 3px;
   overflow: hidden;
   cursor: pointer;
-  background-color: $white;
-  border: 3px solid $white;
+  border: 3px solid transparent;
   border-radius: 8px;
   transition: box-shadow 0.3s;
+
+  &.active {
+    border: 3px solid $white;
+    box-shadow: 0 5px 5px rgba($gray, 0.25);
+  }
 
   &__wrap {
     width: 22px;
@@ -52,7 +60,8 @@
 // search
 .diary-search {
   padding: 20px 15px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+  background-color: $white;
   border-radius: 6px;
   box-shadow: 0 4px 15px rgba($color: $gray, $alpha: 0.15);
 
@@ -89,12 +98,17 @@
   }
 
   &__top {
-    padding-top: 25px;
     margin-bottom: 30px;
     margin-bottom: 15px;
 
     .input-label {
       width: 100%;
+    }
+
+    .input {
+      @include placeholder() {
+        color: rgba($blue-dark, 0.5);
+      }
     }
   }
 
@@ -114,6 +128,11 @@
       .input__icon {
         right: 0.8em;
         font-size: 22px;
+      }
+
+      .input {
+        border-color: $gray-light;
+        box-shadow: 0 4px 15px rgba(154, 167, 175, 0.15);
       }
     }
   }
@@ -145,9 +164,6 @@
 
 // new note
 .diary-new-note-accordion {
-  background: linear-gradient(45deg, #f2f2f2 -1.45%, #f3f3f3 103.07%);
-  border-radius: 6px;
-
   $accordion: &;
 
   &.active {
@@ -172,14 +188,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 20px;
+    margin-bottom: 20px;
   }
 
   &__title {
     margin: 0;
     font-family: $roboto-slab;
-    font-size: 1.5rem;
-    font-weight: 300;
+    font-size: 20px;
+    font-weight: bold;
     color: $blue-dark;
   }
 
@@ -211,16 +227,7 @@
     }
   }
 
-  &__content {
-    height: 100%;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-  }
-
   &__body {
-    padding: 5px 20px 25px;
-
     .textarea-wrapper {
       padding: 1em 0;
       font-size: 14px;
@@ -262,9 +269,9 @@
     margin-right: 0;
     margin-bottom: 15px;
     font-family: $roboto-slab;
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 400;
-    color: $gray;
+    color: $blue-dark;
     white-space: normal;
   }
 
@@ -283,6 +290,9 @@
 
     .button {
       margin: 0;
+      color: $blue-dark;
+      background-color: $white;
+      border-color: $white;
     }
   }
 
@@ -290,6 +300,7 @@
     display: flex;
     flex-direction: column;
     padding: 15px 20px 20px;
+    margin-top: 20px;
     border-top: 1px solid rgba($color: $gray, $alpha: 0.2);
 
     > .button {

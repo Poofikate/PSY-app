@@ -13,6 +13,10 @@ export default class Color {
   setColor() {
     document.body.removeAttribute('data-theme');
     document.body.setAttribute('data-theme', this.id);
+
+    const $active = document.querySelector('.color.active');
+    $active && $active.classList.remove('active');
+    this.$el.classList.add('active');
   }
 }
 

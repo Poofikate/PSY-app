@@ -147,6 +147,12 @@ button {
     box-shadow: 0 30px 15px -20px rgba($color: #1db7f5, $alpha: 0.5) !important;
     transition: background-position 0.3s;
 
+    &:disabled {
+      color: $white;
+      background: none;
+      background-color: $gray;
+    }
+
     &--blue-light {
       background-image: $gr-blue-light;
 
