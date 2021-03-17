@@ -63,6 +63,18 @@
     margin-bottom: 10px;
   }
 
+  &--red {
+    .tasks-card-stat__progress {
+      stroke: $red;
+    }
+  }
+
+  &--transparent {
+    .tasks-card-stat__progress {
+      stroke: transparent;
+    }
+  }
+
   &__percent-wrapper {
     position: relative;
     display: inline-flex;
@@ -73,7 +85,7 @@
     height: 50px;
     min-height: 50px;
     margin-right: 10px;
-    background-color: rgba($color: $blue, $alpha: 0.2);
+    background-color: $white;
     border-radius: 50%;
   }
 
@@ -143,8 +155,9 @@
     height: 50px;
     min-height: 50px;
     margin: 2px;
-    background-color: $gray-light;
+    background-color: $white;
     border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(154, 167, 175, 0.2);
   }
 
   &__icon {
@@ -161,7 +174,10 @@
   margin-top: 10px;
 
   .section-title {
-    margin: 0 0 20px;
+    margin: 0 0 10px;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: left;
     letter-spacing: 0.4px;
   }
 }
@@ -173,6 +189,7 @@
 
 $container-size: 300px;
 $container-size-m: 280px;
+$container-size-sm: 250px;
 $element-size: 50px;
 
 .stats-chart-container {
@@ -216,7 +233,7 @@ $element-size: 50px;
   width: 100%;
   height: 100%;
   padding: 30px;
-  border: 1px solid #ebedef;
+  border: 1px solid rgba($gray, 0.3);
   border-radius: 50%;
   transform: translate(-50%, -50%);
 }
@@ -235,13 +252,17 @@ $element-size: 50px;
   height: $element-size;
   transform-origin: 50% ($container-size-m / 2) + ($element-size / 2);
 
+  @include max-width($phone-sm) {
+    transform-origin: 50% ($container-size-sm / 2) + ($element-size / 2);
+  }
+
   &__wrap {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 100%;
-    background-color: $gray-light;
+    background-color: $white;
     border-radius: 50%;
   }
 
@@ -266,7 +287,7 @@ $element-size: 50px;
   font-weight: normal;
   color: $white;
   text-align: center;
-  background-color: $blue-dark;
+  background-color: $blue;
   border-radius: 50%;
   transition: background-color 0.3s;
 }

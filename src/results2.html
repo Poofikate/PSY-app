@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <title>Results</title>
+  </head>
+  <body>
+    ${require('./modules/components/header2.html')}
+    ${require('./modules/components/nav-bar.html')}
+    ${require('./modules/menu.html')}
+
+    <main class="bg">
+      <!-- results -->
+      <section class="results-section">
+        <div class="container">
+          <!-- wrap -->
+          <div class="results-wrap">
+            ${require('./modules/components/tabs.html')}
+
+            <div class="results">
+              <div class="results-desc-wrapper">
+                <div class="results-indicators">
+                  <div class="tasks-card-stat">
+                    <div class="tasks-card-stat__percent-wrapper">
+                      <svg
+                        data-percent="22"
+                        width="14"
+                        height="14"
+                        viewBox="0 0 14 14"
+                        class="tasks-card-stat__progress j_progressBar"
+                      >
+                        <circle cx="7" cy="7" r="6.5" />
+                      </svg>
+
+                      <span class="tasks-card-stat__percent">
+                        22%
+                      </span>
+                    </div>
+
+                    <span class="tasks-card-stat__text">
+                      Средний процент выполнения заданий
+                    </span>
+                  </div>
+                  <div class="tasks-card-stat tasks-card-stat--red">
+                    <div class="tasks-card-stat__percent-wrapper">
+                      <svg
+                        data-percent="40"
+                        width="14"
+                        height="14"
+                        viewBox="0 0 14 14"
+                        class="tasks-card-stat__progress j_progressBar"
+                      >
+                        <circle cx="7" cy="7" r="6.5" />
+                      </svg>
+
+                      <span class="tasks-card-stat__percent">
+                        40%
+                      </span>
+                    </div>
+
+                    <span class="tasks-card-stat__text">
+                      На этой неделе все ваши показатели улучшились
+                    </span>
+                  </div>
+                  <div class="tasks-card-stat tasks-card-stat--transparent">
+                    <div class="tasks-card-stat__percent-wrapper">
+                      <svg
+                        data-percent="51"
+                        width="14"
+                        height="14"
+                        viewBox="0 0 14 14"
+                        class="tasks-card-stat__progress j_progressBar"
+                      >
+                        <circle cx="7" cy="7" r="6.5" />
+                      </svg>
+
+                      <span class="tasks-card-stat__percent">
+                        15%
+                      </span>
+                    </div>
+
+                    <span class="tasks-card-stat__text">
+                      минут вы тратите ежедневно на выполнения заданий
+                    </span>
+                  </div>
+                </div>
+
+                <div class="results-desc">
+                  <div class="results-desc-item">
+                    <h3 class="results-desc-item__title">
+                      Ваше настроение в течении этой недели
+                    </h3>
+
+                    <div class="results-desc-item__content">
+                      <div class="results-desc-item__tasks">
+                        <div class="results-desc-item__task">
+                          <svg class="results-desc-item__icon">
+                            <use xlink:href="#task3"></use>
+                          </svg>
+                        </div>
+                        <div class="results-desc-item__task">
+                          <svg class="results-desc-item__icon">
+                            <use xlink:href="#task4"></use>
+                          </svg>
+                        </div>
+                        <div class="results-desc-item__task">
+                          <svg class="results-desc-item__icon">
+                            <use xlink:href="#task5"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="results-desc-item">
+                    <h3 class="results-desc-item__title">
+                      Вы наиболее счестливы, выполняя эти задачи:
+                    </h3>
+
+                    <div class="results-desc-item__content">
+                      <div class="results-desc-item__tasks">
+                        <div class="results-desc-item__task">
+                          <svg class="results-desc-item__icon">
+                            <use xlink:href="#task3"></use>
+                          </svg>
+                        </div>
+                        <div class="results-desc-item__task">
+                          <svg class="results-desc-item__icon">
+                            <use xlink:href="#task4"></use>
+                          </svg>
+                        </div>
+                        <div class="results-desc-item__task">
+                          <svg class="results-desc-item__icon">
+                            <use xlink:href="#task5"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ./ End of wrap -->
+        </div>
+        <!-- ./ End of container -->
+      </section>
+      <!-- ./ End of results -->
+    </main>
+  </body>
+</html>

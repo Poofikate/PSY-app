@@ -54,6 +54,7 @@ const config = {
     main: './src/js/_main.js',
     index: './src/js/_index.js',
     results: './src/js/_results.js',
+    results2: './src/js/_results2.js',
     meditation: './src/js/_meditation.js',
     water: './src/js/_water.js',
     sleep: './src/js/_sleep.js',
