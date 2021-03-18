@@ -1043,3 +1043,55 @@
     margin-bottom: auto;
   }
 }
+
+.modal-mood-animal {
+  background-color: $white;
+
+  .modal {
+    padding: 0;
+    background: linear-gradient(
+      180deg,
+      #e4eff4 0%,
+      rgba(228, 239, 244, 0) 100%
+    );
+  }
+
+  .modal-wrap {
+    justify-content: flex-end;
+    padding: 20px;
+    background-color: transparent;
+    background-image: url(../img/reg_bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.mood-animal {
+  .greeting__item {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  &__name {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    max-width: 240px;
+    height: auto;
+    max-height: 320px;
+    object-fit: contain;
+    margin: auto;
+  }
+
+  .button-gradient {
+    width: 100%;
+    margin: 20px 0 0;
+  }
+}
