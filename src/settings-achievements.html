@@ -7,258 +7,189 @@
       name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
-    <title>Settings</title>
+    <title>Achievements</title>
   </head>
   <body>
+    ${require('./modules/components/header2.html')}
     ${require('./modules/components/nav-bar.html')}
     ${require('./modules/menu.html')}
 
-    <main>
-      <!-- my-settings -->
-      <section class="my-settings-section">
+    <main class="bg">
+      <!-- results -->
+      <section class="results-section">
         <div class="container">
           <!-- wrap -->
-          <div class="my-settings-wrap">
-            <!-- left -->
-            <div class="my-settings-left">
-              <!-- aside -->
-              <aside class="my-settings-aside">
-                <div class="my-settings-aside__wrap">
-                  <ul class="my-settings-aside__list">
-                    <li class="my-settings-aside__item">
-                      <a href="#" class="my-settings-aside__link selected">
-                        Мой профиль
-                      </a>
-                    </li>
-                    <li class="my-settings-aside__item">
-                      <a href="#" class="my-settings-aside__link">
-                        Неделя без стресса: I ступень
-                      </a>
-                    </li>
-                    <li class="my-settings-aside__item">
-                      <a href="#" class="my-settings-aside__link">
-                        Мои покупки
-                      </a>
-                    </li>
-                    <li class="my-settings-aside__item">
-                      <a href="#" class="my-settings-aside__link">
-                        Достижения
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </aside>
-              <!-- ./ End of aside -->
-            </div>
-            <!-- ./ End of left -->
+          <div class="results-wrap">
+            ${require('./modules/components/tabs.html')}
 
-            <!-- right -->
-            <div class="my-settings-right">
-              <div class="my-settings-content">
-                <!-- tasks -->
-                <div class="my-settings-tasks">
-                  <h3 class="my-settings-tasks__title">
-                    Неделя без стресса: I ступень
-                  </h3>
+            <div class="my-settings-content">
+              <!-- tasks -->
+              <div class="my-settings-tasks">
+                <h3 class="my-settings-tasks__title">
+                  Открыто <b>4 из 20</b> достижений
+                </h3>
 
-                  <p class="my-settings-tasks__text">
-                    Источниками стресса могут быть положительные или
-                    отрицательные изменения в профессиональной сфере, ступор в
-                    карьере, сложные отношения в рабочем коллективе или с
-                    начальством, выполнение дополнительных обязанностей без
-                    оплаты, скука, прокрастинация и отсутствие удовольствия от
-                    выполнения своей работы.
-                  </p>
-
-                  <div class="my-settings-tasks-wrap">
-                    <div class="my-settings-tasks-header">
-                      <h5 class="my-settings-tasks-header__title">
-                        Выберите от 4 до 8 ежедневных заданий
-                      </h5>
-
-                      <div class="my-settings-tasks-controls">
-                        <a href="#" class="button button-icon active">
-                          <svg class="svg">
-                            <use xlink:href="#control1"></use>
-                          </svg>
-                        </a>
-                        <a href="#" class="button button-icon">
-                          <svg class="svg">
-                            <use xlink:href="#control2"></use>
-                          </svg>
-                        </a>
-                        <a href="#" class="button button-icon">
-                          <svg class="svg">
-                            <use xlink:href="#control3"></use>
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-
-                    <div class="my-settings-tasks-lists">
-                      <div class="my-settings-tasks-list-wrapper">
-                        <div class="my-settings-tasks-list">
-                          <div class="item item--achiev completed">
-                            <div class="item__wrap">
-                              <div class="item__top">
-                                <div class="item__icon-wrapper">
-                                  <svg class="item__icon">
-                                    <use xlink:href="#notification"></use>
-                                  </svg>
-                                </div>
-
-                                <div class="stars">
-                                  <svg class="star star--fill">
-                                    <use xlink:href="#star2"></use>
-                                  </svg>
-                                  <svg class="star star--fill">
-                                    <use xlink:href="#star2"></use>
-                                  </svg>
-                                  <svg class="star">
-                                    <use xlink:href="#star"></use>
-                                  </svg>
-                                </div>
+                <div class="my-settings-tasks-wrap">
+                  <div class="my-settings-tasks-lists">
+                    <div class="my-settings-tasks-list-wrapper">
+                      <div class="my-settings-tasks-list">
+                        <div
+                          data-modal-target="#modal-achievement"
+                          class="item item--achiev"
+                        >
+                          <div class="item__wrap">
+                            <div class="item__top">
+                              <div class="item__icon-wrapper">
+                                <svg class="item__icon">
+                                  <use xlink:href="#notification"></use>
+                                </svg>
                               </div>
 
-                              <div class="item__titles">
-                                <h4 class="item__title">
-                                  Ученик Будды
-                                </h4>
+                              <div class="stars">
+                                <svg class="star">
+                                  <use xlink:href="#star3"></use>
+                                </svg>
+                                <svg class="star">
+                                  <use xlink:href="#star3"></use>
+                                </svg>
+                                <svg class="star">
+                                  <use xlink:href="#star3"></use>
+                                </svg>
                               </div>
                             </div>
-                          </div>
-                          <div class="item item--achiev completed">
-                            <div class="item__wrap">
-                              <div class="item__top">
-                                <div class="item__icon-wrapper">
-                                  <svg class="item__icon">
-                                    <use xlink:href="#notification"></use>
-                                  </svg>
-                                </div>
 
-                                <div class="stars">
-                                  <svg class="star star--fill">
-                                    <use xlink:href="#star2"></use>
-                                  </svg>
-                                  <svg class="star">
-                                    <use xlink:href="#star"></use>
-                                  </svg>
-                                  <svg class="star">
-                                    <use xlink:href="#star"></use>
-                                  </svg>
-                                </div>
-                              </div>
-
-                              <div class="item__titles">
-                                <h4 class="item__title">
-                                  Ученик Будды
-                                </h4>
-                              </div>
+                            <div class="item__titles">
+                              <h4 class="item__title">
+                                Ученик Будды
+                              </h4>
                             </div>
                           </div>
-                          <div class="item item--achiev">
-                            <div class="item__wrap">
-                              <div class="item__top">
-                                <div class="item__icon-wrapper">
-                                  <svg class="item__icon">
-                                    <use xlink:href="#notification"></use>
-                                  </svg>
-                                </div>
-
-                                <div class="stars">
-                                  <svg class="star">
-                                    <use xlink:href="#star"></use>
-                                  </svg>
-                                  <svg class="star">
-                                    <use xlink:href="#star"></use>
-                                  </svg>
-                                  <svg class="star">
-                                    <use xlink:href="#star"></use>
-                                  </svg>
-                                </div>
+                        </div>
+                        <div
+                          data-modal-target="#modal-achievement"
+                          class="item item--achiev completed"
+                        >
+                          <div class="item__wrap">
+                            <div class="item__top">
+                              <div class="item__icon-wrapper">
+                                <svg class="item__icon">
+                                  <use xlink:href="#notification"></use>
+                                </svg>
                               </div>
 
-                              <div class="item__titles">
-                                <h4 class="item__title">
-                                  Ученик Будды
-                                </h4>
+                              <div class="stars">
+                                <svg class="star active">
+                                  <use xlink:href="#star3"></use>
+                                </svg>
+                                <svg class="star">
+                                  <use xlink:href="#star3"></use>
+                                </svg>
+                                <svg class="star">
+                                  <use xlink:href="#star3"></use>
+                                </svg>
                               </div>
                             </div>
-                          </div>
-                          <div class="item item--achiev item--row completed">
-                            <div class="item__wrap">
-                              <div class="item__top">
-                                <div class="item__icon-wrapper">
-                                  <svg class="item__icon">
-                                    <use xlink:href="#notification"></use>
-                                  </svg>
-                                </div>
 
-                                <div class="stars">
-                                  <svg class="star star--fill">
-                                    <use xlink:href="#star2"></use>
-                                  </svg>
-                                  <svg class="star">
-                                    <use xlink:href="#star"></use>
-                                  </svg>
-                                  <svg class="star">
-                                    <use xlink:href="#star"></use>
-                                  </svg>
-                                </div>
-                              </div>
-
-                              <div class="item__text">
-                                <h4 class="item__title">
-                                  Уведомления
-                                </h4>
-
-                                <p>
-                                  Источниками стресса могут быть положительные
-                                  или отрицательные изменения в профессиональной
-                                  сфере, ступор в карьере, сложные отношения в
-                                  рабочем коллективе или с начальством,
-                                  выполнение дополнительных обязанностей без
-                                  оплаты.
-                                </p>
-                              </div>
+                            <div class="item__titles">
+                              <h4 class="item__title">
+                                Вы в ударе!
+                              </h4>
                             </div>
                           </div>
-                          <div class="item item--achiev item--row">
-                            <div class="item__wrap">
-                              <div class="item__top">
-                                <div class="item__icon-wrapper">
-                                  <svg class="item__icon">
-                                    <use xlink:href="#notification"></use>
-                                  </svg>
-                                </div>
-
-                                <div class="stars">
-                                  <svg class="star">
-                                    <use xlink:href="#star"></use>
-                                  </svg>
-                                  <svg class="star">
-                                    <use xlink:href="#star"></use>
-                                  </svg>
-                                  <svg class="star">
-                                    <use xlink:href="#star"></use>
-                                  </svg>
-                                </div>
+                        </div>
+                        <div
+                          data-modal-target="#modal-achievement"
+                          class="item item--achiev"
+                        >
+                          <div class="item__wrap">
+                            <div class="item__top">
+                              <div class="item__icon-wrapper">
+                                <svg class="item__icon">
+                                  <use xlink:href="#notification"></use>
+                                </svg>
                               </div>
 
-                              <div class="item__text">
-                                <h4 class="item__title">
-                                  Уведомления
-                                </h4>
-
-                                <p>
-                                  Источниками стресса могут быть положительные
-                                  или отрицательные изменения в профессиональной
-                                  сфере, ступор в карьере, сложные отношения в
-                                  рабочем коллективе или с начальством,
-                                  выполнение дополнительных обязанностей без
-                                  оплаты.
-                                </p>
+                              <div class="stars">
+                                <svg class="star active">
+                                  <use xlink:href="#star3"></use>
+                                </svg>
+                                <svg class="star">
+                                  <use xlink:href="#star3"></use>
+                                </svg>
+                                <svg class="star">
+                                  <use xlink:href="#star3"></use>
+                                </svg>
                               </div>
+                            </div>
+
+                            <div class="item__titles">
+                              <h4 class="item__title">
+                                Ученик Будды
+                              </h4>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          data-modal-target="#modal-achievement"
+                          class="item item--achiev completed"
+                        >
+                          <div class="item__wrap">
+                            <div class="item__top">
+                              <div class="item__icon-wrapper">
+                                <svg class="item__icon">
+                                  <use xlink:href="#notification"></use>
+                                </svg>
+                              </div>
+
+                              <div class="stars">
+                                <svg class="star active">
+                                  <use xlink:href="#star3"></use>
+                                </svg>
+                                <svg class="star">
+                                  <use xlink:href="#star3"></use>
+                                </svg>
+                                <svg class="star">
+                                  <use xlink:href="#star3"></use>
+                                </svg>
+                              </div>
+                            </div>
+
+                            <div class="item__titles">
+                              <h4 class="item__title">
+                                Вы в ударе!
+                              </h4>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          data-modal-target="#modal-achievement"
+                          class="item item--achiev"
+                        >
+                          <div class="item__wrap">
+                            <div class="item__top">
+                              <div class="item__icon-wrapper">
+                                <svg class="item__icon">
+                                  <use xlink:href="#notification"></use>
+                                </svg>
+                              </div>
+
+                              <div class="stars">
+                                <svg class="star active">
+                                  <use xlink:href="#star3"></use>
+                                </svg>
+                                <svg class="star">
+                                  <use xlink:href="#star3"></use>
+                                </svg>
+                                <svg class="star">
+                                  <use xlink:href="#star3"></use>
+                                </svg>
+                              </div>
+                            </div>
+
+                            <div class="item__titles">
+                              <h4 class="item__title">
+                                Ученик Будды
+                              </h4>
                             </div>
                           </div>
                         </div>
@@ -266,19 +197,18 @@
                     </div>
                   </div>
                 </div>
-                <!-- ./ End of tasks -->
               </div>
+              <!-- ./ End of tasks -->
             </div>
-            <!-- ./ End of right -->
           </div>
           <!-- ./ End of wrap -->
         </div>
         <!-- ./ End of container -->
       </section>
-      <!-- ./ End of my-settings -->
+      <!-- ./ End of results -->
     </main>
 
     <!-- modals -->
-    ${require(`./modules/modals/modal-password.html`)}
+    ${require('./modules/modals/modal-achievement.html')}
   </body>
 </html>

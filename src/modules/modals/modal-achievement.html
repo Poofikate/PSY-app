@@ -1,4 +1,7 @@
-<div class="modal-wrapper j_modal modal-task" id="modal-task">
+<div
+  class="modal-wrapper j_modal modal-task modal-achievement"
+  id="modal-achievement"
+>
   <div class="modal modal--small">
     <div class="modal-wrap">
       <div class="modal__header">
@@ -6,15 +9,20 @@
           <img
             src="../../img/meditation.svg"
             alt=""
-            class="modal-task-info__img"
+            class="modal-task-info__img modal-task-info__img--small"
           />
           <div class="modal-task-info__wrap">
-            <span class="modal-task-info__title">
-              Хобби
-            </span>
-            <span class="modal-task-info__subtitle">
-              Мин. 8 час/день
-            </span>
+            <div class="stars">
+              <svg class="star active">
+                <use xlink:href="#star3"></use>
+              </svg>
+              <svg class="star">
+                <use xlink:href="#star3"></use>
+              </svg>
+              <svg class="star">
+                <use xlink:href="#star3"></use>
+              </svg>
+            </div>
           </div>
         </div>
         <button class="hamburger j_closeModal">
@@ -24,18 +32,16 @@
         </button>
       </div>
 
+      <span class="modal__subtitle">
+        Ученик будды
+      </span>
+
       <p class="modal__text">
         Источниками стресса могут быть положительные или отрицательные изменения
         в профессиональной сфере, ступор в карьере, сложные отношения в рабочем
         коллективе или с начальством, выполнение дополнительных обязанностей без
         оплаты.
       </p>
-
-      <div class="modal__buttons">
-        <button class="button button-gradient" type="button">
-          Выбрать
-        </button>
-      </div>
     </div>
   </div>
 </div>

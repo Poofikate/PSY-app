@@ -19,6 +19,8 @@ body {
 }
 
 main {
+  min-height: calc(100vh - 160px);
+
   &.bg {
     padding-bottom: 110px;
     background-image: url(../img/body_png.png);

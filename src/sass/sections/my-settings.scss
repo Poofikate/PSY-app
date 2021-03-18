@@ -679,42 +679,23 @@
 
 // achievements
 .item--achiev {
-  padding: 20px 15px 30px;
-
-  &.item--row {
-    .item__top {
-      margin-right: 35px;
-    }
-
-    .stars {
-      flex-wrap: unset;
-      width: auto;
-      min-width: auto;
-      margin-top: 10px;
-    }
-
-    .star {
-      &:last-child {
-        order: unset;
-        margin: 2px;
-      }
-    }
-  }
-
   &.completed {
     .item__icon-wrapper {
-      background-color: $green;
+      background-color: $turq;
     }
 
     .item__icon {
       fill: $white;
     }
+  }
 
-    .star {
-      &--fill {
-        fill: $green;
-      }
-    }
+  .item__titles {
+    margin-top: 10px;
+  }
+
+  .item__title {
+    font-family: $roboto-slab;
+    font-weight: normal;
   }
 }
 
@@ -728,10 +709,11 @@
   width: 20px;
   height: 20px;
   margin: 2px;
+  color: transparent;
   fill: $gray;
 
-  &:last-child {
-    order: -1;
-    margin: 2px 4px;
+  &.active {
+    color: $turq;
+    fill: $blue;
   }
 }
