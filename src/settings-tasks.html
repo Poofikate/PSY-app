@@ -7,53 +7,35 @@
       name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
-    <title>Settings</title>
+    <title>Profile</title>
   </head>
   <body>
+    ${require('./modules/components/header.html')}
     ${require('./modules/components/nav-bar.html')}
     ${require('./modules/menu.html')}
 
-    <main>
-     <!-- my-settings -->
-     <section class="my-settings-section">
-      <div class="container">
-        <!-- wrap -->
-        <div class="my-settings-wrap">
-          <!-- left -->
-          <div class="my-settings-left">
-            <!-- aside -->
-            <aside class="my-settings-aside">
-              <div class="my-settings-aside__wrap">
-                <ul class="my-settings-aside__list">
-                  <li class="my-settings-aside__item">
-                    <a href="#" class="my-settings-aside__link selected">
-                      Мой профиль
-                    </a>
-                  </li>
-                  <li class="my-settings-aside__item">
-                    <a href="#" class="my-settings-aside__link">
-                      Неделя без стресса: I ступень
-                    </a>
-                  </li>
-                  <li class="my-settings-aside__item">
-                    <a href="#" class="my-settings-aside__link">
-                      Мои покупки
-                    </a>
-                  </li>
-                  <li class="my-settings-aside__item">
-                    <a href="#" class="my-settings-aside__link">
-                      Достижения
-                    </a>
-                  </li>
-                </ul>
+    <main class="bg">
+      <!-- my-settings -->
+      <section class="my-settings-section">
+        <div class="container">
+          <!-- wrap -->
+          <div class="my-settings-wrap">
+            <a href="#" class="meditation-range-slider premium">
+              <div class="premium__wrap">
+                <svg class="premium__icon">
+                  <use xlink:href="#premium"></use>
+                </svg>
+                <div class="premium__info">
+                  <span class="premium__text">
+                    Премиум активен
+                  </span>
+                  <span class="premium__text">
+                    до 21.03.2022
+                  </span>
+                </div>
               </div>
-            </aside>
-            <!-- ./ End of aside -->
-          </div>
-          <!-- ./ End of left -->
+            </a>
 
-          <!-- right -->
-          <div class="my-settings-right">
             <div class="my-settings-content">
               <!-- tasks -->
               <div class="my-settings-tasks">
@@ -62,12 +44,11 @@
                 </h3>
 
                 <p class="my-settings-tasks__text">
-                  Источниками стресса могут быть положительные или
-                  отрицательные изменения в профессиональной сфере, ступор в
-                  карьере, сложные отношения в рабочем коллективе или с
-                  начальством, выполнение дополнительных обязанностей без
-                  оплаты, скука, прокрастинация и отсутствие удовольствия от
-                  выполнения своей работы.
+                  Источниками стресса могут быть положительные или отрицательные
+                  изменения в профессиональной сфере, ступор в карьере, сложные
+                  отношения в рабочем коллективе или с начальством, выполнение
+                  дополнительных обязанностей без оплаты, скука, прокрастинация
+                  и отсутствие удовольствия от выполнения своей работы.
                 </p>
 
                 <div class="my-settings-tasks-wrap">
@@ -75,636 +56,187 @@
                     <h5 class="my-settings-tasks-header__title">
                       Выберите от 4 до 8 ежедневных заданий
                     </h5>
-
-                    <div class="my-settings-tasks-controls">
-                      <a href="#" class="button button-icon active">
-                        <svg class="svg">
-                          <use xlink:href="#control1"></use>
-                        </svg>
-                      </a>
-                      <a href="#" class="button button-icon">
-                        <svg class="svg">
-                          <use xlink:href="#control2"></use>
-                        </svg>
-                      </a>
-                      <a href="#" class="button button-icon">
-                        <svg class="svg">
-                          <use xlink:href="#control3"></use>
-                        </svg>
-                      </a>
-                    </div>
                   </div>
-                </div>
 
                   <div class="my-settings-tasks-lists">
                     <div class="my-settings-tasks-list-wrapper">
-                      <form data-limit="4" class="my-settings-tasks-list j_form">
-                        <label class="item-checkbox">
-                          <input
-                            type="checkbox"
-                            class="checkbox__input"
-                            name="task"
-                          />
-
-                          <div class="item">
-                            <div class="item__wrap">
-                              <div class="item__top">
-                                <div class="item__img-wrapper">
-                                  <img
-                                    src="./img/item_img.svg"
-                                    alt=""
-                                    class="item__img"
-                                  />
-                                </div>
-
-                                <div class="tooltip">
-                                  <i class="tooltip__symbol">
-                                    i
-                                  </i>
-                                  <div class="tooltip__content">
-                                    <p class="tooltip__text">
-                                      Источниками стресса могут быть
-                                      положительные или отрицательные
-                                      изменения в профессиональной сфере,
-                                      ступор в карьере, сложные отношения в
-                                      рабочем коллективе или с начальством,
-                                      выполнение дополнительных обязанностей
-                                      без оплаты.
-                                    </p>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div class="item__titles">
-                                <h4 class="item__title">
-                                  Уведомления
-                                </h4>
-                                <span class="item__subtitle">
-                                  и подписки
-                                </span>
+                      <div class="my-settings-tasks-list">
+                        <div
+                          data-modal-target="#modal-task"
+                          class="item completed"
+                        >
+                          <div class="item__wrap">
+                            <div class="item__top">
+                              <div class="item__icon-wrapper">
+                                <svg class="item__icon">
+                                  <use xlink:href="#notification"></use>
+                                </svg>
                               </div>
                             </div>
-                          </div>
-                        </label>
-                        <label class="item-checkbox">
-                          <input
-                            type="checkbox"
-                            class="checkbox__input"
-                            name="task"
-                          />
 
-                          <div class="item">
-                            <div class="item__wrap">
-                              <div class="item__top">
-                                <div class="item__img-wrapper">
-                                  <img
-                                    src="./img/item_img.svg"
-                                    alt=""
-                                    class="item__img"
-                                  />
-                                </div>
-
-                                <div class="tooltip">
-                                  <i class="tooltip__symbol">
-                                    i
-                                  </i>
-                                  <div class="tooltip__content">
-                                    <p class="tooltip__text">
-                                      Источниками стресса могут быть
-                                      положительные или отрицательные
-                                      изменения в профессиональной сфере,
-                                      ступор в карьере, сложные отношения в
-                                      рабочем коллективе или с начальством,
-                                      выполнение дополнительных обязанностей
-                                      без оплаты.
-                                    </p>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div class="item__titles">
-                                <h4 class="item__title">
-                                  Уведомления
-                                </h4>
-                                <span class="item__subtitle">
-                                  и подписки
-                                </span>
-                              </div>
+                            <div class="item__titles">
+                              <h4 class="item__title">
+                                Хобби
+                              </h4>
+                              <time class="mood-stat__time">
+                                5—10 мин
+                              </time>
                             </div>
                           </div>
-                        </label>
-                        <label class="item-checkbox">
-                          <input
-                            type="checkbox"
-                            class="checkbox__input"
-                            name="task"
-                          />
-
-                          <div class="item">
-                            <div class="item__wrap">
-                              <div class="item__top">
-                                <div class="item__img-wrapper">
-                                  <img
-                                    src="./img/item_img.svg"
-                                    alt=""
-                                    class="item__img"
-                                  />
-                                </div>
-
-                                <div class="tooltip">
-                                  <i class="tooltip__symbol">
-                                    i
-                                  </i>
-                                  <div class="tooltip__content">
-                                    <p class="tooltip__text">
-                                      Источниками стресса могут быть
-                                      положительные или отрицательные
-                                      изменения в профессиональной сфере,
-                                      ступор в карьере, сложные отношения в
-                                      рабочем коллективе или с начальством,
-                                      выполнение дополнительных обязанностей
-                                      без оплаты.
-                                    </p>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div class="item__titles">
-                                <h4 class="item__title">
-                                  Уведомления
-                                </h4>
-                                <span class="item__subtitle">
-                                  и подписки
-                                </span>
+                        </div>
+                        <div
+                          data-modal-target="#modal-task"
+                          class="item completed"
+                        >
+                          <div class="item__wrap">
+                            <div class="item__top">
+                              <div class="item__icon-wrapper">
+                                <svg class="item__icon">
+                                  <use xlink:href="#notification"></use>
+                                </svg>
                               </div>
                             </div>
-                          </div>
-                        </label>
-                        <label class="item-checkbox">
-                          <input
-                            type="checkbox"
-                            class="checkbox__input"
-                            name="task"
-                          />
 
-                          <div class="item">
-                            <div class="item__wrap">
-                              <div class="item__top">
-                                <div class="item__img-wrapper">
-                                  <img
-                                    src="./img/item_img.svg"
-                                    alt=""
-                                    class="item__img"
-                                  />
-                                </div>
-
-                                <div class="tooltip">
-                                  <i class="tooltip__symbol">
-                                    i
-                                  </i>
-                                  <div class="tooltip__content">
-                                    <p class="tooltip__text">
-                                      Источниками стресса могут быть
-                                      положительные или отрицательные
-                                      изменения в профессиональной сфере,
-                                      ступор в карьере, сложные отношения в
-                                      рабочем коллективе или с начальством,
-                                      выполнение дополнительных обязанностей
-                                      без оплаты.
-                                    </p>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div class="item__titles">
-                                <h4 class="item__title">
-                                  Уведомления
-                                </h4>
-                                <span class="item__subtitle">
-                                  и подписки
-                                </span>
-                              </div>
+                            <div class="item__titles">
+                              <h4 class="item__title">
+                                Медитация
+                              </h4>
+                              <time class="mood-stat__time">
+                                5—10 мин
+                              </time>
                             </div>
                           </div>
-                        </label>
-                        <label class="item-checkbox">
-                          <input
-                            type="checkbox"
-                            class="checkbox__input"
-                            name="task"
-                          />
-
-                          <div class="item">
-                            <div class="item__wrap">
-                              <div class="item__top">
-                                <div class="item__img-wrapper">
-                                  <img
-                                    src="./img/item_img.svg"
-                                    alt=""
-                                    class="item__img"
-                                  />
-                                </div>
-
-                                <div class="tooltip">
-                                  <i class="tooltip__symbol">
-                                    i
-                                  </i>
-                                  <div class="tooltip__content">
-                                    <p class="tooltip__text">
-                                      Источниками стресса могут быть
-                                      положительные или отрицательные
-                                      изменения в профессиональной сфере,
-                                      ступор в карьере, сложные отношения в
-                                      рабочем коллективе или с начальством,
-                                      выполнение дополнительных обязанностей
-                                      без оплаты.
-                                    </p>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div class="item__titles">
-                                <h4 class="item__title">
-                                  Уведомления
-                                </h4>
-                                <span class="item__subtitle">
-                                  и подписки
-                                </span>
+                        </div>
+                        <div data-modal-target="#modal-task" class="item">
+                          <div class="item__wrap">
+                            <div class="item__top">
+                              <div class="item__icon-wrapper">
+                                <svg class="item__icon">
+                                  <use xlink:href="#notification"></use>
+                                </svg>
                               </div>
                             </div>
-                          </div>
-                        </label>
 
-                        <label class="item-checkbox item-checkbox--row">
-                          <input
-                            type="checkbox"
-                            class="checkbox__input"
-                            name="task"
-                          />
-
-                          <div class="item">
-                            <div class="item__wrap">
-                              <div class="item__top">
-                                <div class="item__img-wrapper">
-                                  <img
-                                    src="./img/item_img.svg"
-                                    alt=""
-                                    class="item__img"
-                                  />
-                                </div>
-                              </div>
-
-                              <div class="item__titles">
-                                <h4 class="item__title">
-                                  Уведомления
-                                </h4>
-                                <span class="item__subtitle">
-                                  и подписки
-                                </span>
-                              </div>
-
-                              <p class="item__text">
-                                Источниками стресса могут быть положительные или
-                                отрицательные изменения в профессиональной
-                                сфере, ступор в карьере, сложные отношения в
-                                рабочем коллективе или с начальством, выполнение
-                                дополнительных обязанностей без оплаты.
-                              </p>
+                            <div class="item__titles">
+                              <h4 class="item__title">
+                                Медитация
+                              </h4>
+                              <time class="mood-stat__time">
+                                5—10 мин
+                              </time>
                             </div>
                           </div>
-                        </label>
-                      </form>
-                    </div>
-
-                    <div class="my-settings-tasks-list-wrapper">
-                      <h5 class="my-settings-tasks-header__title">
-                        Бонусное задание
-                      </h5>
-                      <form class="my-settings-tasks-list j_form">
-                        <label class="item-checkbox">
-                          <input
-                            type="checkbox"
-                            class="checkbox__input"
-                            name="task3"
-                          />
-
-                          <div class="item">
-                            <div class="item__wrap">
-                              <div class="item__top">
-                                <div class="item__img-wrapper">
-                                  <img
-                                    src="./img/item_img.svg"
-                                    alt=""
-                                    class="item__img"
-                                  />
-                                </div>
-
-                                <div class="tooltip">
-                                  <i class="tooltip__symbol">
-                                    i
-                                  </i>
-                                  <div class="tooltip__content">
-                                    <p class="tooltip__text">
-                                      Источниками стресса могут быть
-                                      положительные или отрицательные
-                                      изменения в профессиональной сфере,
-                                      ступор в карьере, сложные отношения в
-                                      рабочем коллективе или с начальством,
-                                      выполнение дополнительных обязанностей
-                                      без оплаты.
-                                    </p>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div class="item__titles">
-                                <h4 class="item__title">
-                                  Уведомления
-                                </h4>
-                                <span class="item__subtitle">
-                                  и подписки
-                                </span>
+                        </div>
+                        <div
+                          data-modal-target="#modal-task"
+                          class="item completed"
+                        >
+                          <div class="item__wrap">
+                            <div class="item__top">
+                              <div class="item__icon-wrapper">
+                                <svg class="item__icon">
+                                  <use xlink:href="#notification"></use>
+                                </svg>
                               </div>
                             </div>
-                          </div>
-                        </label>
-                        <label class="item-checkbox">
-                          <input
-                            type="checkbox"
-                            class="checkbox__input"
-                            name="task3"
-                          />
 
-                          <div class="item">
-                            <div class="item__wrap">
-                              <div class="item__top">
-                                <div class="item__img-wrapper">
-                                  <img
-                                    src="./img/item_img.svg"
-                                    alt=""
-                                    class="item__img"
-                                  />
-                                </div>
-
-                                <div class="tooltip">
-                                  <i class="tooltip__symbol">
-                                    i
-                                  </i>
-                                  <div class="tooltip__content">
-                                    <p class="tooltip__text">
-                                      Источниками стресса могут быть
-                                      положительные или отрицательные
-                                      изменения в профессиональной сфере,
-                                      ступор в карьере, сложные отношения в
-                                      рабочем коллективе или с начальством,
-                                      выполнение дополнительных обязанностей
-                                      без оплаты.
-                                    </p>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div class="item__titles">
-                                <h4 class="item__title">
-                                  Уведомления
-                                </h4>
-                                <span class="item__subtitle">
-                                  и подписки
-                                </span>
-                              </div>
+                            <div class="item__titles">
+                              <h4 class="item__title">
+                                Хобби
+                              </h4>
+                              <time class="mood-stat__time">
+                                5—10 мин
+                              </time>
                             </div>
                           </div>
-                        </label>
-                        <label class="item-checkbox">
-                          <input
-                            type="checkbox"
-                            class="checkbox__input"
-                            name="task3"
-                          />
-
-                          <div class="item">
-                            <div class="item__wrap">
-                              <div class="item__top">
-                                <div class="item__img-wrapper">
-                                  <img
-                                    src="./img/item_img.svg"
-                                    alt=""
-                                    class="item__img"
-                                  />
-                                </div>
-
-                                <div class="tooltip">
-                                  <i class="tooltip__symbol">
-                                    i
-                                  </i>
-                                  <div class="tooltip__content">
-                                    <p class="tooltip__text">
-                                      Источниками стресса могут быть
-                                      положительные или отрицательные
-                                      изменения в профессиональной сфере,
-                                      ступор в карьере, сложные отношения в
-                                      рабочем коллективе или с начальством,
-                                      выполнение дополнительных обязанностей
-                                      без оплаты.
-                                    </p>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div class="item__titles">
-                                <h4 class="item__title">
-                                  Уведомления
-                                </h4>
-                                <span class="item__subtitle">
-                                  и подписки
-                                </span>
+                        </div>
+                        <div
+                          data-modal-target="#modal-task"
+                          class="item completed"
+                        >
+                          <div class="item__wrap">
+                            <div class="item__top">
+                              <div class="item__icon-wrapper">
+                                <svg class="item__icon">
+                                  <use xlink:href="#notification"></use>
+                                </svg>
                               </div>
                             </div>
-                          </div>
-                        </label>
-                      </form>
-                    </div>
 
-                    <div class="my-settings-tasks-list-wrapper">
-                      <h5 class="my-settings-tasks-header__title">
-                        Бонусное задание
-                      </h5>
-                      <form class="my-settings-tasks-list">
-                        <label class="item-checkbox">
-                          <input
-                            type="radio"
-                            class="checkbox__input"
-                            name="task2"
-                          />
-
-                          <div class="item">
-                            <div class="item__wrap">
-                              <div class="item__top">
-                                <div class="item__img-wrapper">
-                                  <img
-                                    src="./img/item_img.svg"
-                                    alt=""
-                                    class="item__img"
-                                  />
-                                </div>
-
-                                <div class="tooltip">
-                                  <i class="tooltip__symbol">
-                                    i
-                                  </i>
-                                  <div class="tooltip__content">
-                                    <p class="tooltip__text">
-                                      Источниками стресса могут быть
-                                      положительные или отрицательные
-                                      изменения в профессиональной сфере,
-                                      ступор в карьере, сложные отношения в
-                                      рабочем коллективе или с начальством,
-                                      выполнение дополнительных обязанностей
-                                      без оплаты.
-                                    </p>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div class="item__titles">
-                                <h4 class="item__title">
-                                  Уведомления
-                                </h4>
-                                <span class="item__subtitle">
-                                  и подписки
-                                </span>
-                              </div>
+                            <div class="item__titles">
+                              <h4 class="item__title">
+                                Медитация
+                              </h4>
+                              <time class="mood-stat__time">
+                                5—10 мин
+                              </time>
                             </div>
                           </div>
-                        </label>
-                        <label class="item-checkbox">
-                          <input
-                            type="radio"
-                            class="checkbox__input"
-                            name="task2"
-                          />
-
-                          <div class="item">
-                            <div class="item__wrap">
-                              <div class="item__top">
-                                <div class="item__img-wrapper">
-                                  <img
-                                    src="./img/item_img.svg"
-                                    alt=""
-                                    class="item__img"
-                                  />
-                                </div>
-
-                                <div class="tooltip">
-                                  <i class="tooltip__symbol">
-                                    i
-                                  </i>
-                                  <div class="tooltip__content">
-                                    <p class="tooltip__text">
-                                      Источниками стресса могут быть
-                                      положительные или отрицательные
-                                      изменения в профессиональной сфере,
-                                      ступор в карьере, сложные отношения в
-                                      рабочем коллективе или с начальством,
-                                      выполнение дополнительных обязанностей
-                                      без оплаты.
-                                    </p>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div class="item__titles">
-                                <h4 class="item__title">
-                                  Уведомления
-                                </h4>
-                                <span class="item__subtitle">
-                                  и подписки
-                                </span>
+                        </div>
+                        <div data-modal-target="#modal-task" class="item">
+                          <div class="item__wrap">
+                            <div class="item__top">
+                              <div class="item__icon-wrapper">
+                                <svg class="item__icon">
+                                  <use xlink:href="#notification"></use>
+                                </svg>
                               </div>
                             </div>
-                          </div>
-                        </label>
-                        <label class="item-checkbox">
-                          <input
-                            type="radio"
-                            class="checkbox__input"
-                            name="task2"
-                          />
 
-                          <div class="item">
-                            <div class="item__wrap">
-                              <div class="item__top">
-                                <div class="item__img-wrapper">
-                                  <img
-                                    src="./img/item_img.svg"
-                                    alt=""
-                                    class="item__img"
-                                  />
-                                </div>
-
-                                <div class="tooltip">
-                                  <i class="tooltip__symbol">
-                                    i
-                                  </i>
-                                  <div class="tooltip__content">
-                                    <p class="tooltip__text">
-                                      Источниками стресса могут быть
-                                      положительные или отрицательные
-                                      изменения в профессиональной сфере,
-                                      ступор в карьере, сложные отношения в
-                                      рабочем коллективе или с начальством,
-                                      выполнение дополнительных обязанностей
-                                      без оплаты.
-                                    </p>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div class="item__titles">
-                                <h4 class="item__title">
-                                  Уведомления
-                                </h4>
-                                <span class="item__subtitle">
-                                  и подписки
-                                </span>
-                              </div>
+                            <div class="item__titles">
+                              <h4 class="item__title">
+                                Медитация
+                              </h4>
+                              <time class="mood-stat__time">
+                                5—10 мин
+                              </time>
                             </div>
                           </div>
-                        </label>
-                      </form>
-                    </div>
-                  </div>
-                </div>
+                        </div>
+                        <div
+                          data-modal-target="#modal-task"
+                          class="item completed"
+                        >
+                          <div class="item__wrap">
+                            <div class="item__top">
+                              <div class="item__icon-wrapper">
+                                <svg class="item__icon">
+                                  <use xlink:href="#notification"></use>
+                                </svg>
+                              </div>
+                            </div>
 
-                <div class="my-settings-tasks-buttons-wrapper">
-                  <div class="my-settings-tasks-buttons">
-                    <button
-                      class="button button--gray button--invert"
-                      type="reset"
-                    >
-                      Сбросить выбор
-                    </button>
-                    <button class="button" type="submit">
-                      Сохранить
-                    </button>
-                  </div>
+                            <div class="item__titles">
+                              <h4 class="item__title">
+                                Медитация
+                              </h4>
+                              <time class="mood-stat__time">
+                                5—10 мин
+                              </time>
+                            </div>
+                          </div>
+                        </div>
+                        <div data-modal-target="#modal-task" class="item">
+                          <div class="item__wrap">
+                            <div class="item__top">
+                              <div class="item__icon-wrapper">
+                                <svg class="item__icon">
+                                  <use xlink:href="#notification"></use>
+                                </svg>
+                              </div>
+                            </div>
 
-                  <div class="my-settings-tasks-time">
-                    <div class="my-settings-tasks-time__img-wrapper">
-                      <img
-                        src="./img/time.svg"
-                        alt=""
-                        class="my-settings-tasks__img"
-                      />
-                    </div>
-
-                    <div class="my-settings-tasks-time__info">
-                      <span class="my-settings-tasks-time__key">
-                        Общее время
-                      </span>
-                      <span class="my-settings-tasks-time__value">
-                        Менее 20 мин.
-                      </span>
+                            <div class="item__titles">
+                              <h4 class="item__title">
+                                Медитация
+                              </h4>
+                              <time class="mood-stat__time">
+                                5—10 мин
+                              </time>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -712,16 +244,128 @@
               <!-- ./ End of tasks -->
             </div>
           </div>
-          <!-- ./ End of right -->
+          <!-- ./ End of wrap -->
         </div>
-        <!-- ./ End of wrap -->
-      </div>
-      <!-- ./ End of container -->
-    </section>
-    <!-- ./ End of my-settings -->
+        <!-- ./ End of container -->
+      </section>
+      <!-- ./ End of my-settings -->
+
+      <!-- app-settings -->
+      <section class="app-settings-section">
+        <div class="container">
+          <div class="app-settings-wrap">
+            <h2 class="section-title">
+              Настройки приложения
+            </h2>
+            <ul class="app-settings__list">
+              <li class="app-settings__item">
+                <span class="app-settings__title">
+                  Ежедневная мотивация
+                </span>
+
+                <label class="checkbox checkbox-switch">
+                  <input class="checkbox__input" type="checkbox" />
+                  <div class="checkbox-switch__custom-wrapper">
+                    <div class="checkbox-switch__custom">
+                      <svg class="checkbox__icon stroke">
+                        <use xlink:href="#done"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </label>
+              </li>
+              <li class="app-settings__item">
+                <span class="app-settings__title">
+                  Показывать интересные статьи
+                </span>
+
+                <label class="checkbox checkbox-switch">
+                  <input class="checkbox__input" type="checkbox" />
+                  <div class="checkbox-switch__custom-wrapper">
+                    <div class="checkbox-switch__custom">
+                      <svg class="checkbox__icon stroke">
+                        <use xlink:href="#done"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </label>
+              </li>
+            </ul>
+
+            <div class="app-settings__links">
+              <a class="app-settings__link">
+                <span class="app-settings__title">
+                  Выбрать помощника
+                </span>
+
+                <svg class="svg">
+                  <use xlink:href="#arrow2"></use>
+                </svg>
+              </a>
+              <a class="app-settings__link">
+                <span class="app-settings__title">
+                  Изменить язык
+                </span>
+
+                <svg class="svg">
+                  <use xlink:href="#arrow2"></use>
+                </svg>
+              </a>
+              <a class="app-settings__link">
+                <span class="app-settings__title">
+                  Использовать код
+                </span>
+
+                <svg class="svg">
+                  <use xlink:href="#arrow2"></use>
+                </svg>
+              </a>
+
+              <a class="app-settings__link app-settings__link--blue">
+                <span class="app-settings__title">
+                  Выйти
+                </span>
+              </a>
+            </div>
+
+            <h2 class="section-title">
+              Настройки приложения
+            </h2>
+
+            <ul class="app-settings__list app-settings__list--other">
+              <li class="app-settings__item">
+                <span class="app-settings__title">
+                  Подписаться в instgram
+                </span>
+              </li>
+              <li class="app-settings__item">
+                <span class="app-settings__title">
+                  Часто задаваемые вопросы
+                </span>
+              </li>
+              <li class="app-settings__item">
+                <span class="app-settings__title">
+                  Ежедневная мотивация
+                </span>
+
+                <i>
+                  №334151
+                </i>
+              </li>
+              <li class="app-settings__item">
+                <span class="app-settings__title">
+                  Поделиться с друзьями
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- ./ End of container -->
+      </section>
+      <!-- ./ End of app-settings -->
     </main>
 
     <!-- modals -->
-    ${require(`./modules/modals/modal-password.html`)}
+    ${require('./modules/modals/modal-task.html')}
   </body>
 </html>

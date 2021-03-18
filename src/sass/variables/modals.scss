@@ -1095,3 +1095,66 @@
     margin: 20px 0 0;
   }
 }
+
+.modal-task {
+  .modal {
+    padding: 25px 25px 15px;
+    border-radius: 40px;
+
+    &.modal--small {
+      .modal-wrap {
+        max-width: none;
+      }
+    }
+  }
+}
+
+.modal__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 10px;
+
+  .hamburger {
+    position: static;
+    margin: 0 0 0 20px;
+  }
+}
+
+.modal-task-info {
+  display: inline-flex;
+  align-items: center;
+
+  &__img {
+    display: block;
+    width: 36px;
+    min-width: 36px;
+    height: 36px;
+    min-height: 36px;
+    margin-right: 20px;
+  }
+
+  &__title {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  &__text {
+    font-family: $roboto-slab;
+    font-size: 12px;
+    font-weight: normal;
+  }
+}
+
+.modal__text {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.modal__buttons {
+  .button {
+    width: 100%;
+    margin: 10px 0 0;
+  }
+}

@@ -1,0 +1,118 @@
+.app-settings-section {
+  .section-title {
+    margin: 0 0 20px;
+  }
+}
+
+.meditation-range-slider.premium {
+  display: flex;
+  min-height: 70px;
+  color: $white;
+  background: linear-gradient(89.95deg, #217bfc 0.02%, #31cae4 111.05%),
+    linear-gradient(90deg, #23a3cf 0%, #25d4ca 102.44%);
+}
+
+.premium__wrap {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.premium__icon {
+  display: block;
+  width: 30px;
+  min-width: 30px;
+  height: 30px;
+  min-height: 30px;
+  margin-right: 15px;
+  fill: currentColor;
+}
+
+.premium__text {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.3;
+  color: currentColor;
+}
+
+.app-settings__list {
+  display: flex;
+  flex-direction: column;
+
+  &--other {
+    .app-settings__title {
+      font-family: $roboto;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    i {
+      font-size: 14px;
+      font-weight: bold;
+      color: $blue;
+    }
+  }
+}
+
+.app-settings__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
+
+  .checkbox-switch {
+    margin: 0;
+  }
+}
+
+.app-settings__title {
+  margin-right: 20px;
+  font-family: $roboto-slab;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.app-settings__links {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 20px;
+  margin: 30px 0;
+  background-color: $white;
+  border-radius: 40px;
+  box-shadow: 0 0 15px rgba(154, 167, 175, 0.2);
+}
+
+.app-settings__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+  color: $blue-dark;
+
+  &:not(:last-of-type) {
+    margin-bottom: 8px;
+  }
+
+  &--blue {
+    color: $blue;
+  }
+
+  .app-settings__title {
+    font-family: $roboto;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .svg {
+    display: block;
+    width: 16px;
+    min-width: 16px;
+    height: 16px;
+    min-height: 16px;
+    fill: currentColor;
+  }
+}

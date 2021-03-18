@@ -35,7 +35,6 @@
 .my-settings-wrap {
   display: flex;
   flex-direction: column;
-  padding-top: 20px;
 }
 
 .my-settings-left {
@@ -127,70 +126,34 @@
 // item checkbox
 .item-checkbox {
   position: relative;
-  width: calc(25% - 20px);
-  margin: 5px;
-
-  &--row {
-    width: calc(100% - 10px);
-
-    .item {
-      padding: 20px 15px;
-    }
-
-    .item__wrap {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    .item__top {
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .tooltip {
-      display: none;
-    }
-
-    .item__titles {
-      min-width: auto;
-      margin: 0 0 0 20px;
-    }
-  }
+  width: calc(100% / 3 - 10px);
+  margin: 10px 5px;
 
   .checkbox__input:checked + .item {
-    background-color: $gray-light;
-    box-shadow: none;
+    .item__icon-wrapper {
+      background-color: $turq;
+    }
 
-    .item__title {
-      color: $blue;
+    .item__icon {
+      fill: $blue-dark;
     }
   }
 
   .checkbox__input:disabled + .item {
-    cursor: default;
-    box-shadow: 0 0 40px rgba($color: $gray-dark, $alpha: 0.3);
     opacity: 0.7;
 
-    .item__title {
-      color: $blue-dark;
+    .item__icon-wrapper {
+      background-color: $gray;
+    }
+
+    .item__icon {
+      fill: $blue-dark;
     }
   }
 
   .item {
     width: 100% !important;
     margin: 0 !important;
-  }
-
-  .tooltip {
-    position: static;
-
-    &__content {
-      top: 45px;
-      right: 5px;
-      width: calc(100vw - 40px);
-      max-width: none;
-    }
   }
 
   &:nth-child(odd) {
@@ -205,25 +168,10 @@
 
 .item {
   position: relative;
-  width: calc(25% - 10px);
-  padding: 15px;
-  margin: 5px;
+  width: calc(100% / 3 - 10px);
+  margin: 10px 5px;
+  text-align: center;
   cursor: pointer;
-  background-color: $white;
-  border-radius: 20px;
-  box-shadow: 0 0 40px rgba($color: $gray-dark, $alpha: 0.3);
-  transition: box-shadow 0.3s, background-color 0.3s, opacity 0.3s;
-
-  .tooltip {
-    position: static;
-
-    &__content {
-      top: 45px;
-      right: 5px;
-      width: calc(100vw - 40px);
-      max-width: none;
-    }
-  }
 
   &:nth-child(odd) {
     .tooltip {
@@ -234,55 +182,29 @@
     }
   }
 
-  &--row {
-    width: calc(100% - 10px);
-    padding: 20px 15px;
-
-    .item__wrap {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    .item__top {
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .tooltip {
-      display: none;
-    }
-
-    .item__titles {
-      margin: 0 0 0 20px;
-    }
-  }
-
+  &.completed,
   &.selected {
-    background-color: $gray-light;
-    box-shadow: none;
-
-    .item__title {
-      color: $blue;
+    .item__icon-wrapper {
+      background-color: $turq;
     }
-  }
 
-  &__top {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    .item__icon {
+      fill: $blue-dark;
+    }
   }
 
   &__icon-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 58px;
-    min-width: 58px;
-    height: 58px;
-    min-height: 58px;
-    background-color: $gray-light;
-    border-radius: 25px;
+    width: 60px;
+    min-width: 60px;
+    height: 60px;
+    min-height: 60px;
+    margin: 0 auto 5px;
+    background-color: $white;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(154, 167, 175, 0.2);
   }
 
   &__icon {
@@ -315,11 +237,18 @@
 
   &__title {
     display: block;
-    font-size: 16px;
+    font-family: $roboto;
+    font-size: 12px;
     font-weight: bold;
     line-height: 1.3;
     color: $blue-dark;
     transition: color 0.3s;
+  }
+
+  .mood-stat__time {
+    margin: 7px 0 0;
+    font-family: $roboto-slab;
+    font-weight: normal;
   }
 
   &__subtitle {
@@ -341,67 +270,6 @@
     .item__title {
       margin-bottom: 15px;
     }
-  }
-}
-
-.tooltip {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 20px;
-  min-width: 20px;
-  height: 20px;
-  min-height: 20px;
-  border: 2px solid $gray;
-  border-radius: 50%;
-  transition: border 0.3s;
-
-  &.active {
-    border: 2px solid $blue;
-
-    .tooltip__symbol {
-      color: $blue;
-    }
-
-    .tooltip__content {
-      visibility: visible;
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  &__symbol {
-    font-size: 14px;
-    font-weight: bold;
-    line-height: 1.5;
-    color: $gray;
-    text-align: center;
-    transition: color 0.3s;
-  }
-
-  &__content {
-    position: absolute;
-    top: calc(100% + 10px);
-    right: -15px;
-    width: 330px;
-    max-width: calc(50vw - 30px);
-    padding: 15px;
-    visibility: hidden;
-    background-color: $white;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(176, 189, 191, 0.45);
-    opacity: 0;
-    transition: transform 0.3s, opacity 0.3s, visibility 0.3s;
-    transform: translateY(15px);
-  }
-
-  &__text {
-    font-size: 12px;
-    font-weight: 300;
-    line-height: 1.3;
-    color: $blue-dark;
   }
 }
 
@@ -466,7 +334,7 @@
 
 // tasks
 .my-settings-tasks__title {
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   font-family: $roboto-slab;
   font-size: 1.5rem;
   font-weight: bold;
@@ -475,8 +343,8 @@
 .my-settings-tasks__text {
   width: 100%;
   max-width: 560px;
-  font-size: 14px;
-  font-weight: 300;
+  font-size: 12px;
+  font-weight: 400;
   line-height: 1.6;
   color: $blue-dark;
 }
@@ -541,15 +409,6 @@
   display: flex;
   flex-wrap: wrap;
   margin: -5px;
-
-  .item,
-  .item-checkbox {
-    width: calc(50% - 10px);
-
-    &--row {
-      width: calc(100% - 10px);
-    }
-  }
 }
 
 .my-settings-tasks-buttons-wrapper {
@@ -842,10 +701,7 @@
 
 .stars {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  width: 48px;
-  min-width: 48px;
 }
 
 .star {

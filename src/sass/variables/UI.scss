@@ -819,10 +819,10 @@ button {
 .checkbox-switch {
   .checkbox__input {
     &:checked + .checkbox-switch__custom-wrapper {
-      background-color: $pale-turq;
+      background-color: rgba($bluee, 0.25);
 
       .checkbox-switch__custom {
-        background-color: $turq;
+        background-color: $bluee;
         transform: translateX(100%);
       }
     }
@@ -843,7 +843,7 @@ button {
     min-width: 20px;
     height: 20px;
     min-height: 20px;
-    background-color: $turq;
+    background-color: $bluee;
     border-radius: 50%;
     transition: transform 0.2s ease, background-color 0.2s ease;
   }
