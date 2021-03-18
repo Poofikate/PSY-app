@@ -60,7 +60,9 @@ export default class Player {
       this.hideControl(this.controls.start);
       this.showControl(this.controls.pause);
 
-      this.startTimerToLocked();
+      if (this._type === 'AUDIO') {
+        this.startTimerToLocked();
+      }
     });
 
     this.player.on('pause', (event) => {
@@ -86,9 +88,17 @@ export default class Player {
     this.controls.pause.addEventListener('click', () => this.player.pause());
     this.controls.stop.addEventListener('click', () => this.player.stop());
 
-    document.addEventListener('touchstart', this.startTimerToLocked.bind(this));
-    document.addEventListener('touchmove', this.startTimerToLocked.bind(this));
-    document.addEventListener('touchend', this.startTimerToLocked.bind(this));
+    if (this._type === 'AUDIO') {
+      document.addEventListener(
+        'touchstart',
+        this.startTimerToLocked.bind(this)
+      );
+      document.addEventListener(
+        'touchmove',
+        this.startTimerToLocked.bind(this)
+      );
+      document.addEventListener('touchend', this.startTimerToLocked.bind(this));
+    }
 
     _instances[this.id] = this;
   }
