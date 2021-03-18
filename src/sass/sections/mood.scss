@@ -4,12 +4,8 @@
 
 .tasks-mood {
   width: 100%;
-  padding: 15px 5px 20px;
   margin: 20px 0 0;
   text-align: center;
-  background-color: $white;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba($color: $gray, $alpha: 0.5);
 
   &.selected {
     .tasks-mood__button {

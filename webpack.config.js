@@ -69,6 +69,7 @@ const config = {
     'before-reg': './src/js/_before-reg.js',
     greeting: './src/js/_greeting.js',
     mode: './src/js/_mode.js',
+    mood: './src/js/_mood.js',
   },
   output: {
     filename: (chunkData) => {

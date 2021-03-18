@@ -24,6 +24,7 @@
 @import 'components/progress';
 @import 'components/date';
 @import 'components/tabs';
+@import 'components/mood-today';
 
 // Sections - Разделы сайта
 @import 'sections/menu';
@@ -52,3 +53,4 @@
 @import 'sections/reg';
 @import 'sections/before-reg';
 @import 'sections/greeting';
+@import 'sections/chart-mood';

@@ -9,26 +9,11 @@
   position: relative;
   z-index: 1;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   color: $blue-dark;
-  background-color: $white;
 
   &:not(:last-of-type) {
-    margin-bottom: 20px;
-
-    .mood-stat__assessment {
-      &::before {
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        z-index: -1;
-        width: 1px;
-        height: 100px;
-        content: '';
-        background-color: $gray;
-        transform: translateX(-50%);
-      }
-    }
+    margin-bottom: 10px;
   }
 
   &__inner {
@@ -39,9 +24,27 @@
   }
 
   &__time {
-    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    margin-right: 15px;
+    font-size: 12px;
     font-weight: normal;
+    font-weight: bold;
     line-height: 1.2;
+
+    &::before {
+      display: block;
+      width: 20px;
+      min-width: 20px;
+      height: 20px;
+      min-height: 20px;
+      margin-right: 5px;
+      content: '';
+      background-image: url(../img/time2-dark.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      opacity: 0.1;
+    }
   }
 
   &__assessment {
@@ -50,12 +53,12 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 34px;
-    min-width: 34px;
-    height: 34px;
-    min-height: 34px;
+    width: 50px;
+    min-width: 50px;
+    height: 50px;
+    min-height: 50px;
     padding: 5px;
-    margin: 0 12px 0 15px;
+    margin: 0 12px 0 0;
     background-color: $gray;
     border-radius: 50%;
 
@@ -76,28 +79,22 @@
     }
 
     .svg {
-      width: 18px;
-      height: 18px;
+      width: 24px;
+      height: 24px;
       fill: $white;
     }
   }
 
   &__title {
     flex-grow: 1;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: bold;
+    line-height: 1.5;
   }
 
   &__tasks-wrapper {
-    @include max-width(400px) {
-      width: 100%;
-      max-width: 110px;
-    }
-
-    @include max-width(350px) {
-      width: 100%;
-      max-width: 72px;
-    }
+    display: inline-flex;
+    align-items: center;
   }
 
   &__tasks {
@@ -110,19 +107,20 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 34px;
-    min-width: 34px;
-    height: 34px;
-    min-height: 34px;
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    min-height: 40px;
     padding: 5px;
     margin: 2px;
-    background-color: $gray-light;
+    background-color: $white;
     border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(154, 167, 175, 0.2);
   }
 
   &__icon {
-    width: 22px;
-    height: 22px;
+    width: 24px;
+    height: 24px;
     fill: $blue-dark;
   }
 }

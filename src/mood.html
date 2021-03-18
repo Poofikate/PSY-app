@@ -10,44 +10,23 @@
     <title>Mood</title>
   </head>
   <body>
+    ${require('./modules/components/header2.html')}
     ${require('./modules/components/nav-bar.html')}
     ${require('./modules/menu.html')}
 
-    <main>
+    <main class="bg">
       <!-- mood -->
       <section class="mood-section">
         <div class="container">
           <!-- wrap -->
           <div class="mood-wrap">
-            <h6 class="subtitle subtitle--red">
-              Сегодня вы довольны!
-            </h6>
-            <h6 class="subtitle subtitle--orange">
-              Сегодня вы довольны!
-            </h6>
-            <h6 class="subtitle subtitle--yellow">
-              Сегодня вы довольны!
-            </h6>
-            <h6 class="subtitle subtitle--green-yellow">
-              Сегодня вы довольны!
-            </h6>
-            <h6 class="subtitle subtitle--green">
-              Сегодня вы довольны!
-            </h6>
-
-            ${require('./modules/components/date.html')}
-
-            <div class="tasks-card-mobile__header-mobile">
-              <h1 class="tasks-card__title">
-                Уровень беспокойства
-              </h1>
-            </div>
+            ${require('./modules/components/mood-today.html')}
 
             <!-- class for button - 'selected'  -->
             <div class="tasks-mood">
               <div class="mood-wrap">
                 <span class="mood__text">
-                  Вечерняя оценка
+                  Как вы себя сейчас чувствуете?
                 </span>
 
                 <div class="mood-list">
@@ -128,10 +107,6 @@
             <div class="mood-stats">
               <div class="mood-stat">
                 <div class="mood-stat__inner">
-                  <time class="mood-stat__time">
-                    07:20
-                  </time>
-
                   <div class="mood-stat__assessment mood-stat__assessment--red">
                     <svg class="svg">
                       <use xlink:href="#mood_red"></use>
@@ -144,25 +119,14 @@
                 </div>
 
                 <div class="mood-stat__tasks-wrapper">
+                  <time class="mood-stat__time">
+                    07:20
+                  </time>
+
                   <div class="mood-stat__tasks">
                     <div class="mood-stat__task">
                       <svg class="mood-stat__icon">
                         <use xlink:href="#task1"></use>
-                      </svg>
-                    </div>
-                    <div class="mood-stat__task">
-                      <svg class="mood-stat__icon">
-                        <use xlink:href="#task2"></use>
-                      </svg>
-                    </div>
-                    <div class="mood-stat__task">
-                      <svg class="mood-stat__icon">
-                        <use xlink:href="#task3"></use>
-                      </svg>
-                    </div>
-                    <div class="mood-stat__task">
-                      <svg class="mood-stat__icon">
-                        <use xlink:href="#task4"></use>
                       </svg>
                     </div>
                   </div>
@@ -170,10 +134,6 @@
               </div>
               <div class="mood-stat">
                 <div class="mood-stat__inner">
-                  <time class="mood-stat__time">
-                    13:20
-                  </time>
-
                   <div
                     class="mood-stat__assessment mood-stat__assessment--orange"
                   >
@@ -183,25 +143,19 @@
                   </div>
 
                   <span class="mood-stat__title">
-                    Нейтрально
+                    Зол
                   </span>
                 </div>
 
                 <div class="mood-stat__tasks-wrapper">
+                  <time class="mood-stat__time">
+                    07:20
+                  </time>
+
                   <div class="mood-stat__tasks">
                     <div class="mood-stat__task">
                       <svg class="mood-stat__icon">
                         <use xlink:href="#task1"></use>
-                      </svg>
-                    </div>
-                    <div class="mood-stat__task">
-                      <svg class="mood-stat__icon">
-                        <use xlink:href="#task2"></use>
-                      </svg>
-                    </div>
-                    <div class="mood-stat__task">
-                      <svg class="mood-stat__icon">
-                        <use xlink:href="#task3"></use>
                       </svg>
                     </div>
                   </div>
@@ -209,10 +163,6 @@
               </div>
               <div class="mood-stat">
                 <div class="mood-stat__inner">
-                  <time class="mood-stat__time">
-                    13:20
-                  </time>
-
                   <div
                     class="mood-stat__assessment mood-stat__assessment--yellow"
                   >
@@ -227,15 +177,14 @@
                 </div>
 
                 <div class="mood-stat__tasks-wrapper">
+                  <time class="mood-stat__time">
+                    07:20
+                  </time>
+
                   <div class="mood-stat__tasks">
                     <div class="mood-stat__task">
                       <svg class="mood-stat__icon">
                         <use xlink:href="#task1"></use>
-                      </svg>
-                    </div>
-                    <div class="mood-stat__task">
-                      <svg class="mood-stat__icon">
-                        <use xlink:href="#task2"></use>
                       </svg>
                     </div>
                   </div>
@@ -243,10 +192,6 @@
               </div>
               <div class="mood-stat">
                 <div class="mood-stat__inner">
-                  <time class="mood-stat__time">
-                    13:20
-                  </time>
-
                   <div
                     class="mood-stat__assessment mood-stat__assessment--green-yellow"
                   >
@@ -256,30 +201,19 @@
                   </div>
 
                   <span class="mood-stat__title">
-                    Нейтрально
+                    Не Отлично!
                   </span>
                 </div>
 
                 <div class="mood-stat__tasks-wrapper">
+                  <time class="mood-stat__time">
+                    07:20
+                  </time>
+
                   <div class="mood-stat__tasks">
                     <div class="mood-stat__task">
                       <svg class="mood-stat__icon">
                         <use xlink:href="#task1"></use>
-                      </svg>
-                    </div>
-                    <div class="mood-stat__task">
-                      <svg class="mood-stat__icon">
-                        <use xlink:href="#task6"></use>
-                      </svg>
-                    </div>
-                    <div class="mood-stat__task">
-                      <svg class="mood-stat__icon">
-                        <use xlink:href="#task7"></use>
-                      </svg>
-                    </div>
-                    <div class="mood-stat__task">
-                      <svg class="mood-stat__icon">
-                        <use xlink:href="#task6"></use>
                       </svg>
                     </div>
                   </div>
@@ -287,10 +221,6 @@
               </div>
               <div class="mood-stat">
                 <div class="mood-stat__inner">
-                  <time class="mood-stat__time">
-                    13:20
-                  </time>
-
                   <div
                     class="mood-stat__assessment mood-stat__assessment--green"
                   >
@@ -300,11 +230,15 @@
                   </div>
 
                   <span class="mood-stat__title">
-                    Счастлив
+                    Отлично!
                   </span>
                 </div>
 
                 <div class="mood-stat__tasks-wrapper">
+                  <time class="mood-stat__time">
+                    07:20
+                  </time>
+
                   <div class="mood-stat__tasks">
                     <div class="mood-stat__task">
                       <svg class="mood-stat__icon">
@@ -321,6 +255,32 @@
         <!-- ./ End of container -->
       </section>
       <!-- ./ End of mood-stats -->
+
+      <!-- chart-mood -->
+      <section class="chart-mood-section">
+        <div class="container">
+          <div class="chart-mood-wrap">
+            <h2 class="h1 tasks-card__title">
+              Настроение в течении дня
+            </h2>
+
+            <div class="stats-line-chart-wrap">
+              <div
+                data-current="[2, 3, 1, 5, 4, 4]"
+                data-current-x="[18:00, 12:00, 19:00, 22:11, 18:10, 08:34]"
+                data-current-color="#1CA7C4"
+                class="stats-chart j_line-chart-mood"
+              ></div>
+            </div>
+
+            <a href="#" class="button button-gradient">
+              Подробная статистика
+            </a>
+          </div>
+        </div>
+        <!-- ./ End of container -->
+      </section>
+      <!-- ./ End of chart-mood -->
     </main>
   </body>
 </html>

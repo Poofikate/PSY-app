@@ -1,0 +1,61 @@
+.meditation-range-slider {
+  &.mood-today {
+    display: flex;
+    min-height: 70px;
+    padding: 10px 20px;
+  }
+}
+
+.mood-today {
+  &__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    font-family: $roboto-slab;
+    font-size: 12px;
+    color: $blue-dark;
+
+    .svg {
+      display: block;
+      width: 14px;
+      min-width: 14px;
+      height: 14px;
+      min-height: 14px;
+      margin-right: 5px;
+      margin-left: 0;
+      stroke: currentColor;
+      transform: rotate(90deg);
+    }
+
+    &--disabled {
+      pointer-events: none;
+      opacity: 0.3;
+    }
+
+    &--next {
+      flex-direction: row-reverse;
+
+      .svg {
+        margin-right: 0;
+        margin-left: 5px;
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  &__inner {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 15px;
+  }
+
+  .mood-stat__title {
+    text-align: left;
+  }
+}
