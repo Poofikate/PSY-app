@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="151" height="230" fill="none"><rect id="backgroundrect" width="100%" height="100%" x="0" y="0" fill="none" stroke="none"/>
+
+
+
+
+
+
+
+
+<defs>
+<linearGradient id="paint0_linear" x1="-0.5964424014091492" y1="0.650988757610321" x2="1.6444692611694336" y2="0.650988757610321">
+<stop stop-color="#23A3CF"/>
+<stop offset="1" stop-color="#25D4CA"/>
+</linearGradient>
+<linearGradient id="paint1_linear" x1="-0.5964424014091492" y1="1.0890164375305176" x2="1.834567666053772" y2="0.9768614768981934">
+<stop stop-color="#217BFC"/>
+<stop offset="1" stop-color="#31CAE4"/>
+</linearGradient>
+<linearGradient id="paint2_linear" x1="-1.5564321279525757" y1="0.3809126019477844" x2="2.687798023223877" y2="0.3809126019477844">
+<stop stop-color="#23A3CF"/>
+<stop offset="1" stop-color="#25D4CA"/>
+</linearGradient>
+<linearGradient id="paint3_linear" x1="-1.5564321279525757" y1="0.6495110988616943" x2="3.047963857650757" y2="0.6147768497467041">
+<stop stop-color="#217BFC"/>
+<stop offset="1" stop-color="#31CAE4"/>
+</linearGradient>
+<linearGradient id="paint4_linear" x1="-0.703066349029541" y1="0.31329092383384705" x2="1.7580933570861816" y2="0.31329092383384705">
+<stop stop-color="#23A3CF"/>
+<stop offset="1" stop-color="#25D4CA"/>
+</linearGradient>
+<linearGradient id="paint5_linear" x1="-0.703066349029541" y1="0.5394679307937622" x2="1.9669475555419922" y2="0.5102219581604004">
+<stop stop-color="#217BFC"/>
+<stop offset="1" stop-color="#31CAE4"/>
+</linearGradient>
+<linearGradient id="paint6_linear" x1="-1.2473440170288086" y1="0.8256233930587769" x2="2.3237338066101074" y2="0.8256233930587769">
+<stop stop-color="#23A3CF"/>
+<stop offset="1" stop-color="#25D4CA"/>
+</linearGradient>
+<linearGradient id="paint7_linear" x1="-1.2473440170288086" y1="1.3812434673309326" x2="2.626671314239502" y2="1.2390146255493164">
+<stop stop-color="#217BFC"/>
+<stop offset="1" stop-color="#31CAE4"/>
+</linearGradient>
+<clipPath id="clip0">
+<rect width="150.6179962158203" height="224.0050048828125" fill="white" y="5.994629859924316" x="0" id="svg_1"/>
+</clipPath>
+</defs>
+<g class="currentLayer" style=""><title>Layer 1</title>
+<path d="M56.6305,229.5 H93.9967 C113.499,229.5 129.789,215.791 131.564,197.881 L150.618,5.49463 C150.618,5.49463 115.024,12.6134 75.6837,12.6134 C32.2218,12.6134 0,5.49463 0,5.49463 L19.0629,197.89 C20.8292,215.8 37.1191,229.5 56.6305,229.5 z" fill="white" id="svg_3" class=""/>
+<path d="M140.716,42.7086 L125.451,196.786 C123.978,211.658 110.451,222.868 93.9876,222.868 H56.6305 C40.1666,222.868 26.6405,211.658 25.1671,196.786 L9.89294,42.6171 C50.8649,30.5095 97.7947,40.5031 140.716,42.7086 z" fill="#EAF1F3" id="svg_4" class=""/>
+
+
+
+
+
+
+
+<ellipse cx="75.68370056152344" cy="6.7440900802612305" rx="74.93440246582031" ry="6.7440900802612305" fill="#C9D6DA" id="svg_12" class=""/></g></svg>

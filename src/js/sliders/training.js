@@ -12,10 +12,10 @@ if ($slider) {
     centerInsufficientSlides: true,
     autoHeight: true,
 
-    effect: 'fade',
-    fadeEffect: {
-      crossFade: true,
-    },
+    // effect: 'fade',
+    // fadeEffect: {
+    //   crossFade: true,
+    // },
 
     pagination: {
       el: '.modal-train-pagination',

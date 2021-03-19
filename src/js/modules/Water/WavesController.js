@@ -21,7 +21,7 @@ export default class WavesController {
     this.resized = false;
     this.waves = [];
 
-    this.mh = 233;
+    this.mh = 170;
     this.border = 160;
 
     this.maxColor = this.$canvas.getAttribute('data-max-color');

@@ -24,6 +24,10 @@ export default class Player {
     this._isLocked = false;
 
     this.player = null;
+    this.mql = window.matchMedia('(orientation: landscape)');
+
+    // callbacks
+    this.endCallback = () => {};
 
     this.init();
   }
@@ -34,6 +38,10 @@ export default class Player {
     this.player = new Plyr(this.$player, {
       controls: ['progress', 'current-time'],
       invertTime: false,
+      fullscreen: {
+        enabled: true,
+        container: '.j_player-container',
+      },
     });
 
     this.$currentTime = this.$container.querySelector('.plyr__time--current');
@@ -52,8 +60,9 @@ export default class Player {
 
     this.player.on('ended', (event) => {
       this.player.pause();
-      this.player.currentTime = 0.0;
-      this.player.play();
+      this.endCallback.apply(this);
+      // this.player.currentTime = 0.0;
+      // this.player.play();
     });
 
     this.player.on('play', (event) => {
@@ -99,6 +108,10 @@ export default class Player {
       );
       document.addEventListener('touchend', this.startTimerToLocked.bind(this));
     }
+
+    this.checkOrientation(this.mql);
+
+    this.mql.addEventListener('change', this.checkOrientation.bind(this));
 
     _instances[this.id] = this;
   }
@@ -148,6 +161,14 @@ export default class Player {
     }, 5000);
   }
 
+  checkOrientation(m) {
+    if (m.matches) {
+      this.$container.classList.add('is-landscape');
+    } else {
+      this.$container.classList.remove('is-landscape');
+    }
+  }
+
   static initAll() {
     const $containers = document.querySelectorAll('.j_player-container');
     if ($containers.length) {
@@ -158,6 +179,12 @@ export default class Player {
           $player,
         });
       });
+    }
+  }
+
+  static setEndCallback(callback) {
+    for (const key in _instances) {
+      _instances[key].endCallback = callback;
     }
   }
 

@@ -1,12 +1,16 @@
 import mojs from '@mojs/core/build/mo';
 
+const _animals = {};
 export default class Animal {
   constructor($el) {
     this.$el = $el;
-    this.$controls = this.$el.querySelectorAll('[data-control]');
+    this.$form = this.$el.querySelector('[data-controls]');
+    this.$controls = this.$form.querySelectorAll('[data-control]');
     this.$imgsWrap = this.$el.querySelector('[data-animals]');
     this.$imgsContainer = this.$el.querySelector('[data-animals-wrap]');
     this.$imgs = this.$el.querySelectorAll('[data-img]');
+
+    this.id = this.$el.getAttribute('data-animal') || null;
 
     this.delay = 300;
 
@@ -16,11 +20,9 @@ export default class Animal {
   init() {
     this.onInit();
 
-    if (this.$controls.length) {
-      this.$controls.forEach(($control) =>
-        $control.addEventListener('change', this.change.bind(this))
-      );
-    }
+    this.$form && this.$form.addEventListener('change', this.change.bind(this));
+
+    _animals[this.id] = this;
   }
 
   onInit() {
@@ -103,6 +105,18 @@ export default class Animal {
     });
   }
 
+  set(id) {
+    const $checked = this.$form.querySelector('input:checked');
+    const $curr = this.$form.querySelector(`[data-control="${id}"]`);
+
+    $checked.removeAttribute('checked');
+    $checked.checked = false;
+    $curr.setAttribute('checked', '');
+    $curr.checked = true;
+
+    this.openImg(id);
+  }
+
   destroyAnimation() {
     this.burst = null;
     this.shape = null;
@@ -114,3 +128,4 @@ export default class Animal {
 
 const $els = document.querySelectorAll('[data-animal]');
 if ($els.length) $els.forEach(($el) => new Animal($el));
+window._animals = _animals;

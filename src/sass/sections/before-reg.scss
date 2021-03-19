@@ -26,7 +26,10 @@
 }
 
 .modal-train-slider-wrapper {
-  margin: 30px 0;
+  width: calc(100% + 40px);
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: -20px;
   text-align: center;
 }
 
@@ -58,6 +61,8 @@
 }
 
 .modal-train-slide {
+  padding: 0 20px;
+
   .modal-title {
     padding: 0;
     margin: 0 0 20px;

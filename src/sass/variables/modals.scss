@@ -760,6 +760,36 @@
       }
     }
 
+    &.is-landscape {
+      padding: 20px 20px 10px;
+
+      .timer-time-wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .meditation-timer-time {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .meditation-music {
+        margin-top: auto;
+        margin-right: 40px;
+        margin-bottom: 0;
+      }
+
+      .player-wrapper {
+        flex-grow: 1;
+        width: auto;
+        margin-top: auto;
+      }
+
+      .player-times {
+        margin-top: 10px;
+      }
+    }
+
     .modal-wrap {
       display: flex;
       flex-direction: column;
@@ -867,7 +897,12 @@
 }
 
 .modal-mood {
+  overflow: auto;
+  overflow-x: hidden;
+
   .modal {
+    height: auto;
+    min-height: 100%;
     background: $gr-body;
   }
 
@@ -882,6 +917,7 @@
 
       .mood-completed {
         display: block;
+        margin-bottom: 20px;
       }
 
       .button--gray {
