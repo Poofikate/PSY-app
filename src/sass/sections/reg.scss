@@ -12,6 +12,14 @@
   &:first-of-type {
     padding-top: 20px;
   }
+
+  &--left-bg {
+    background-position: left center;
+  }
+
+  &--right-bg {
+    background-position: right center;
+  }
 }
 
 .reg-wrap {
