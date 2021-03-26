@@ -134,6 +134,8 @@ export default class Player {
         ],
       };
 
+      this.$currentTime = this.$container.querySelector('.plyr__time--current');
+
       if (poster) {
         this.player.poster = poster;
       } else {

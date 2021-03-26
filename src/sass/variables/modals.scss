@@ -901,9 +901,14 @@
   overflow-x: hidden;
 
   .modal {
+    display: inline-flex;
     height: auto;
     min-height: 100%;
     background: $gr-body;
+
+    .modal-wrap {
+      height: auto;
+    }
   }
 
   .modal-body {

@@ -29,8 +29,10 @@
 .greeting__item {
   display: inline-flex;
   align-items: center;
+  max-width: calc(100% - 15px);
   padding: 5px 15px;
-  margin-left: 15px;
+  margin-right: 0;
+  margin-left: auto;
   font-size: 16px;
   line-height: 1.625;
   background-color: $white;
@@ -42,7 +44,7 @@
   }
 
   &--my {
-    margin-right: 15px;
+    margin-right: auto;
     margin-left: 0;
     background-color: $turq;
   }
