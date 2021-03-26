@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <title>Blog Post</title>
+  </head>
+  <body>
+    ${require('./modules/components/header.html')}
+    ${require('./modules/components/nav-bar.html')}
+
+    <main>
+      <!-- post -->
+      <section class="post-section">
+        <div class="container">
+          <!-- wrap -->
+          <div class="post-wrap">
+            <div class="post j_aside-parent">
+              <!-- content -->
+              <div class="post-content">
+                <a href="./blog.html" class="link-back">
+                  <svg class="link-back__arrow">
+                    <use xlink:href="#arrow2"></use>
+                  </svg>
+
+                  Вернуться назад
+                </a>
+
+                <h2 class="post__title">
+                  Рекомендации родителям по профориентации
+                </h2>
+
+                <div class="post-test">
+                  <span class="test-count"> Вопрос 1 / <em>8</em> </span>
+
+                  <h4 class="post-test__title">
+                    За последний месяц Вы испытывали <br />
+                    чувство тревоги:
+                  </h4>
+
+                  <form class="test-form">
+                    <button class="button button--gray-light" type="button">
+                      Каждый день
+                    </button>
+                    <button class="button button--gray-light" type="button">
+                      Часто
+                    </button>
+                    <button class="button button--gray-light" type="button">
+                      Иногда
+                    </button>
+                    <button class="button button--gray-light" type="button">
+                      Редко
+                    </button>
+                    <button class="button button--gray-light" type="button">
+                      Никогда
+                    </button>
+                  </form>
+                </div>
+
+                <div class="post-desc">
+                  <p class="post__text">
+                    Недостаточно знаний по требуемому предмету. Например,
+                    ребенок хочет стать инженером, но ради этого он не готов
+                    зубрить физику. Так как она ему не интересная и физика
+                    является преградой для ребенка. Помимо школьных предметов, в
+                    качестве преград могут быть здоровье, физическая подготовка
+                    и т.д.
+                  </p>
+
+                  <p class="post__text"
+                    >У ребенка все хорошо получается, но сильного интереса ни к
+                    чему нет. В этом случае лучше отвести ребенка к психологу,
+                    на консультации специалист поможет осознать школьнику, какая
+                    профессия принесет ему большее удовлетворение.
+                  </p>
+
+                  <p class="post__text"
+                    >У школьника наоборот все плохо с учебой, но двигаться куда
+                    - то надо. В первую очередь, надо поработать над самооценкой
+                    ребенка. Объяснить, что жизнь не меряется по школьным
+                    меркам. Во взрослой жизни добиваются успеха те, кто не
+                    боится делать ошибки и занимается, тем что ему нравится.
+                    После этого, стоит отталкиваться от интересов ребенка, а не
+                    от школьных предметов.
+                  </p>
+
+                  <p class="post__text"
+                    >Многие дети боятся не поступить в престижный вуз и потерять
+                    целый год обучения. В этом случае нужно учитывать запасные
+                    варианты. Государство предоставляет возможность подавать
+                    документы в пять вузов. Объясните ребенку, что не всегда
+                    престижность вуза говорит о качественной подготовке кадров.
+                    Ну, а если все таки действительно не получится поступить в
+                    желаемое учебное заведение, то можно будет за год как
+                    следует подготовиться и подзаработать.
+                  </p>
+                </div>
+              </div>
+              <!-- ./ End of content -->
+
+              <!-- info -->
+              <div data-offset="120" class="post-info j_aside">
+                <div class="post-img-wrapper">
+                  <img
+                    src="https://via.placeholder.com/300x200"
+                    alt=""
+                    class="post__img"
+                  />
+                </div>
+
+                <div class="post-info__bottom">
+                  <span class="blog-post__tag">
+                    Тесты
+                  </span>
+
+                  <time class="post__date">
+                    23.07.2020
+                  </time>
+                </div>
+              </div>
+              <!-- ./ End of info -->
+            </div>
+          </div>
+          <!-- ./ End of wrap -->
+        </div>
+        <!-- ./ End of container -->
+      </section>
+      <!-- ./ End of post -->
+    </main>
+  </body>
+</html>

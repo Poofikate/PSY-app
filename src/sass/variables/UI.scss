@@ -454,6 +454,36 @@ button {
   }
 }
 
+.input-btn {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  z-index: 2;
+  padding: 5px;
+  cursor: pointer;
+  transform: translateY(-50%);
+
+  + .input-label {
+    .input {
+      padding: 0.75em 3.5em 0.75em 1.75em;
+    }
+  }
+
+  &:hover {
+    .input-btn__icon {
+      stroke: $black;
+    }
+  }
+
+  &__icon {
+    display: block;
+    width: 16px;
+    height: 16px;
+    stroke: $blue;
+    transition: stroke 0.3s;
+  }
+}
+
 .input__placeholder {
   order: -1;
   overflow: hidden;

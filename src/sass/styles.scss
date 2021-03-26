@@ -25,6 +25,7 @@
 @import 'components/date';
 @import 'components/tabs';
 @import 'components/mood-today';
+@import 'components/pagination';
 
 // Sections - Разделы сайта
 @import 'sections/menu';
@@ -55,3 +56,5 @@
 @import 'sections/greeting';
 @import 'sections/chart-mood';
 @import 'sections/app-settings';
+@import 'sections/blog';
+@import 'sections/blog-post';
