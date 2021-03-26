@@ -118,7 +118,7 @@ export default class RangeSlider {
       }
     });
 
-    this.$slider.noUiSlider.on('end', (values, handle) => {
+    this.$slider.noUiSlider.on('change', (values, handle) => {
       this.onTargetChangeCallback.apply(this);
     });
   }
