@@ -180,12 +180,19 @@
 .modal-feeling {
   padding: 0;
 
+  &.active {
+    .modal {
+      transform: unset;
+    }
+  }
+
   .modal {
     padding-top: 20px;
     padding-bottom: 0;
     background: linear-gradient(180deg, #e4eff4 0%, rgba(228, 239, 244, 0) 100%),
       #fff;
     border-radius: 0;
+    transform: unset;
   }
 
   .modal-title {
@@ -364,8 +371,24 @@
 }
 
 .modal__footer {
-  padding: 30px 20px;
+  padding: 30px 20px 15px;
   background-color: $gray-light;
+
+  &--last {
+    padding: 15px 20px;
+
+    &.fixed {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      z-index: 5;
+      width: 100%;
+
+      + .modal__footer {
+        margin-bottom: 75px;
+      }
+    }
+  }
 }
 
 .modal-buttons {
@@ -885,6 +908,8 @@
 }
 
 .player-times {
+  position: relative;
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1177,8 +1202,14 @@
 
   &__title {
     display: block;
+    margin-bottom: 3px;
     font-size: 14px;
     font-weight: bold;
+  }
+
+  &__subtitle {
+    font-family: $roboto-slab;
+    font-size: 12px;
   }
 
   &__text {
@@ -1189,14 +1220,17 @@
 }
 
 .modal__text {
+  font-family: $roboto;
   font-size: 12px;
-  line-height: 1.5;
+  font-weight: normal;
+  line-height: 1.6;
 }
 
 .modal__buttons {
   .button {
     width: 100%;
     margin: 10px 0 0;
+    letter-spacing: 0.4px;
   }
 }
 

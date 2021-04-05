@@ -48,9 +48,29 @@
             <!-- ./ End of header -->
 
             <!-- search -->
-            <div class="diary-search">
-              <div class="diary-search__header"> </div>
-              <div class="diary-search__wrap diary-new-note-accordion__content">
+            <div data-accordion class="diary-search">
+              <div class="diary-search__header">
+                <h3 class="diary-new-note-accordion__title">
+                  Поиск записей
+                </h3>
+
+                <button
+                  class="button diary-new-note-accordion__button accordion-button"
+                  type="button"
+                >
+                  <p class="diary-new-note-accordion__button-text">
+                    <span class="for-open">Открыть</span>
+                    <span class="for-close">Скрыть</span>
+                  </p>
+
+                  <svg class="diary-new-note-accordion__button-icon">
+                    <use xlink:href="#arrow"></use>
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="diary-search__wrap diary-new-note-accordion__content accordion-content"
+              >
                 <div class="diary-search__top">
                   <label class="input-label">
                     <svg class="input__icon">
@@ -171,14 +191,30 @@
 
             <!-- new-note -->
             <div class="diary-new-note">
-              <div class="diary-new-note-accordion">
+              <div data-accordion class="diary-new-note-accordion">
                 <div class="diary-new-note-accordion__header">
                   <h3 class="diary-new-note-accordion__title">
                     Новая запись в дневнике
                   </h3>
+
+                  <button
+                    class="button diary-new-note-accordion__button accordion-button"
+                    type="button"
+                  >
+                    <p class="diary-new-note-accordion__button-text">
+                      <span class="for-open">Открыть</span>
+                      <span class="for-close">Скрыть</span>
+                    </p>
+
+                    <svg class="diary-new-note-accordion__button-icon">
+                      <use xlink:href="#arrow"></use>
+                    </svg>
+                  </button>
                 </div>
 
-                <div class="diary-new-note-accordion__content">
+                <div
+                  class="diary-new-note-accordion__content accordion-content"
+                >
                   <div class="diary-new-note-accordion__body">
                     <div class="textarea-wrapper">
                       <textarea

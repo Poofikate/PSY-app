@@ -147,12 +147,6 @@ button {
     box-shadow: 0 30px 15px -20px rgba($color: #1db7f5, $alpha: 0.5) !important;
     transition: background-position 0.3s;
 
-    &:disabled {
-      color: $white;
-      background: none;
-      background-color: $gray;
-    }
-
     &--blue-light {
       background-image: $gr-blue-light;
 
@@ -175,6 +169,13 @@ button {
       .svg {
         transform: scale(1.2);
       }
+    }
+
+    &:disabled {
+      color: $white;
+      background: none;
+      background-color: $gray;
+      box-shadow: none !important;
     }
   }
 
@@ -502,6 +503,23 @@ button {
     cursor: text;
     transition: font 0.2s ease, transform 0.2s ease, color 0.2s ease;
     transform: translateY(125%);
+  }
+}
+
+.input-time {
+  position: relative;
+  display: block;
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    z-index: 1;
+    width: 20px;
+    height: 20px;
+    content: '';
+    background-color: $white;
+    transform: translateY(-50%);
   }
 }
 

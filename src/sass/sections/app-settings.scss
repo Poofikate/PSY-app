@@ -74,6 +74,7 @@
   font-family: $roboto-slab;
   font-size: 16px;
   font-weight: normal;
+  color: $blue-dark;
 }
 
 .app-settings__links {
@@ -99,6 +100,11 @@
 
   &--blue {
     color: $blue;
+  }
+
+  &--disabled {
+    color: $gray-dark;
+    pointer-events: none;
   }
 
   .app-settings__title {

@@ -21,6 +21,19 @@
     flex-grow: 1;
     align-items: center;
     margin-right: 10px;
+
+    &--other {
+      flex-direction: column;
+      text-align: center;
+
+      .mood-stat__assessment {
+        margin: 0;
+      }
+
+      .mood-stat__title {
+        font-weight: normal;
+      }
+    }
   }
 
   &__time {
