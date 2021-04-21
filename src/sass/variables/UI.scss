@@ -260,6 +260,11 @@ button {
       }
     }
 
+    &--like {
+      background-color: transparent;
+      border-color: transparent;
+    }
+
     &__plus {
       font-size: 36px;
       font-weight: 300;
