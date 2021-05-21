@@ -263,6 +263,19 @@ button {
     &--like {
       background-color: transparent;
       border-color: transparent;
+
+      &.active {
+        .svg {
+          fill: $white;
+        }
+      }
+
+      .svg {
+        width: 26px;
+        height: 26px;
+        fill: transparent;
+        stroke: $white;
+      }
     }
 
     &__plus {

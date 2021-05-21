@@ -21,6 +21,7 @@ export default class Player {
       +this.$container.getAttribute('data-lock-timeout') || 10000;
 
     this._type = this.$player.tagName;
+    this._isDontLock = this.$container.hasAttribute('dont-lock');
     this._isLocked = false;
 
     this.player = null;
@@ -69,7 +70,7 @@ export default class Player {
       this.hideControl(this.controls.start);
       this.showControl(this.controls.pause);
 
-      if (this._type === 'AUDIO') {
+      if (this._type === 'AUDIO' && !this._isDontLock) {
         this.startTimerToLocked();
       }
     });
@@ -97,7 +98,7 @@ export default class Player {
     this.controls.pause.addEventListener('click', () => this.player.pause());
     this.controls.stop.addEventListener('click', () => this.player.stop());
 
-    if (this._type === 'AUDIO') {
+    if (this._type === 'AUDIO' && !this._isDontLock) {
       document.addEventListener(
         'touchstart',
         this.startTimerToLocked.bind(this)

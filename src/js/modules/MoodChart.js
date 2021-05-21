@@ -34,7 +34,7 @@ export default class MoodChart {
           margin: 10,
           fontFamily: 'Roboto',
           fontSize: 12,
-          color: '#303F56',
+          color: this.dataCurrent.length <= 7 ? '#303F56' : 'transparent',
         },
         axisLine: {
           lineStyle: {

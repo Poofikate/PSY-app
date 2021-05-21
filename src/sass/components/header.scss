@@ -69,22 +69,5 @@
   .button-icon {
     margin: 0;
     background-color: $white;
-
-    &--like {
-      background-color: transparent;
-
-      &.active {
-        .svg {
-          fill: $white;
-        }
-      }
-
-      .svg {
-        width: 26px;
-        height: 26px;
-        fill: transparent;
-        stroke: $white;
-      }
-    }
   }
 }

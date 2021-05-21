@@ -170,6 +170,37 @@
     height: 26px;
     fill: $blue-dark;
   }
+
+  &__moods {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -5px;
+
+    .mood-stat__inner {
+      flex-grow: unset;
+      width: calc(100% / 3 - 10px);
+      margin: 10px 5px;
+    }
+
+    .mood-stat__title {
+      display: flex;
+      align-items: center;
+      margin-top: 5px;
+    }
+  }
+
+  &__content {
+    > .mood-stat__inner {
+      &--line {
+        width: calc(100% - 10px);
+        margin: 0;
+
+        &:not(:last-of-type) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
 }
 
 .stats-charts {
