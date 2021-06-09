@@ -9,6 +9,10 @@
   min-width: 320px;
   margin: 25px 0;
   overflow: hidden;
+
+  @include max-width($phone-sm) {
+    min-width: auto;
+  }
 }
 
 .sleep__item {
@@ -79,7 +83,8 @@
   text-align: center;
 
   .meditation-timer-time {
-    height: 80px;
+    max-width: none;
+    height: 90px;
     margin: 0 0 15px;
   }
 }
