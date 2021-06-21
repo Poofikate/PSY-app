@@ -67,7 +67,7 @@ export default class MoodChart {
       },
       grid: {
         width: '90%',
-        top: '-2',
+        // top: '-2',
         left: '10',
       },
       series: [
@@ -154,7 +154,8 @@ export default class MoodChart {
       .replace(/\]/g, '')
       .split(',');
 
-    arr = arr.map((num, i) => +num > 0 && +num - 0.5);
+    // arr = arr.map((num, i) => +num > 0 && +num - 0.5);
+    arr = arr.map((num, i) => +num > 0 && +num - 0);
 
     return arr;
   }
