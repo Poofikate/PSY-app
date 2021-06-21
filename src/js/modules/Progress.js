@@ -26,6 +26,7 @@ if ($progress) {
   progress = new Progress({ $progress });
 }
 
+const defaultText = ' мин<i>Показатель, который надо достигнуть</i>';
 export default class RangeSlider {
   constructor(options) {
     this.$slider = options.$slider;
@@ -40,6 +41,7 @@ export default class RangeSlider {
       step: +this.$slider.getAttribute('data-step'),
       target: +this.$slider.getAttribute('data-target-value'),
       offset: +this.$slider.getAttribute('data-offset'),
+      text: this.$slider.getAttribute('data-text') || defaultText,
     };
 
     this.ratio = media ? 5 : 7;
@@ -80,7 +82,7 @@ export default class RangeSlider {
         stepped: true,
         format: wNumb({
           decimals: 0,
-          suffix: ' мин<i>Показатель, который надо достигнуть</i>',
+          suffix: ` мин ${this.options.text}`,
           encoder: (a) => a + this.options.offset,
         }),
       },
