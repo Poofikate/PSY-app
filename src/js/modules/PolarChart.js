@@ -36,7 +36,7 @@ class PolarChart {
       },
       angleAxis: {
         type: 'value',
-        startAngle: 135 - this.offsetAngle,
+        startAngle: 90 - this.offsetAngle,
         show: false,
       },
       radiusAxis: {
