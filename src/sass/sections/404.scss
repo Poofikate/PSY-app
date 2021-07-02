@@ -1,0 +1,40 @@
+.section-404 {
+  overflow: hidden;
+  color: $blue-dark;
+
+  &:first-of-type {
+    padding-top: 60px;
+  }
+}
+
+.section-404-wrap {
+  width: 100%;
+  max-width: 470px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-404__img {
+  display: block;
+  width: 100%;
+}
+
+.section-404__content {
+  width: 100%;
+  max-width: 740px;
+  margin: -20px auto 0;
+
+  .button {
+    margin: 30px 0 0;
+  }
+}
+
+.section-404__title {
+  margin: 0 0 20px;
+}
+
+.section-404__text {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
