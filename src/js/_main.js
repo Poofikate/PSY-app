@@ -19,6 +19,7 @@ import './modules/Select';
 import './modules/Accordion';
 import './modules/Tooltip';
 import './modules/Range';
+import './modules/Locker';
 
 // sliders
 import './sliders/bonus-tasks';
