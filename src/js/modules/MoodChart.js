@@ -48,11 +48,16 @@ export default class MoodChart {
         max: 5,
         min: 0,
         interval: 1,
+        position: 'right',
         axisTick: {
           show: false,
         },
         axisLabel: {
-          show: false,
+          show: true,
+          color: '#303f56',
+          align: 'left',
+          margin: '15',
+          formatter: '{value}л',
         },
         axisLine: {
           lineStyle: {
@@ -66,9 +71,9 @@ export default class MoodChart {
         },
       },
       grid: {
-        width: '90%',
-        // top: '-2',
-        left: '10',
+        width: '88%',
+        // right: '10',
+        left: '5',
       },
       series: [
         {
